@@ -1,0 +1,98 @@
+import {useNavigate} from 'react-router-dom';
+import Icon from '../atoms/Icon';
+import {useFavorites} from '../../hooks/useFavorites';
+
+function HoverOverlay({film}) {
+    const navigate = useNavigate();
+
+    const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
+    const favorited = isFavorite(film.id);
+
+    const toggleFavorite = (e) => {
+        e.stopPropagation(); //prevent card click evnt
+        if (favorited) {
+            removeFromFavorites(film.id);
+        } else {
+            addToFavorites(film.id);
+        }
+    };
+
+    return (
+        <div className="hover-overlay absolute inset-0 opacity-0 group-hover:opacity-100
+        transition-opacity duration-300 z-10">
+            {/* back blur */}
+            <div className="hover-overlay-background absolute inset-0 bg-black/80 backdrop-blur-sm" />
+
+            {/* hover img thumbnail */}
+            <div className="hover-overlay-thumbnail relative h-[200px] overflow-hidden rounded-t-lg">
+                <img 
+                    src={film.hoverImage} 
+                    alt={film.title}
+                    className="hover-overlay-image w-full h-full object-cover"
+                />
+            </div>
+
+            {/* action buttons */}
+            <div className="hover-overlay-actions relative flex items-center justify-center gap-4 p-4">
+                <button
+                    onClick={() => navigate(`/watch/${film.id}`)}
+                    className="hover-overlay-button hover-overlay-button--play 
+                    w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700
+                    flex items-center justify-center text-white transition"
+                    aria-label='Play'
+                >
+                    <Icon name="play" className="h-5 w-5 fill-white" />
+                </button>
+                <button
+                    onClick={toggleFavorite}
+                    className="hover-overlay-button hover-overlay-button--favorite
+                        w-10 h-10 rounded-full bg-white/20 hover:bg-white/30
+                        flex items-center justify-center text-white transition"
+                    aria-label="Add to favorites"
+                >
+                    <Icon 
+                        name={favorited ? "check" : "plus"}
+                        className="h-5 w-5" 
+                    />
+                </button>
+                 <button
+                    onClick={() => navigate(`/detail/${film.id}`)}
+                    className="hover-overlay-button hover-overlay-button--detail 
+                        w-10 h-10 rounded-full bg-white/20 hover:bg-white/30
+                        flex items-center justify-center text-white transition"
+                    aria-label="Details"
+                    >
+                        <Icon name="arrowDown" className="h-5 w-5" />
+                </button>
+            </div>
+
+            {/* meta age+episodes */}
+            <div className="hover-overlay-meta relative px-4 pb-3 flex gap-2 text-xs text-white/80">
+                {film.age && (
+                <span className="hover-overlay-age bg-red-500/80 px-2 py-0.5 rounded font-bold">{film.age}</span>
+                )}
+                    <span className="hover-overlay-episodes">
+                        {film.episodes}
+                    </span>
+                    <span className="hover-overlay-episodes">
+                        {film.duration}
+                    </span>
+            </div>
+
+            {/* genres */}
+            {film.genres && (
+                <div className="hover-overlay-genres relative px-4 pb-2 flex flex-wrap gap-0.5">
+                    {film.genres.map((g) => (
+                        <span key={g} className="hover-overlay-genre-tag 
+                        text-[11px] text-white/60 border border-white/20
+                        px-2 py-0.5 rounded-full">
+                            {g}
+                        </span>
+                    ))}
+                </div>
+            )}
+        </div>
+    )
+}
+
+export default HoverOverlay;

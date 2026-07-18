@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .container-responsive {
+    width: min(100% - clamp(1rem, 4vw, 3rem) * 2, 1400px);
+    margin-inline: auto;
+  }
+}
+
+
+/* Custom theme for Tailwind v4 */
+@theme {
+  --font-family-sans: 'Lato', system-ui, sans-serif;
+  
+  /* Custom colors jika perlu nanti */
+  --color-chill-dark: #0F0F0F;
+  --color-chill-gray: #181A1C;
+}
+
+/* Global styles */
+body {
+  font-family: theme(--font-family-sans);
+  margin: 0;
+  padding: 0;
+  background-color: theme(--color-chill-dark);
+  overflow-x: hidden;
+  min-height: 100vh;
+  line-height: 1.6;
+}

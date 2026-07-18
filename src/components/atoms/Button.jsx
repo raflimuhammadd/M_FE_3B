@@ -1,0 +1,35 @@
+function Button({ variant = 'primary', size = 'md', className = '', children, ...props}) {
+    const variants = {
+        primary: 'bg-blue-600 hover:bg-blue-700 text-white font-semibold',
+        secondary: 'bg-white/10 hover:bg-white/20 text-white font-semibold',
+        ghost: 'text-white/60 hover:text-white',
+        icon: 'bg-white/20 hover:bg-white/30 text-white',
+    };
+
+    const sizes = {
+        sm: 'px-4 py-2 text-sm',
+        md: 'px-6 py-3 text-base',
+        lg: 'px-8 py-3 text-lg',
+    };
+
+    const base = 'rounded-full transition flex items-center justify-center gap-2';
+    const iconBase = 'flex items-center justify-center rounded-full transition';
+    const iconSizes = {
+        sm: 'w-8 h-8',
+        md: 'w-10 h-10',
+        lg: 'w-12 h-12',
+    };
+
+    const isIcon = variant === 'icon';
+    const classes = isIcon
+        ? `${iconBase} ${iconSizes[size] || iconSizes.md} ${variants[variant]} ${className}`
+        : `${base} ${sizes[size] || sizes.md} ${variants[variant]} ${className}`;
+
+    return (
+        <button className={classes} {...props}>
+            {children}
+        </button>
+    )
+}
+
+export default Button;
