@@ -87,7 +87,7 @@ function LoginForm() {
                     </Button>
                     <p className="login-form-register-text text-center text-white/60">Atau</p>
                     <Button type="button" variant="secondary" className="w-full">
-                        <img src="../public/assets/images/google-icon.png" alt="Google" className="h-5 w-5" />
+                        <img src="/assets/images/google-icon.png" alt="Google" className="h-5 w-5" />
                         Masuk dengan Google
                     </Button>
             </div>

@@ -35,7 +35,7 @@ function ProfileDropdown() {
                 flex items-center justify-center cursor-pointer"
                 aria-label="Profile menu"
             >
-                <img src="../public/assets/images/profile.png" 
+                <img src="/assets/images/profile.png" 
                 alt="Profile"
                 className="profile-dropdown-avatar h-8 w-8 xs:h-9 xs:w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 rounded-full" 
             />

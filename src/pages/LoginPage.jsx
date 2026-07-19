@@ -4,7 +4,7 @@ function LoginPage() {
         <AuthLayout
             title="Masuk"
             subtitle="Selamat datang kembali!"
-            bgImage="../public/assets/images/theatre3.jpg"
+            bgImage="/assets/images/theatre3.jpg"
         >
             <LoginForm />
         </AuthLayout>
