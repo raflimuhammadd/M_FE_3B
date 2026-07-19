@@ -9,12 +9,12 @@ function Navbar() {
           <div className="navbar-left flex items-center gap-3 xs:gap-4 sm:gap-6 md:gap-8">
             <NavLink to="/home" className="navbar-logo">
               <img
-                src="../../../publ/assets/images/chill-vect.png"
+                src="/assets/images/chill-vect.png"
                 alt="CHILL"
                 className="h-5 xs:h-6 w-auto block sm:hidden"
               />
               <img
-                src="../..//assets/images/logo-chill.png"
+                src="/assets/images/logo-chill.png"
                 alt="CHILL"
                 className="h-7 sm:h-8 md:h-10 w-auto hidden sm:block"
               />
