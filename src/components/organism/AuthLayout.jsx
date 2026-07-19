@@ -1,4 +1,4 @@
-import chillLogo from '../../assets/images/logo-chill.png';
+import chillLogo from '../../../public/assets/images/logo-chill.png';
 
 function AuthLayout({title, subtitle, bgImage, children}) {
     return (

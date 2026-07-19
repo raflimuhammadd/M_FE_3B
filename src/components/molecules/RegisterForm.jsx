@@ -119,7 +119,7 @@ function RegisterForm() {
         </Button>
         <p className="text-center text-white/60">atau</p>
         <Button type="button" variant="secondary" className="w-full">
-          <img src="./src/assets/images/google-icon.png" alt="Google" className="h-5 w-5" />
+          <img src="../public/assets/images/google-icon.png" alt="Google" className="h-5 w-5" />
           Masuk dengan Google
         </Button>
       </div>

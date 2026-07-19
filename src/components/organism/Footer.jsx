@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Icon from "../atoms/Icon";
-import logoChill from "../../assets/images/logo-chill.png";
+import logoChill from "../../../public/assets/images/logo-chill.png";
 
 const genres = [
     { title: 'Genre', columns: [

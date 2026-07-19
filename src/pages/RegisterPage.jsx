@@ -5,7 +5,7 @@ function RegisterPage() {
     <AuthLayout
       title="Daftar"
       subtitle="Selamat Datang!"
-      bgImage="./src/assets/images/theatre3.jpg"
+      bgImage="../public/assets/images/theatre3.jpg"
     >
       <RegisterForm />
     </AuthLayout>
