@@ -1,5 +1,5 @@
 import ProfileDropdown from "../molecules/ProfileDropdown";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -7,7 +7,7 @@ function Navbar() {
       <div className="navbar-container container-responsive py-2 xs:py-2.5 sm:py-3 md:py-4">
         <div className="navbar-wrapper flex items-center gap-4 xs:gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           <div className="navbar-left flex items-center gap-3 xs:gap-4 sm:gap-6 md:gap-8">
-            <a href="/home" className="navbar-logo">
+            <NavLink to="/home" className="navbar-logo">
               <img
                 src="../../../publ/assets/images/chill-vect.png"
                 alt="CHILL"
@@ -18,7 +18,7 @@ function Navbar() {
                 alt="CHILL"
                 className="h-7 sm:h-8 md:h-10 w-auto hidden sm:block"
               />
-            </a>
+            </NavLink>
             <ul className="navbar-menu flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6">
               <li className="navbar-menu-item">
                 <Link to="/series" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
