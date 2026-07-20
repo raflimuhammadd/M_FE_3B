@@ -12,7 +12,6 @@ function Hero({featuredFilm}) {
             relative min-h-[50vh] xs:min-h-[55vh] 
             sm:min-h-[65vh] md:min-h-[75vh] 
             lg:min-h-[85vh] overflow-hidden">
-            {/* background image */}
             <img 
                 src={featuredFilm.hoverImage} 
                 alt={featuredFilm.title} 
@@ -28,7 +27,6 @@ function Hero({featuredFilm}) {
                                 {featuredFilm.title}
                             </h1>
 
-                            {/* description */}
                             <p className="
                                 text-white/80 text-xs xs:text-sm sm:text-base md:text-lg mb-3 xs:mb-4 sm:mb-5 
                                 max-w-[50ch] line-clamp-3 xs:line-clamp-4 sm:line-clamp-none
@@ -37,7 +35,7 @@ function Hero({featuredFilm}) {
                             </p>
                         </div>
 
-                        {/* actions btn - FULL WIDTH */}
+                        {/* actions-btn*/}
                         <div className="flex items-center justify-between w-full">
                             <div className="flex items-center gap-2 xs:gap-3 sm:gap-4 flex-wrap">
                                 <button
@@ -60,7 +58,8 @@ function Hero({featuredFilm}) {
                                     Selengkapnya
                                 </button>
                                 
-                                <span className=" text-white border border-chill-gray-700 px-1.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-bold shrink-0 text-xs sm:text-base">
+                                <span className=" text-white border border-chill-gray-700 w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-chill-gray
+                                                    flex items-center justify-center text-xs sm:text-sm font-bold shrink-0">
                                     {featuredFilm.age}
                                 </span>
                             </div>

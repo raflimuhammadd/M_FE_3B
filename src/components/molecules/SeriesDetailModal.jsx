@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Icon from '../atoms/Icon';
 import Button from '../atoms/Button';
 import Badge from '../atoms/Badge';
+import {useFavorites} from '../../hooks/useFavorites';
 import EpisodeCard from './EpisodeCard';
 
 function SeriesDetailModal({ 
@@ -12,6 +13,10 @@ function SeriesDetailModal({
   handleBackdropClick 
 }) {
   const modalRef = useRef(null);
+
+  const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
+  const favorited = isFavorite(series?.id);
+  const [isMuted, setIsMuted] = useState(true);
 
   // Focus trap and animation
   useEffect(() => {
@@ -47,42 +52,44 @@ function SeriesDetailModal({
   // Action handlers
   const handlePlayClick = () => {
     console.log(`Play ${title}`);
-    // TODO: Navigate to watch page
+    // navigate to watch page - soon
     closeModal();
   };
 
   const handleFavoriteClick = () => {
-    console.log(`Toggle favorite for ${title}`);
-    // TODO: Integrate with favorites context
+    if (favorited) {
+      removeFromFavorites(series.id);
+    } else {
+      addToFavorites(series.id);
+    }
   };
 
   const handleMuteClick = () => {
-    console.log(`Toggle mute`);
-    // TODO: Implement mute functionality
+    setIsMuted(prev => !prev);
+    console.log('muted', isMuted);
   };
 
-  // Render desktop modal vs mobile bottom sheet
+  // Render desktop modal && mobile bottom sheet
   if (isMobile) {
     return (
       <div 
         className="fixed inset-0 z-50 flex items-end"
         onClick={handleBackdropClick}
       >
-        {/* Backdrop */}
         <div className="absolute inset-0 bg-black/60" />
         
-        {/* Bottom sheet */}
+        {/* bottomsheet */}
         <div 
           ref={modalRef}
           className="relative w-full bg-chill-dark rounded-t-2xl overflow-hidden max-h-[85vh] flex flex-col"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Drag handle */}
+          {/* draghandle */}
           <div className="flex justify-center py-3">
             <div className="w-12 h-1.5 bg-white/30 rounded-full" />
           </div>
 
-          {/* Close button */}
+          {/* closedbtn */}
           <button
             onClick={closeModal}
             className="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/70 transition"
@@ -91,16 +98,16 @@ function SeriesDetailModal({
             <Icon name="x" className="h-4 w-4" />
           </button>
 
-          {/* Scrollable content */}
+          {/* scrollablecontent */}
           <div className="flex-1 overflow-y-auto">
-            {/* Hero section */}
+            {/* hero */}
             <div className="relative h-64">
               <img 
                 src={hoverImage || image} 
                 alt={title}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-chill-dark via-chill-dark/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-chill-dark via-chill-dark/50 to-transparent" />
               
               <div className="absolute bottom-4 left-4 right-4">
                 <h1 className="text-2xl font-bold text-white mb-2">{title}</h1>
@@ -116,12 +123,12 @@ function SeriesDetailModal({
               </div>
             </div>
 
-            {/* Action buttons */}
+            {/* actions-btn */}
             <div className="flex items-center justify-between p-4 border-b border-white/10">
               <Button 
                 variant="primary" 
                 size="md"
-                className="flex-1 mr-2"
+                className="button-play flex-1 mr-2"
                 onClick={handlePlayClick}
               >
                 <Icon name="play" className="h-4 w-4 mr-2" />
@@ -131,7 +138,6 @@ function SeriesDetailModal({
                 variant="secondary" 
                 size="icon"
                 onClick={handleFavoriteClick}
-                className="w-12"
               >
                 <Icon name="plus" className="h-5 w-5" />
               </Button>
@@ -139,17 +145,16 @@ function SeriesDetailModal({
                 variant="secondary" 
                 size="icon"
                 onClick={handleMuteClick}
-                className="w-12"
+                aria-label={isMuted ? 'Unmute' : 'Mute'}
               >
-                <Icon name="speaker-x" className="h-5 w-5" />
+                <Icon name={isMuted ? 'speaker-x' : 'volume'} className="h-5 w-5" />
               </Button>
             </div>
 
-            {/* Description */}
             <div className="p-4">
               <p className="text-white/80 text-sm mb-4">{description}</p>
               
-              {/* Metadata */}
+              {/* metadata */}
               <div className="grid grid-cols-1 gap-4 mb-6">
                 <div>
                   <h3 className="text-white/60 text-xs mb-2">Cast</h3>
@@ -170,7 +175,7 @@ function SeriesDetailModal({
               </div>
             </div>
 
-            {/* Episodes section */}
+            {/* episodes */}
             {episodesList.length > 0 && (
               <div className="px-4 pb-8">
                 <h2 className="text-xl font-bold text-white mb-4">Episodes</h2>
@@ -191,23 +196,23 @@ function SeriesDetailModal({
     );
   }
 
-  // Desktop modal
+  // dekstop-modal
   return (
     <div 
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       onClick={handleBackdropClick}
     >
-      {/* Backdrop */}
+      {/* backdrop-blur */}
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
       
-      {/* Modal */}
+      {/* modal */}
       <div 
         ref={modalRef}
         className="relative w-full max-w-4xl bg-chill-dark rounded-xl overflow-hidden shadow-2xl max-h-[85vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
         tabIndex={-1}
       >
-        {/* Close button */}
+        {/* Closed-btn */}
         <button
           onClick={closeModal}
           className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/50 flex items-center justify-center text-white hover:bg-black/70 transition"
@@ -216,73 +221,75 @@ function SeriesDetailModal({
           <Icon name="x" className="h-5 w-5" />
         </button>
 
-        {/* Hero section */}
-        <div className="relative h-72">
+        <div className="hero-section relative h-72">
           <img 
             src={hoverImage || image} 
             alt={title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-chill-dark via-chill-dark/60 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-chill-dark via-chill-dark/60 to-transparent" />
           
           <div className="absolute bottom-6 left-6 right-6">
-            <div className="flex items-end justify-between">
-              <div>
-                <h1 className="text-3xl font-bold text-white mb-2">{title}</h1>
-                <div className="flex items-center gap-4 text-white/80 text-base">
-                  <Badge variant="rating">
-                    <Icon name="star" className="h-4 w-4" />
-                    <span>{rating}</span>
-                  </Badge>
-                  <span>{year}</span>
-                  <span>{age}</span>
-                  <span>{episodes}</span>
-                </div>
-              </div>
-              
-              {/* Action buttons */}
+            <h1 className="text-3xl font-bold text-white">{title}</h1>
+
+            <div className="mt-6 flex items-center justify-between">
+              {/* leftgrp-btn */}
               <div className="flex items-center gap-3">
                 <Button 
                   variant="primary" 
                   size="lg"
-                  className="flex items-center"
                   onClick={handlePlayClick}
                 >
-                  <Icon name="play" className="h-5 w-5 mr-2" />
+                  <Icon name="play"/>
                   Mulai
                 </Button>
                 <Button 
                   variant="secondary" 
                   size="icon"
                   onClick={handleFavoriteClick}
-                  className="w-12 h-12"
+                  aria-label={favorited ? "Remove from MyList" : "Add to MyList"}
                 >
-                  <Icon name="plus" className="h-6 w-6" />
+                  <Icon name={favorited ? "check" : "plus"}/>
                 </Button>
+              </div>
+
+              {/* right-btn */}
+              <div>
                 <Button 
                   variant="secondary" 
                   size="icon"
                   onClick={handleMuteClick}
-                  className="w-12 h-12"
+                  aria-label={isMuted ? "Unmute" : "Mute"}
                 >
-                  <Icon name="speaker-x" className="h-6 w-6" />
+                  <Icon name={isMuted ? "speaker-x" : "volume"}/>
                 </Button>
               </div>
             </div>
           </div>
+
+
         </div>
 
-        {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-6 scrollbar-hide">
+
+          <div className="mb-6 flex items-center gap-3 text-sm text-white/70">
+            <Icon name="star" className="h-3 w-3 mr-0" />
+            <span>{rating}</span>
+            <span className="h-1 w-1 rounded-full bg-white/30" />
+            <span>{year}</span>
+            <span className="h-1 w-1 rounded-full bg-white/30" />
+            <span>{episodes}</span>
+            <span className="h-1 w-1 rounded-full bg-white/30" />
+            <span>{age}</span>
+          </div>
+
           <div className="grid grid-cols-2 gap-8">
-            {/* Left column: Description */}
             <div>
-              <h2 className="text-white font-bold text-lg mb-3">Sinopsis</h2>
+              <h2 className="left-column-content text-white font-bold text-lg mb-3">Sinopsis</h2>
               <p className="text-white/80 text-base mb-6">{description}</p>
             </div>
 
-            {/* Right column: Metadata */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="right-column-content space-y-4">
               <div>
                 <h3 className="text-white/60 text-sm mb-2">Cast</h3>
                 <p className="text-white text-base">
@@ -294,10 +301,6 @@ function SeriesDetailModal({
                 <p className="text-white text-base">{creator}</p>
               </div>
               <div>
-                <h3 className="text-white/60 text-sm mb-2">Year</h3>
-                <p className="text-white text-base">{year}</p>
-              </div>
-              <div>
                 <h3 className="text-white/60 text-sm mb-2">Genres</h3>
                 <p className="text-white text-base">
                   {Array.isArray(genres) ? genres.join(', ') : ''}
@@ -306,11 +309,10 @@ function SeriesDetailModal({
             </div>
           </div>
 
-          {/* Episodes section */}
           {episodesList.length > 0 && (
-            <div className="mt-8">
+            <div className="mt-8 overflow-hidden">
               <h2 className="text-2xl font-bold text-white mb-6">Episodes</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="space-y-3">
                 {episodesList.map((episode) => (
                   <EpisodeCard 
                     key={episode.id}

@@ -13,16 +13,17 @@ function Button({ variant = 'primary', size = 'md', className = '', children, ..
     };
 
     const base = 'rounded-full transition flex items-center justify-center gap-2';
-    const iconBase = 'flex items-center justify-center rounded-full transition';
+    const iconBase = 'flex items-center justify-center rounded-full transition box-border';
     const iconSizes = {
         sm: 'w-8 h-8',
         md: 'w-10 h-10',
         lg: 'w-12 h-12',
+        icon: 'w-10 h-10',
     };
 
-    const isIcon = variant === 'icon';
+    const isIcon = size === 'icon';
     const classes = isIcon
-        ? `${iconBase} ${iconSizes[size] || iconSizes.md} ${variants[variant]} ${className}`
+        ? `${iconBase} ${iconSizes[size] || iconSizes.md} ${variants.icon} ${className}`
         : `${base} ${sizes[size] || sizes.md} ${variants[variant]} ${className}`;
 
     return (

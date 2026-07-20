@@ -2,11 +2,11 @@
 export default {
   theme: {
     screens: {
-      'xs': '375px',   // 🆕 Small phones (iPhone SE, etc)
-      'sm': '640px',   // Tablets
-      'md': '768px',   // Desktop
-      'lg': '1024px',  // Large desktop
-      'xl': '1280px',  // Extra large
+      'xs': '375px',   // small phones (iPhone SE, etc)
+      'sm': '640px',   // tablets
+      'md': '768px',   // desktop
+      'lg': '1024px',  // large desktop
+      'xl': '1280px',  // extra large
       '2xl': '1536px', // 2K screens
     },
     extend: {
@@ -26,4 +26,17 @@ export default {
       },
     },
   },
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      })
+    }
+  ]
 }

@@ -13,6 +13,10 @@
     width: min(100% - clamp(1rem, 4vw, 3rem) * 2, 1400px);
     margin-inline: auto;
   }
+  .perfect-circle {
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
 }
 
 

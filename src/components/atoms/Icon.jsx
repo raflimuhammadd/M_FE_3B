@@ -1,7 +1,12 @@
 const icons = {
   star: <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />,
   play: <path d="M8 5v14l11-7z" />,
-  plus: <polyline points="20 6 9 17 4 12" />,
+  plus: (
+    <>
+    <line x1="12" y1="5" x2="12" y2="19" />
+    <line x1="5" y1="12" x2="19" y2="12" />
+    </>
+  ),
   info: (
     <>
       <circle cx="12" cy="12" r="10" />
@@ -18,10 +23,16 @@ const icons = {
   check: <polyline points="20 6 9 17 4 12" />,
   x: <><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></>,
   'speaker-x': (
-    <>
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-      <line x1="23" y1="9" x2="17" y2="15" />
-      <line x1="17" y1="9" x2="23" y2="15" />
+     <>
+      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+      <line x1="22" y1="9" x2="16" y2="15" />
+      <line x1="16" y1="9" x2="22" y2="15" />
+    </>
+  ),
+  volume: (
+     <>
+      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
     </>
   ),
 };
@@ -36,7 +47,7 @@ function Icon({ name, className = "h-5 w-5", ...props }) {
       viewBox="0 0 24 24"
       fill={['star', 'play'].includes(name) ? 'currentColor' : 'none'}
       stroke={['star', 'play'].includes(name) ? 'none' : 'currentColor'}
-      strokeWidth="2"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
