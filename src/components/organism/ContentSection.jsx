@@ -3,14 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import MovieCard from '../molecules/MovieCard';
 import ScrollButtons from '../molecules/ScrollButtons';
 
-function ContentSection({ title, films, variant = 'portrait', onSeriesSelect }) {
+function ContentSection({ title, films, items, variant = 'portrait', onSelect }) {
   const navigate = useNavigate();
   const scrollRef = useRef(null);
 
   // Deterministic progress generation using film ID as seed
+  const data = films || items || [];
+  
   const filmsWithProgress = useMemo(() => {
-    if (!films) return [];
-    return films.map((film) => {
+    if (!data || data.length === 0) return [];
+
+    return data.map((film) => {
       if (variant === 'landscape') {
         // Deterministic seed from film ID
         const seed = film.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
@@ -19,9 +22,9 @@ function ContentSection({ title, films, variant = 'portrait', onSeriesSelect }) 
       }
       return film;
     });
-  }, [films, variant]);
+  }, [data, variant]);
 
-  if (!films || films.length === 0) return null;
+  if (!data || data.length === 0) return null;
 
   const handleViewAll = () => {
     const routeMap = {
@@ -62,11 +65,11 @@ function ContentSection({ title, films, variant = 'portrait', onSeriesSelect }) 
             {filmsWithProgress.map((film) => (
               <MovieCard
                 key={film.id}
-                film={film}
+                item={film}
                 variant={variant}
                 progress={film.progress}
                 showNewEpisode={film.hasNewEpisode}
-                onSelect={onSeriesSelect}
+                onSelect={onSelect}
               />
             ))}
           </div>

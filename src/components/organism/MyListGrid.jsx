@@ -29,7 +29,7 @@ function MyListGrid({ items, emptyMessage }) {
         {items.map((item) => (
           <MovieCard
             key={item.id}
-            film={item}
+            item={item}
             variant="portrait"
             showNewEpisode={item.hasNewEpisode}
           />

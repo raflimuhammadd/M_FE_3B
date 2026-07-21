@@ -1,8 +1,8 @@
 import { useState, useCallback, useEffect } from 'react';
 
-export function useSeriesModal() {
+export function useDetailModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedSeries, setSelectedSeries] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
   // Check mobile on mount and resize
@@ -14,7 +14,7 @@ export function useSeriesModal() {
   }, []);
 
   const openModal = useCallback((series) => {
-    setSelectedSeries(series);
+    setSelectedItem(series);
     setIsOpen(true);
     // Prevent body scroll when modal open
     document.body.style.overflow = 'hidden';
@@ -22,7 +22,7 @@ export function useSeriesModal() {
 
   const closeModal = useCallback(() => {
     setIsOpen(false);
-    setSelectedSeries(null);
+    setSelectedItem(null);
     // Restore body scroll
     document.body.style.overflow = 'auto';
   }, []);
@@ -85,7 +85,7 @@ export function useSeriesModal() {
 
   return {
     isOpen,
-    selectedSeries,
+    selectedItem,
     isMobile,
     openModal,
     closeModal,

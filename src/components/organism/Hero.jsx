@@ -1,22 +1,53 @@
 import {useNavigate} from 'react-router-dom';
+import {Button, Icon} from '../atoms';
+import {useState} from 'react';
 
 function Hero({featuredFilm}) {
     const navigate = useNavigate();
+    const [isMuted, setIsMuted] = useState(true);
 
     if (!featuredFilm) {
         return null;
     }
 
+    const handleMuteClick = () => {
+        setIsMuted(prev => !prev);
+        console.log('muted', isMuted);
+    }
+    
     return (
         <section className="
             relative min-h-[50vh] xs:min-h-[55vh] 
             sm:min-h-[65vh] md:min-h-[75vh] 
             lg:min-h-[85vh] overflow-hidden">
-            <img 
-                src={featuredFilm.hoverImage} 
-                alt={featuredFilm.title} 
-                className="absolute inset-0 w-full h-full object-cover"
-            />
+            
+            {featuredFilm.youtubeId ? (
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <iframe 
+                        src={`https://www.youtube-nocookie.com/embed/${featuredFilm.youtubeId}?
+                        auplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${featuredFilm.youtubeId}
+                        &controls=0&showinfo=0&rel=0&playsinline=1`}
+                        className="absolute"
+                        style={{
+                            width: '177.78vh',
+                            height: '56.25vw',
+                            minWidth: '100%',
+                            minHeight: '100%',
+                            top: '50%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                        }}
+                        allow="autoplay; encrypted-media"
+                        title={featuredFilm.title}
+                    />
+                </div>
+            ) : (
+                <img 
+                    src={featuredFilm.hoverImage}
+                    alt={featuredFilm.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+            )}
 
             {/* overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-chill-dark via-black/75 to-black/20">
@@ -64,17 +95,14 @@ function Hero({featuredFilm}) {
                                 </span>
                             </div>
 
-                            <button
-                                className="flex items-center justify-center w-9 sm:w-12 h-9 sm:h-12
-                                rounded-full bg-white/20 hover:bg-white/30 transition shrink-0"
-                                aria-label="Mute/Unmute"
+                            <Button 
+                                variant="secondary" 
+                                size="icon"
+                                onClick={handleMuteClick}
+                                aria-label={isMuted ? 'Unmute' : 'Mute'}
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="sm:w-5 sm:h-5">
-                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-                                    <line x1="23" y1="9" x2="17" y2="15"/>
-                                    <line x1="17" y1="9" x2="23" y2="15"/>
-                                </svg>
-                            </button>
+                                <Icon name={isMuted ? 'speaker-x' : 'volume'} className="h-5 w-5" />
+                            </Button>
                         </div>
                     </div>
 

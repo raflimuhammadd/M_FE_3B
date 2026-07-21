@@ -60,7 +60,11 @@ export const filmData = {
         duration: '2j 2m',
         genres: ['Action', 'Adventure', 'Sci-Fi'],
         image: '/assets/images/guardian.png',
-        hoverImage: '/assets/images/guardian-lands.png'
+        hoverImage: '/assets/images/guardian-lands.png',
+        description: 'Peter Quill alias Star-Lord, seorang pencuri asal bumi, mencuri sebuah bola misterius (Orb) dan menjadi buronan setelah dikejar penjahat super Ronan. Ia terpaksa beraliansi dengan empat orang buangan luar angkasa:',
+        cast: ['Jason Sudeikis', 'Hannah Waddingham', 'Brett Goldstein', 'Juno Temple', 'Brendan Hunt', 'Nick Mohammed'],
+        creator: 'Bill Lawrence, Jason Sudeikis, Brendan Hunt, Joe Kelly',
+        recomendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania']
     },
     'card-duty': {
         id: 'duty-after-school',
@@ -226,7 +230,9 @@ export const filmData = {
         genres: ['Sci-Fi', 'Action', 'Adventure'],
         image: '/assets/images/avatar.png',
         hoverImage: '/assets/images/avatar.png',
-        description: 'Jake Sully dan Neytiri bersama anak-anak mereka yang hidup damai di Pandora. Ancaman datang ketika kolonial manusia RDA kembali. Untuk melindungi keluarga dan sukunya, Jake dan keluarganya melarikan diri dan berlindung pada suku laut Metkayina'
+        description: 'Jake Sully dan Neytiri bersama anak-anak mereka yang hidup damai di Pandora. Ancaman datang ketika kolonial manusia RDA kembali. Untuk melindungi keluarga dan sukunya, Jake dan keluarganya melarikan diri dan berlindung pada suku laut Metkayina',
+        youtubeId: 'U0MOoyI7pIM',
+        recomendations: ['avatar-2', 'doc-strage', 'ant-main']
     },
     'card-avatar-2': {
         id: 'avatar-way-of-water',
@@ -247,7 +253,8 @@ export const filmData = {
         duration: '2j 55m',
         genres: ['Action', 'Crime', 'Drama'],
         image: '/assets/images/batman.png',
-        hoverImage: '/assets/images/batman-lands.png'
+        hoverImage: '/assets/images/batman-lands.png',
+        recomendations: ['batman-2', 'doc-strange', 'ant-main']
     },
     'card-baymax': {
         id: 'baymax',
@@ -390,7 +397,8 @@ export const filmData = {
         genres: ['Thriller', 'Horror', 'Drama'],
         image: '/assets/images/happiness.png',
         hoverImage: '/assets/images/happiness-lands.png',
-        description: 'Mengisahkan perjuangan hidup sepasang sahabat di sebuah apartemen bertingkat yang di-lockdown akibat wabah penyakit misterius yang mengubah manusia menjadi haus darah.'
+        description: 'Mengisahkan perjuangan hidup sepasang sahabat di sebuah apartemen bertingkat yang di-lockdown akibat wabah penyakit misterius yang mengubah manusia menjadi haus darah.',
+        youtubeId: 'gqhUlldiLEo'
     },
     'card-jurassic': {
         id: 'jurassic-world',

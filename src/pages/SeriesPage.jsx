@@ -1,10 +1,10 @@
 import {Navbar, Hero, Footer} from '../components';
 import {ContentSection, SeriesDetailModal} from '../components';
 import filmData from '../data/filmData';
-import {useSeriesModal} from '../hooks';
+import {useDetailModal} from '../hooks';
 
 function SeriesPage() {
-    const { isOpen, selectedSeries, isMobile, openModal, closeModal, handleBackdropClick } = useSeriesModal();
+    const { isOpen, selectedItem, isMobile, openModal, closeModal, handleBackdropClick } = useDetailModal();
     // convert data object to arrray
     const allFilms = Object.values(filmData);
 
@@ -68,42 +68,42 @@ function SeriesPage() {
                     {/* section1: landscape */}
                     <ContentSection 
                         title="Melanjutkan Tontonan Series"
-                        films={continueWatchingSeries}
+                        items={continueWatchingSeries}
                         variant="landscape"
-                        onSeriesSelect={openModal}
+                        onSelect={openModal}
                     />
 
                     {/* section2: portrait */}
                     <ContentSection 
                         title="Series Populer"
-                        films={popularSeries}
+                        items={popularSeries}
                         variant="portrait"
-                        onSeriesSelect={openModal}
+                        onSelect={openModal}
                     />
 
                     {/* section3: portrait */}
                     <ContentSection 
                         title="Top Rating Series Hari ini"
-                        films={topRatingSeries}
+                        items={topRatingSeries}
                         variant="portrait"
-                        onSeriesSelect={openModal}
+                        onSelect={openModal}
                     />
 
                     {/* section4: portrait */}
                     <ContentSection 
                         title="Series Trending"
-                        films={trendingSeries}
+                        items={trendingSeries}
                         variant="portrait"
-                        onSeriesSelect={openModal}
+                        onSelect={openModal}
                     />
 
                     {/* section5: genre */}
                     {newReleaseSeries.length > 0 && (
                         <ContentSection 
                             title="Rilis Baru"
-                            films={newReleaseSeries}
+                            items={newReleaseSeries}
                             variant="portrait"
-                            onSeriesSelect={openModal}
+                            onSelect={openModal}
                         />
                     )}
                 </div>
@@ -114,7 +114,7 @@ function SeriesPage() {
             {/* Series Detail Modal */}
             <SeriesDetailModal
                 isOpen={isOpen}
-                series={selectedSeries}
+                series={selectedItem}
                 isMobile={isMobile}
                 closeModal={closeModal}
                 handleBackdropClick={handleBackdropClick}
