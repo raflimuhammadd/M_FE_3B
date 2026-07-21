@@ -4,7 +4,7 @@ import HoverOverlay from './HoverOverlay';
 import HoverOverlayLandscape from './HoverOverlayLandscape';
 // import {isSeries, isFilm} from '../../utils/contentTypes';
 
-function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = false, onSelect }) {
+function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = false, onSelect, hoverVariant }) {
   if (!item) return null;
   const displayProgress = progress;
 
@@ -41,7 +41,7 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
                 <span>{item.rating}</span>
               </Badge>
             )}
-            <HoverOverlay film={item} />
+            <HoverOverlay film={item} variant={hoverVariant || 'default'} onSelect={onSelect} />
         </div>
         <h3 className="movie-card-title text-white text-xs xs:text-sm sm:text-base font-medium truncate text-center">
           {item.title}

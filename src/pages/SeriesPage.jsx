@@ -53,9 +53,6 @@ function SeriesPage() {
             hasNewEpisode: index % 3 === 0, //ambil new episode
             topRank: index < 3 ? index + 1 : null //ambil top rank
         }))
-    // const newReleaseSeries = series
-    //     .filter(s => s.hasNewEpisode || s.isPremium)
-    //     .slice(0, 6);
 
     return (
         <div className="min-h-screen bg-chill-dark">

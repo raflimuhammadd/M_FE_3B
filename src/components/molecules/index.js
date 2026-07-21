@@ -9,4 +9,4 @@ export { default as HoverOverlayLandscape } from './HoverOverlayLandscape';
 export { default as SeriesDetailModal } from './SeriesDetailModal';
 export { default as EpisodeCard } from './EpisodeCard';
 export { default as FilmDetailModal } from './FilmDetailModal';
-export { default as RecomendationCard } from './RecomendationCard';
+export { default as RecommendationCard } from './RecommendationCard';

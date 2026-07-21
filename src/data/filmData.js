@@ -61,10 +61,12 @@ export const filmData = {
         genres: ['Action', 'Adventure', 'Sci-Fi'],
         image: '/assets/images/guardian.png',
         hoverImage: '/assets/images/guardian-lands.png',
-        description: 'Peter Quill alias Star-Lord, seorang pencuri asal bumi, mencuri sebuah bola misterius (Orb) dan menjadi buronan setelah dikejar penjahat super Ronan. Ia terpaksa beraliansi dengan empat orang buangan luar angkasa:',
-        cast: ['Jason Sudeikis', 'Hannah Waddingham', 'Brett Goldstein', 'Juno Temple', 'Brendan Hunt', 'Nick Mohammed'],
-        creator: 'Bill Lawrence, Jason Sudeikis, Brendan Hunt, Joe Kelly',
-        recomendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania']
+        year: 2014,
+        description: 'Peter Quill alias Star-Lord, seorang pencuri asal bumi, mencuri sebuah bola misterius dan menjadi buronan setelah dikejar penjahat super Ronan. Ia terpaksa beraliansi dengan empat orang buangan luar angkasa untuk menyelamatkan galaksi.',
+        cast: ['Chris Pratt', 'Zoe Saldana', 'Dave Bautista', 'Vin Diesel', 'Bradley Cooper'],
+        creator: 'James Gunn',
+        youtubeId: 'd96cjJhvlMA',
+        recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania']
     },
     'card-duty': {
         id: 'duty-after-school',
@@ -77,6 +79,7 @@ export const filmData = {
         image: '/assets/images/duty-after-potrait.png',
         hoverImage: '/assets/images/duty-after.png',
         topRank: 4,
+        youtubeId: 'kZ5i8NyA4P4',
         description: 'Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.',
         cast: ['Shin Hyun-soo', 'Lee Soon-won', 'Im Se-mi', 'Kim Ki-hae', 'Kwon Eun-bin', 'Moon Sang-min'],
         creator: 'Lee Nam-kyu',
@@ -231,8 +234,11 @@ export const filmData = {
         image: '/assets/images/avatar.png',
         hoverImage: '/assets/images/avatar.png',
         description: 'Jake Sully dan Neytiri bersama anak-anak mereka yang hidup damai di Pandora. Ancaman datang ketika kolonial manusia RDA kembali. Untuk melindungi keluarga dan sukunya, Jake dan keluarganya melarikan diri dan berlindung pada suku laut Metkayina',
-        youtubeId: 'U0MOoyI7pIM',
-        recomendations: ['avatar-2', 'doc-strage', 'ant-main']
+        year: 2009,
+        cast: ['Sam Worthington', 'Zoe Saldana', 'Sigourney Weaver', 'Stephen Lang', 'Michelle Rodriguez'],
+        creator: 'James Cameron',
+        youtubeId: 'Ml27ZX3f8GQ',
+        recommendations: ['avatar-way-of-water', 'guardian-galaxy', 'jurassic-world']
     },
     'card-avatar-2': {
         id: 'avatar-way-of-water',
@@ -243,6 +249,11 @@ export const filmData = {
         genres: ['Sci-Fi', 'Action', 'Adventure'],
         image: '/assets/images/avatar-2.png',
         hoverImage: '/assets/images/avatar-lands.png',
+        year: 2022,
+        description: 'Jake Sully dan Neytiri bersama anak-anak mereka hidup damai di Pandora. Ancaman datang ketika kolonial manusia RDA kembali. Untuk melindungi keluarga dan sukunya, mereka melarikan diri dan berlindung pada suku laut Metkayina.',
+        cast: ['Sam Worthington', 'Zoe Saldana', 'Sigourney Weaver', 'Kate Winslet'],
+        creator: 'James Cameron',
+        youtubeId: 'd9MyW72ELq0',
         isPremium: true
     },
     'card-batman': {
@@ -254,7 +265,12 @@ export const filmData = {
         genres: ['Action', 'Crime', 'Drama'],
         image: '/assets/images/batman.png',
         hoverImage: '/assets/images/batman-lands.png',
-        recomendations: ['batman-2', 'doc-strange', 'ant-main']
+        year: 2022,
+        description: 'Ketika seorang pembunuh berantai yang sadis mulai membunuh tokoh-tokoh penting di Gotham, Batman harus menyelidiki pesan-pesan misterius yang ditinggalkan oleh si pembunuh sambil mengungkap jaringan korupsi yang lebih dalam di kota itu.',
+        cast: ['Robert Pattinson', 'Zoë Kravitz', 'Paul Dano', 'Colin Farrell', 'Jeffrey Wright'],
+        creator: 'Matt Reeves',
+        youtubeId: 'mqqft2x_Aa4',
+        recommendations: ['black-adam', 'shazam-fury', 'doctor-strange-multiverse']
     },
     'card-baymax': {
         id: 'baymax',
@@ -316,6 +332,11 @@ export const filmData = {
         genres: ['Animation', 'Action', 'Adventure'],
         image: '/assets/images/big-6.png',
         hoverImage: '/assets/images/big-6-lands.png',
+        year: 2014,
+        description: 'Hiro Hamada, seorang jenius robotika muda, membentuk tim pahlawan super bersama robot kesehatan bernama Baymax dan teman-temannya untuk menghadapi penjahat misterius yang mengancam kota San Fransokyo.',
+        cast: ['Ryan Potter', 'Scott Adsit', 'Jamie Chung', 'Daman Wayans Jr.', 'T.J. Miller'],
+        creator: 'Don Hall, Chris Williams',
+        youtubeId: '8IdMPpKMdcc',
         isPremium: true
     },
     'card-black-adam': {
@@ -326,7 +347,11 @@ export const filmData = {
         duration: '2j 4m',
         genres: ['Action', 'Superhero', 'Fantasy'],
         image: '/assets/images/black-adam.png',
-        hoverImage: '/assets/images/black-adam-lands.png'
+        hoverImage: '/assets/images/black-adam-lands.png',
+        year: 2022,
+        description: 'Black Adam, seorang anti-pahlawan legendaris yang dibangkitkan dari masa lalu, diberikan kekuatan oleh para dewa. Setelah hampir 5.000 tahun dikurung, ia dibebaskan dan membawa keadilan dengan caranya sendiri yang brutal di dunia modern.',
+        cast: ['Dwayne Johnson', 'Aldis Hodge', 'Noah Centineo', 'Sarah Shahi', 'Pierce Brosnan'],
+        creator: 'Jaume Collet-Serra'
     },
     'card-blue-lock': {
         id: 'blue-lock',
@@ -336,7 +361,48 @@ export const filmData = {
         episodes: '24 Episode',
         genres: ['Sports', 'Anime', 'Drama'],
         image: '/assets/images/blue-lock.png',
-        hoverImage: '/assets/images/blue-lock-lands.png'
+        hoverImage: '/assets/images/blue-lock-lands.png',
+        year: 2022,
+        description: 'Sebuah program pelatihan sepak bola ekstrem yang mempertemukan 300 pemain muda terbaik Jepang untuk bersaing memperebutkan satu posisi striker terbaik di dunia. Yoichi Isagi harus beradaptasi dengan kompetisi brutal ini untuk mewujudkan mimpinya menjadi pemain sepak bola terbaik.',
+        cast: ['Kazuki Ura', 'Yuma Uchida', 'Miyu Irino', 'Tasuku Kaito', 'Soma Saito'],
+        creator: 'Muneyuki Kaneshiro',
+        episodesList: [
+            {
+                id: 1,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Dream',
+                description: 'Yoichi Isagi bergabung dengan proyek Blue Lock dan langsung merasakan betapa kejamnya kompetisi striker terbaik Jepang.',
+                duration: '24m'
+            },
+            {
+                id: 2,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Monster',
+                description: 'Persaingan di Blue Lock semakin memanas saat para pemain harus mencetak gol untuk bertahan.',
+                duration: '24m'
+            },
+            {
+                id: 3,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Devour',
+                description: 'Isagi belajar dari pemain terbaik dan mulai mengembangkan gaya bermainnya sendiri.',
+                duration: '24m'
+            },
+            {
+                id: 4,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Luck',
+                description: 'Babak kedua dimulai dengan aturan baru yang lebih kejam. Hanya yang terkuat yang akan bertahan.',
+                duration: '24m'
+            },
+            {
+                id: 5,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Flow',
+                description: 'Para pemain memasuki kondisi flow dan menunjukkan kemampuan terbaik mereka di lapangan.',
+                duration: '24m'
+            }
+        ]
     },
     'card-devil-judge': {
         id: 'devil-judge',
@@ -346,7 +412,48 @@ export const filmData = {
         episodes: '16 Episode',
         genres: ['Drama', 'Thriller', 'Crime'],
         image: '/assets/images/devil-at-me.png',
-        hoverImage: '/assets/images/devil-lands.png'
+        hoverImage: '/assets/images/devil-lands.png',
+        year: 2021,
+        description: 'Di masa depan dystopian Korea, masyarakat mendambakan keadilan dan terobsesi dengan pertunjukan realitas. Hakim misterius Kang Yo-han memimpin persidangan langsung yang disiarkan di mana rakyat menjadi juri. Seorang hakim idealis bergabung dan mulai mempertanyakan motif di balik pengadilan tersebut.',
+        cast: ['Ji Sung', 'Kim Min-jung', 'Park Jin-young', 'Park Gyu-young'],
+        creator: 'Moon Yoo-seok',
+        episodesList: [
+            {
+                id: 1,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Trial Begins',
+                description: 'Kang Yo-han memulai persidangan pertamanya yang menghebohkan publik Korea.',
+                duration: '70m'
+            },
+            {
+                id: 2,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Idealist',
+                description: 'Kim Ga-on bergabung dengan pengadilan nasional dan mulai meragukan metode Kang Yo-han.',
+                duration: '68m'
+            },
+            {
+                id: 3,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Puppet',
+                description: 'Konspirasi di balik layar mulai terungkap saat kekuatan politik mencoba mengendalikan pengadilan.',
+                duration: '72m'
+            },
+            {
+                id: 4,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Truth',
+                description: 'Masa lalu Kang Yo-han mulai terungkap dan mengungkap motif sebenarnya.',
+                duration: '66m'
+            },
+            {
+                id: 5,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Verdict',
+                description: 'Persidangan mencapai klimaks saat semua pihak harus menghadapi kebenaran yang paling pahit.',
+                duration: '75m'
+            }
+        ]
     },
     'card-dilan': {
         id: 'dilan-1990',
@@ -356,7 +463,11 @@ export const filmData = {
         duration: '1j 50m',
         genres: ['Romance', 'Drama'],
         image: '/assets/images/dilan.png',
-        hoverImage: '/assets/images/dilan-lands.png'
+        hoverImage: '/assets/images/dilan-lands.png',
+        year: 2018,
+        description: 'Kisah cinta remaja antara Milea, seorang siswi pindahan dari Jakarta, dan Dilan, seorang siswa populer di sekolah mereka di Bandung tahun 1990. Dilan dengan segala keunikan dan keberaniannya berusaha memenangkan hati Milea.',
+        cast: ['Iqbaal Ramadhan', 'Vanesha Prescilla', 'Bucek Depp', 'Happy Salma'],
+        creator: 'Fajar Bustomi'
     },
     'card-doc-strange': {
         id: 'doctor-strange-multiverse',
@@ -366,7 +477,11 @@ export const filmData = {
         duration: '2j 6m',
         genres: ['Action', 'Fantasy', 'Horror'],
         image: '/assets/images/doc-strange.png',
-        hoverImage: '/assets/images/doc-strange-lands.png'
+        hoverImage: '/assets/images/doc-strange-lands.png',
+        year: 2022,
+        description: 'Dr. Stephen Strange membuka pintu ke multiverse setelah secara tidak sengaja menggunakan mantra terlarang. Ia harus bekerja sama dengan sekutu lama dan baru untuk melintasi realitas alternatif yang berbahaya dan menghadapi musuh misterius.',
+        cast: ['Benedict Cumberbatch', 'Elizabeth Olsen', 'Chiwetel Ejiofor', 'Benedict Wong', 'Xochitl Gomez'],
+        creator: 'Sam Raimi'
     },
     'card-dont-look': {
         id: 'dont-look-up',
@@ -376,7 +491,11 @@ export const filmData = {
         duration: '2j 18m',
         genres: ['Comedy', 'Drama', 'Sci-Fi'],
         image: '/assets/images/dont-look.png',
-        hoverImage: '/assets/images/dont-look-lands.png'
+        hoverImage: '/assets/images/dont-look-lands.png',
+        year: 2021,
+        description: 'Dua astronom menemukan sebuah komet raksasa yang akan menghancurkan Bumi dalam waktu dekat. Mereka berusaha memperingatkan dunia melalui media dan pemerintah, tetapi tidak ada yang mau mendengarkan. Satir gelap tentang respons masyarakat terhadap krisis.',
+        cast: ['Leonardo DiCaprio', 'Jennifer Lawrence', 'Meryl Streep', 'Cate Blanchett', 'Timothée Chalamet'],
+        creator: 'Adam McKay'
     },
     'card-fast-x': {
         id: 'fast-x',
@@ -386,7 +505,11 @@ export const filmData = {
         duration: '2j 21m',
         genres: ['Action', 'Adventure', 'Thriller'],
         image: '/assets/images/fast-x.png',
-        hoverImage: '/assets/images/fast-x-lands.png'
+        hoverImage: '/assets/images/fast-x-lands.png',
+        year: 2023,
+        description: 'Dominic Toretto dan keluarganya menjadi target balas dendam manusia paling berbahaya yang pernah mereka hadapi: Dante Reyes, yang ingin menghancurkan segalanya yang dicintai Dom. Kali ini, Dom harus melindungi keluarganya dengan cara apa pun.',
+        cast: ['Vin Diesel', 'Jason Momoa', 'Michelle Rodriguez', 'Tyrese Gibson', 'Ludacris'],
+        creator: 'Louis Leterrier'
     },
     'card-happiness': {
         id: 'happiness',
@@ -398,6 +521,46 @@ export const filmData = {
         image: '/assets/images/happiness.png',
         hoverImage: '/assets/images/happiness-lands.png',
         description: 'Mengisahkan perjuangan hidup sepasang sahabat di sebuah apartemen bertingkat yang di-lockdown akibat wabah penyakit misterius yang mengubah manusia menjadi haus darah.',
+        year: 2021,
+        cast: ['Han Hyo-joo', 'Park Hyung-sik', 'Jo Woo-jin'],
+        creator: 'Ahn Gil-ho',
+        episodesList: [
+            {
+                id: 1,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Outbreak',
+                description: 'Wabah misterius menyebar di apartemen mewah dan para penghuni mulai menunjukkan gejala aneh.',
+                duration: '65m'
+            },
+            {
+                id: 2,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Lockdown',
+                description: 'Apartemen di-lockdown dan Sae-bom serta Yi-hyun harus bertahan hidup di tengah kekacauan.',
+                duration: '68m'
+            },
+            {
+                id: 3,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Infected',
+                description: 'Semakin banyak penghuni apartemen yang terinfeksi dan situasi semakin tidak terkendali.',
+                duration: '70m'
+            },
+            {
+                id: 4,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Survival',
+                description: 'Persediaan makanan mulai menipis dan kelompok yang selamat harus membuat keputusan sulit.',
+                duration: '66m'
+            },
+            {
+                id: 5,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Truth',
+                description: 'Sae-bom dan Yi-hyun menemukan kebenaran di balik wabah yang menghancurkan apartemen mereka.',
+                duration: '72m'
+            }
+        ],
         youtubeId: 'gqhUlldiLEo'
     },
     'card-jurassic': {
@@ -409,7 +572,11 @@ export const filmData = {
         genres: ['Action', 'Adventure', 'Sci-Fi'],
         image: '/assets/images/jurrasic-world.png',
         hoverImage: '/assets/images/jurrasic-lands.png',
-        topRank:2
+        year: 2015,
+        description: 'Taman hiburan Jurassic World di pulau Isla Nublar beroperasi penuh dengan dinosaurus hasil rekayasa genetik. Namun, ketika dinosaurus hibrida baru yang cerdas melarikan diri, liburan keluarga berubah menjadi perjuangan untuk bertahan hidup.',
+        cast: ['Chris Pratt', 'Bryce Dallas Howard', 'Vincent D\'Onofrio', 'Omar Sy', 'BD Wong'],
+        creator: 'Colin Trevorrow',
+        topRank: 2
     },
     'card-mermaid': {
         id: 'little-mermaid',
@@ -419,8 +586,11 @@ export const filmData = {
         duration: '2j 15m',
         genres: ['Fantasy', 'Musical', 'Adventure'],
         image: '/assets/images/lit-mermaid.png',
-        hoverImage: '/assets/images/little-mermaid-lands.png'
-
+        hoverImage: '/assets/images/little-mermaid-lands.png',
+        year: 2023,
+        description: 'Ariel, seorang putri duyung muda yang penasaran dengan dunia manusia, membuat kesepakatan dengan penyihir laut Ursula untuk menjadi manusia. Ia harus memenangkan cinta Pangeran Eric dalam tiga hari atau jiwanya akan menjadi milik Ursula.',
+        cast: ['Halle Bailey', 'Jonah Hauer-King', 'Daveed Diggs', 'Melissa McCarthy', 'Javier Bardem'],
+        creator: 'Rob Marshall'
     },
     'card-megan': {
         id: 'megan',
@@ -431,6 +601,10 @@ export const filmData = {
         genres: ['Horror', 'Sci-Fi', 'Thriller'],
         image: '/assets/images/megan.png',
         hoverImage: '/assets/images/megan-lands.png',
+        year: 2022,
+        description: 'Seorang insinyur robotika menjadi wali bagi keponakannya yang yatim piatu. Ia menciptakan sebuah boneka AI yang disebut M3GAN untuk menemani dan melindungi gadis itu. Namun M3GAN menjadi terlalu protektif dengan cara yang mengerikan.',
+        cast: ['Allison Williams', 'Violet McGraw', 'Amie Donald', 'Jenna Davis', 'Ronny Chieng'],
+        creator: 'Gerard Johnstone',
         topRank: 5
     },
     'card-miles': {
@@ -441,7 +615,11 @@ export const filmData = {
         duration: '2j 20m',
         genres: ['Animation', 'Action', 'Adventure'],
         image: '/assets/images/miles-morales.png',
-        hoverImage: '/assets/images/miles-lands.png'
+        hoverImage: '/assets/images/miles-lands.png',
+        year: 2023,
+        description: 'Miles Morales berpetualang melintasi multiverse untuk bergabung dengan Spider-People dari berbagai dimensi. Ia harus menghadapi ancaman baru dan menentukan arti menjadi seorang pahlawan dalam petualangan epik ini.',
+        cast: ['Shameik Moore', 'Hailee Steinfeld', 'Oscar Isaac', 'Jake Johnson', 'Issa Rae'],
+        creator: 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson'
     },
     'card-missing': {
         id: 'missing',
@@ -451,7 +629,11 @@ export const filmData = {
         duration: '1j 51m',
         genres: ['Thriller', 'Mystery', 'Drama'],
         image: '/assets/images/missing.png',
-        hoverImage: '/assets/images/missing-lands.png'
+        hoverImage: '/assets/images/missing-lands.png',
+        year: 2023,
+        description: 'Seorang remaja perempuan menggunakan keterampilan internetnya untuk menyelidiki hilangnya ibunya secara misterius saat liburan di Kolombia. Tanpa bantuan orang dewasa, ia harus meretas sistem dan melintasi batas untuk mengungkap kebenaran.',
+        cast: ['Storm Reid', 'Nia Long', 'Ken Leung', 'Amy Landecker', 'Daniel Henney'],
+        creator: 'Will Merrick, Nick Johnson'
     },
     'card-my-hero': {
         id: 'my-hero-academia',
@@ -461,7 +643,48 @@ export const filmData = {
         episodes: '24 Episode',
         genres: ['Action', 'Anime', 'Superhero'],
         image: '/assets/images/my-hero-aca.png',
-        hoverImage: '/assets/images/my-hero-lands.png'
+        hoverImage: '/assets/images/my-hero-lands.png',
+        year: 2016,
+        description: 'Di dunia di mana hampir setiap orang memiliki kekuatan super yang disebut Quirk, Izuku Midoriya adalah salah satu dari sedikit manusia tanpa kekuatan. Namun ia bercita-cita menjadi pahlawan. Takdirnya berubah saat bertemu pahlawan terhebat All Might yang mewariskan Quirk padanya. Izuku bergabung dengan SMA UA untuk menjadi pahlawan profesional.',
+        cast: ['Daiki Yamashita', 'Nobuhiko Okamoto', 'Kenta Miyake', 'Ayane Sakura', 'Kaito Ishikawa'],
+        creator: 'Kohei Horikoshi',
+        episodesList: [
+            {
+                id: 1,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Izuku Midoriya: Origin',
+                description: 'Izuku Midoriya, seorang anak tanpa Quirk, bertemu dengan pahlawan nomor satu All Might.',
+                duration: '24m'
+            },
+            {
+                id: 2,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'What It Takes to Be a Hero',
+                description: 'All Might memberikan izuku Quirk One for All dan mempersiapkannya untuk ujian masuk SMA UA.',
+                duration: '24m'
+            },
+            {
+                id: 3,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Roaring Muscles',
+                description: 'Ujian masuk SMA UA dimulai dan Izuku harus menunjukkan kemampuan barunya.',
+                duration: '24m'
+            },
+            {
+                id: 4,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'Start Line',
+                description: 'Hari pertama Izuku di SMA UA dimulai dengan teman-teman dan rival baru.',
+                duration: '24m'
+            },
+            {
+                id: 5,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'What I Can Do Now',
+                description: 'Kelas 1-A menjalani pelatihan pertama mereka dengan guru mereka, Shota Aizawa.',
+                duration: '24m'
+            }
+        ]
     },
     'card-my-perfect': {
         id: 'my-perfect-stranger',
@@ -472,7 +695,48 @@ export const filmData = {
         genres: ['Romance', 'Mystery', 'Drama'],
         image: '/assets/images/my-perfect.png',
         hoverImage: '/assets/images/my-perfect-lands.png',
-        topRank:5
+        topRank: 5,
+        year: 2023,
+        description: 'Yoon Hae-joon, seorang editor majalah, terjebak di tahun 1987 setelah mengendarai mobil misterius. Di sana ia bertemu Baek Yoon-young, seorang mahasiswi yang berusaha menyelidiki kasus pembunuhan berantai. Keduanya bekerja sama untuk mengubah masa depan sambil menemukan misteri yang menghubungkan mereka.',
+        cast: ['Kim Dong-wook', 'Jin Ki-joo', 'Seo Ji-hoon', 'Lee Won-jung'],
+        creator: 'Kang Soo-yeon',
+        episodesList: [
+            {
+                id: 1,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Time Slip',
+                description: 'Hae-joon secara tidak sengaja melakukan perjalanan waktu ke tahun 1987 dan bertemu dengan Yoon-young.',
+                duration: '65m'
+            },
+            {
+                id: 2,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Murder Case',
+                description: 'Yoon-young mengajak Hae-joon untuk menyelidiki kasus pembunuhan berantai yang terjadi di desanya.',
+                duration: '68m'
+            },
+            {
+                id: 3,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Connection',
+                description: 'Keduanya menemukan bahwa kasus pembunuhan tersebut terhubung dengan orang-orang di sekitar mereka.',
+                duration: '70m'
+            },
+            {
+                id: 4,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Warning',
+                description: 'Hae-joon menyadari bahwa tindakannya di masa lalu bisa mengubah masa depan secara drastis.',
+                duration: '66m'
+            },
+            {
+                id: 5,
+                thumbnail: '/assets/images/placeholder-episode.jpg',
+                title: 'The Race',
+                description: 'Waktu terus berjalan dan mereka harus menemukan pelaku sebelum terlambat.',
+                duration: '72m'
+            }
+        ]
     },
     'card-otto': {
         id: 'man-called-otto',
@@ -482,7 +746,11 @@ export const filmData = {
         duration: '2j 6m',
         genres: ['Comedy', 'Drama'],
         image: '/assets/images/otto.png',
-        hoverImage: '/assets/images/otto-lands.png'
+        hoverImage: '/assets/images/otto-lands.png',
+        year: 2022,
+        description: 'Otto adalah seorang duda tua pemarah yang pensiun dan tinggal sendiri. Hidupnya berubah ketika sebuah keluarga muda pindah ke sebelah rumahnya. Dengan bantuan mereka, Otto belajar kembali arti kehidupan dan kebahagiaan.',
+        cast: ['Tom Hanks', 'Mariana Treviño', 'Rachel Keller', 'Manuel Garcia-Rulfo'],
+        creator: 'Marc Forster'
     },
     'card-quantumania': {
         id: 'ant-man-quantumania',
@@ -492,7 +760,11 @@ export const filmData = {
         duration: '2j 5m',
         genres: ['Action', 'Adventure', 'Sci-Fi'],
         image: '/assets/images/ant-quantum.png',
-        hoverImage: '/assets/images/quantum-lands.png'
+        hoverImage: '/assets/images/quantum-lands.png',
+        year: 2023,
+        description: 'Scott Lang dan Hope van Dyne bersama orang tua Hope, Hank Pym dan Janet van Dyne, tersedot ke dunia kuantum yang misterius. Mereka harus bekerja sama untuk melawan Kang sang Penakluk dan menemukan jalan pulang ke dunia nyata.',
+        cast: ['Paul Rudd', 'Evangeline Lilly', 'Jonathan Majors', 'Michael Douglas', 'Michelle Pfeiffer'],
+        creator: 'Peyton Reed'
     },
     'card-rio': {
         id: 'rio',
@@ -502,7 +774,11 @@ export const filmData = {
         duration: '1j 36m',
         genres: ['Animation', 'Adventure', 'Comedy'],
         image: '/assets/images/rio.png',
-        hoverImage: '/assets/images/rio-lands.png'
+        hoverImage: '/assets/images/rio-lands.png',
+        year: 2011,
+        description: 'Blu, seekor macaw biru jinak yang tidak bisa terbang, dibawa dari Minnesota ke Rio de Janeiro untuk bertemu dengan Pearl, satu-satunya macaw biru betina yang tersisa. Petualangan dimulai saat mereka diculik oleh penyelundup burung.',
+        cast: ['Jesse Eisenberg', 'Anne Hathaway', 'Jemaine Clement', 'Leslie Mann', 'will.i.am'],
+        creator: 'Carlos Saldanha'
     },
     'card-shazam': {
         id: 'shazam-fury',
@@ -512,7 +788,11 @@ export const filmData = {
         duration: '2j 10m',
         genres: ['Action', 'Fantasy', 'Comedy'],
         image: '/assets/images/shazam.png',
-        hoverImage: '/assets/images/shazam-lands.png'
+        hoverImage: '/assets/images/shazam-lands.png',
+        year: 2023,
+        description: 'Billy Batson dan teman-teman supernya masih belajar menggunakan kekuatan dewa mereka. Namun ketika para dewa mitologi kuno mengancam Bumi, Shazam dan keluarganya harus bersatu untuk melindungi dunia dan kekuatan mereka.',
+        cast: ['Zachary Levi', 'Asher Angel', 'Jack Dylan Grazer', 'Rachel Zegler', 'Helen Mirren'],
+        creator: 'David F. Sandberg'
     },
     'card-sonic-2': {
         id: 'sonic-2',
@@ -522,7 +802,11 @@ export const filmData = {
         duration: '2j 2m',
         genres: ['Action', 'Adventure', 'Comedy'],
         image: '/assets/images/sonic-2.png',
-        hoverImage: '/assets/images/sonic-2-lands.png'
+        hoverImage: '/assets/images/sonic-2-lands.png',
+        year: 2022,
+        description: 'Sonic si landak biru kembali bersama sahabatnya Tom. Kali ini ia harus menghadapi Dr. Robotnik yang kembali dengan sekutu baru, Knuckles. Sonic bergabung dengan Tails untuk menyelamatkan dunia dari ancaman baru.',
+        cast: ['James Marsden', 'Ben Schwartz', 'Idris Elba', 'Colleen O\'Shaughnessey', 'Jim Carrey'],
+        creator: 'Jeff Fowler'
     },
     'card-stuart': {
         id: 'stuart-little',
@@ -533,6 +817,10 @@ export const filmData = {
         genres: ['Family', 'Comedy', 'Adventure'],
         image: '/assets/images/stuart-little.png',
         hoverImage: '/assets/images/stuart-lands.png',
+        year: 1999,
+        description: 'Keluarga Little mengadopsi seorang anak laki-laki bernama Stuart — yang kebetulan adalah seekor tikus kecil yang bisa berbicara. Stuart harus beradaptasi dengan kehidupan barunya bersama keluarga manusia dan menghadapi kucing keluarga yang tidak menyukainya.',
+        cast: ['Michael J. Fox', 'Geena Davis', 'Hugh Laurie', 'Jonathan Lipnicki', 'Nathan Lane'],
+        creator: 'Rob Minkoff',
         isPremium: true
     },
     'card-tomorrow': {
@@ -543,7 +831,11 @@ export const filmData = {
         duration: '2j 20m',
         genres: ['Action', 'Sci-Fi', 'Adventure'],
         image: '/assets/images/tomorrow-war.png',
-        hoverImage: '/assets/images/tomorrow-war-lands.png'
+        hoverImage: '/assets/images/tomorrow-war-lands.png',
+        year: 2021,
+        description: 'Sekelompok tentara dari masa depan melakukan perjalanan waktu ke masa kini untuk merekrut warga sipil bergabung dalam perang melawan alien yang mengancam keberadaan umat manusia. Seorang guru sains direkrut dan harus meninggalkan keluarganya.',
+        cast: ['Chris Pratt', 'Yvonne Strahovski', 'J.K. Simmons', 'Betty Gilpin', 'Sam Richardson'],
+        creator: 'Chris McKay'
     },
     'card-suzume': {
         id: 'suzume',
@@ -554,6 +846,10 @@ export const filmData = {
         genres: ['Animation', 'Adventure', 'Fantasy'],
         image: '/assets/images/suzume.png',
         hoverImage: '/assets/images/suzume-lands.png',
+        year: 2023,
+        description: 'Suzume, seorang gadis SMA, bertemu seorang pemuda yang mencari pintu misterius. Ia mengikuti pemuda itu dan secara tidak sengaja membuka pintu yang melepaskan bencana ke Jepang. Suzume harus berlari melintasi Jepang untuk menutup pintu-pintu itu.',
+        cast: ['Nanoka Hara', 'Hokuto Matsumura', 'Eri Fukatsu', 'S\u00f4ta Fukushi'],
+        creator: 'Makoto Shinkai',
         hasNewEpisode: true,
         topRank: 1
     },
@@ -715,7 +1011,57 @@ export const filmData = {
                 duration: '81m'
             }
         ]
-    }
+    },
+    'card-avengers-dooms-day': {
+        id: 'doomsday',
+        title: 'Avengers Doom\'s Day',
+        rating: '4.8/5',
+        age: '13+',
+        duration: '2j 2m',
+        genres: ['Action', 'Adventure', 'Sci-Fi'],
+        image: '/assets/images/guardian.png',
+        hoverImage: '/assets/images/guardian-lands.png',
+        year: 2026,
+        description: 'Para Avengers bersatu kembali untuk menghadapi ancaman terbesar mereka: Doctor Doom yang telah mendapatkan kekuatan tak terbayangkan. Pertempuran epik ini akan menentukan nasib Bumi dan multiverse.',
+        cast: ['Robert Downey Jr.', 'Chris Evans', 'Scarlett Johansson', 'Benedict Cumberbatch'],
+        creator: 'Anthony Russo, Joe Russo',
+        recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
+        isPremium: true
+    },
+    'card-amazing-spidey': {
+        id: 'amazing-spidey',
+        title: 'The Amazing Spider-Man',
+        rating: '4.6/5',
+        age: '13+',
+        duration: '2j 2m',
+        genres: ['Action', 'Adventure', 'Sci-Fi'],
+        image: '/assets/images/amazing-spidey-prtrt.jpg',
+        hoverImage: '/assets/images/amazing-spidey-lands.jpg',
+        year: 2012,
+        description: 'Peter Parker, seorang remaja SMA yang cerdas, mendapatkan kekuatan seperti laba-laba setelah digigit laba-laba hasil rekayasa genetika. Ia belajar bahwa dengan kekuatan besar datang tanggung jawab besar, saat ia berhadapan dengan The Lizard.',
+        cast: ['Andrew Garfield', 'Emma Stone', 'Rhys Ifans', 'Denis Leary', 'Sally Field'],
+        creator: 'Marc Webb',
+        recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
+        isPremium: true,
+        topRank: 3
+    },
+    'card-spidey-brand-new-day': {
+        id: 'spidey-brand-new-day',
+        title: 'Spiderman Brand New Day',
+        rating: '4.6/5',
+        age: '13+',
+        duration: '2j 2m',
+        genres: ['Action', 'Adventure', 'Sci-Fi'],
+        image: '/assets/images/spiderman-brand-new-day-prtrt.jpeg',
+        hoverImage: '/assets/images/spiderman-brand-new-day-lands.jpeg',
+        year: 2026,
+        description: 'Peter Parker kembali dengan identitas baru setelah rahasianya terbongkar. Dengan bantuan teman-teman lamanya, ia berjuang melawan musuh baru yang lebih kuat dari sebelumnya dalam petualangan Spider-Man yang belum pernah ada.',
+        cast: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch', 'Jacob Batalon'],
+        creator: 'Destin Daniel Cretton',
+        recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
+        isPremium: true,
+        topRank: 4
+    },
 
 
 };

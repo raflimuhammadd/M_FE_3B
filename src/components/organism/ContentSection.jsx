@@ -8,12 +8,12 @@ function ContentSection({ title, films, items, variant = 'portrait', onSelect })
   const scrollRef = useRef(null);
 
   // Deterministic progress generation using film ID as seed
-  const data = films || items || [];
+  const itemsData = films || items;
   
   const filmsWithProgress = useMemo(() => {
-    if (!data || data.length === 0) return [];
+    if (!itemsData || itemsData.length === 0) return [];
 
-    return data.map((film) => {
+    return itemsData.map((film) => {
       if (variant === 'landscape') {
         // Deterministic seed from film ID
         const seed = film.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
@@ -22,9 +22,9 @@ function ContentSection({ title, films, items, variant = 'portrait', onSelect })
       }
       return film;
     });
-  }, [data, variant]);
+  }, [itemsData, variant]);
 
-  if (!data || data.length === 0) return null;
+  if (!itemsData || itemsData.length === 0) return null;
 
   const handleViewAll = () => {
     const routeMap = {

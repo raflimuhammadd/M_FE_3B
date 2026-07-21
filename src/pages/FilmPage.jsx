@@ -113,6 +113,7 @@ function FilmPage() {
                 isMobile={isMobile}
                 closeModal={closeModal}
                 handleBackdropClick={handleBackdropClick}
+                openModal={openModal}
             />
         </div>
     )

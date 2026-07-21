@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Navbar, Footer } from '../components';
+import { Navbar, Footer, FilmDetailModal } from '../components';
 import { useFavorites } from '../hooks/useFavorites';
+import { useDetailModal } from '../hooks/useDetailModal';
 import MyListGrid from '../components/organism/MyListGrid';
 
 function MyListPage () {
   const {getFavoriteItems} = useFavorites();
   const [activeTab, setActiveTab] = useState('all');
+  const {isOpen, selectedItem, isMobile, openModal, closeModal, handleBackdropClick} = useDetailModal();
 
   // get all favorite items
   const allItems = getFavoriteItems();
@@ -33,7 +35,7 @@ function MyListPage () {
     <div className="min-h-screen bg-chill-dark">
       <Navbar />
 
-      <main className="container-responsive py-8 sm:py-12">
+      <main className="container-fluid pt-24 pb-8 sm:pb-12">
         {/* header */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white
         mb-6 sm:mb-8">
@@ -78,9 +80,18 @@ function MyListPage () {
         <MyListGrid 
           items={displayItems}
           emptyMessage={emptyMessages[activeTab]}
+          onSelect={openModal}
         />
       </main>
 
+      <FilmDetailModal 
+        isOpen={isOpen}
+        film={selectedItem}
+        isMobile={isMobile}
+        closeModal={closeModal}
+        handleBackdropClick={handleBackdropClick}
+        openModal={openModal}
+      />
       <Footer />
     </div>
   )

@@ -1,19 +1,29 @@
 import {useNavigate} from 'react-router-dom';
 import {Button, Icon} from '../atoms';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+
 
 function Hero({featuredFilm}) {
     const navigate = useNavigate();
     const [isMuted, setIsMuted] = useState(true);
+    const [showVideo, setShowVideo] = useState(false);
+    const [videoError, setVideoError] = useState(false);
 
-    if (!featuredFilm) {
-        return null;
-    }
-
+    useEffect(() => {
+        if (!featuredFilm.youtubeId) return;
+        const timer = setTimeout(() => setShowVideo(true), 2500);
+        return () => clearTimeout(timer);
+    }, [featuredFilm.youtubeId]);
+    
     const handleMuteClick = () => {
         setIsMuted(prev => !prev);
         console.log('muted', isMuted);
     }
+
+    const handleVideoError = () => {
+        setVideoError(true);
+        console.log('video error');
+    };
     
     return (
         <section className="
@@ -21,12 +31,17 @@ function Hero({featuredFilm}) {
             sm:min-h-[65vh] md:min-h-[75vh] 
             lg:min-h-[85vh] overflow-hidden">
             
-            {featuredFilm.youtubeId ? (
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img 
+                src={featuredFilm.hoverImage}
+                alt={featuredFilm.title}
+                className="absolute inset-0 w-full h-full object-cover"
+            />
+
+            {showVideo && featuredFilm.youtubeId && !videoError && (
+                <div className="absolute inset-0 overflow-hidden pointer-events-none animate-fade-in">
                     <iframe 
-                        src={`https://www.youtube-nocookie.com/embed/${featuredFilm.youtubeId}?
-                        auplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${featuredFilm.youtubeId}
-                        &controls=0&showinfo=0&rel=0&playsinline=1`}
+                        src={`https://www.youtube-nocookie.com/embed/${featuredFilm.youtubeId}?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${featuredFilm.youtubeId}&controls=0&showinfo=0&rel=0&playsinline=1`}
+                        onError={handleVideoError}
                         className="absolute"
                         style={{
                             width: '177.78vh',
@@ -41,13 +56,8 @@ function Hero({featuredFilm}) {
                         title={featuredFilm.title}
                     />
                 </div>
-            ) : (
-                <img 
-                    src={featuredFilm.hoverImage}
-                    alt={featuredFilm.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
             )}
+
 
             {/* overlay */}
             <div className="absolute inset-0 bg-linear-to-t from-chill-dark via-black/75 to-black/20">

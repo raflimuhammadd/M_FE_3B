@@ -4,7 +4,7 @@ import Button from '../atoms/Button';
 import Badge from '../atoms/Badge';
 import {useFavorites} from '../../hooks/useFavorites';
 import filmData from '../../data/filmData';
-import RecomendationCard from './RecomendationCard';
+import RecommendationCard from './RecommendationCard';
 
 function FilmDetailModal({ 
   isOpen, 
@@ -70,9 +70,9 @@ function FilmDetailModal({
     console.log('muted', isMuted);
   };
 
-  const handleRecomendationClick = (recomendedFilm) => {
+  const handleRecommendationClick = (recommendedFilm) => {
     if (openModal) {
-      openModal(recomendedFilm);
+      openModal(recommendedFilm);
     }
   }
 
@@ -181,21 +181,21 @@ function FilmDetailModal({
                 </div>
               </div>
 
-                  {film.recomendations && film.recomendations.length > 0 && (
+                  {film.recommendations && film.recommendations.length > 0 && (
                   <div className="px-4 pb-8">
                     <h2 className="text-xl font-bold text-white mb-4">
                       Rekomendasi Serupa
                     </h2>
                     <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-2">
-                      {film.recomendations.map((filmId) => {
-                        const recomendedFilm = Object.values(filmData).find(f => f.id === filmId);
-                        if (!recomendedFilm) return null;
+                      {film.recommendations.map((filmId) => {
+                        const recommendedFilm = Object.values(filmData).find(f => f.id === filmId);
+                        if (!recommendedFilm) return null;
 
                         return (
-                          <RecomendationCard 
-                            key={recomendedFilm.id}
-                            film={recomendedFilm}
-                            onSelect={handleRecomendationClick}
+                          <RecommendationCard 
+                            key={recommendedFilm.id}
+                            film={recommendedFilm}
+                            onSelect={handleRecommendationClick}
                           />
                         );
                       })}
@@ -322,21 +322,21 @@ function FilmDetailModal({
             </div>
           </div>
 
-              {film.recomendations && film.recomendations.length > 0 && (
+              {film.recommendations && film.recommendations.length > 0 && (
               <div className="mt-8">
                 <h2 className="text-2xl font-bold text-white mb-6">
                   Rekomendasi Serupa
                 </h2>
                 <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-2">
-                  {film.recomendations.map((filmId) => {
-                    const recomendedFilm = Object.values(filmData).find(f => f.id === filmId);
-                    if (!recomendedFilm) return null;
+                  {film.recommendations.map((filmId) => {
+                    const recommendedFilm = Object.values(filmData).find(f => f.id === filmId);
+                    if (!recommendedFilm) return null;
 
                     return (
-                      <RecomendationCard 
-                        key={recomendedFilm.id}
-                        film={recomendedFilm}
-                        onSelect={handleRecomendationClick}
+                      <RecommendationCard 
+                        key={recommendedFilm.id}
+                        film={recommendedFilm}
+                        onSelect={handleRecommendationClick}
                       />
                     )
                   })}

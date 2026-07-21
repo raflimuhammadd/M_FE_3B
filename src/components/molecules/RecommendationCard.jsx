@@ -1,7 +1,7 @@
 import Icon from "../atoms/Icon";
 import Badge from "../atoms/Badge";
 
-function RecomendationCard({film, onSelect}) {
+function RecommendationCard({film, onSelect}) {
     if (!film) return null;
 
     const handleClick = () => {
@@ -13,10 +13,10 @@ function RecomendationCard({film, onSelect}) {
     return (
         <article
             onClick={handleClick}
-            className="recomendation-card shrink-0 w-35 sm:w-40 md:w-45
+            className="recommendation-card shrink-0 w-35 sm:w-40 md:w-45
                         group cursor-pointer"
         >
-            <div className="recomendation-card-image-wrapper relative aspect-2/3
+            <div className="recommendation-card-image-wrapper relative aspect-2/3
                             rounded-lg overflow-hidden mb-2">
                 <img 
                     src={film.image} 
@@ -54,7 +54,7 @@ function RecomendationCard({film, onSelect}) {
                 </div>
             </div>
 
-            <h3 className="recomendation-card-title text-white text-xs sm:text-sm
+            <h3 className="recommendation-card-title text-white text-xs sm:text-sm
                     font-medium truncate text-center">
                 {film.title}
             </h3>
@@ -62,4 +62,4 @@ function RecomendationCard({film, onSelect}) {
     )
 }
 
-export default RecomendationCard
+export default RecommendationCard

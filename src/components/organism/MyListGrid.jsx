@@ -4,10 +4,10 @@ import Icon from '../atoms/Icon';
 /**
  * Grid component untuk display favorites
  * 
- * @param {Array} items - Array of film/series objects
- * @param {string} emptyMessage - Message untuk empty state
+ * @param {Array} items
+ * @param {string} emptyMessage
  */
-function MyListGrid({ items, emptyMessage }) {
+function MyListGrid({ items, emptyMessage, onSelect }) {
   // Empty state
   if (!items || items.length === 0) {
     return (
@@ -32,6 +32,8 @@ function MyListGrid({ items, emptyMessage }) {
             item={item}
             variant="portrait"
             showNewEpisode={item.hasNewEpisode}
+            hoverVariant='mylist'
+            onSelect={onSelect}
           />
         ))}
       </div>
