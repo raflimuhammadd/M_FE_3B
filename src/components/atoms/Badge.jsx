@@ -1,6 +1,6 @@
 function Badge({variant = 'rating', children, className = '', ...props}) {
     const variants = {
-         rating: 'bg-black/70 text-[#FFD700] backdrop-blur flex items-center gap-0.5',
+        rating: 'bg-black/70 text-[#FFD700] backdrop-blur flex items-center gap-0.5',
         age: 'bg-red-600 text-white',
         episode: 'bg-blue-600 text-white',
         premium: 'bg-[#FFC107] text-black font-bold uppercase text-[0.625rem] tracking-wide',

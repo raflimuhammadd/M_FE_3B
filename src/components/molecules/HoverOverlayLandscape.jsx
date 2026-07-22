@@ -1,10 +1,12 @@
 import { Icon } from "../atoms";
 import {useFavorites} from "../../hooks/useFavorites";
+import {useNavigate} from "react-router-dom";
 
-function HoverOverlayLandscape({film}) {
+function HoverOverlayLandscape({film, onSelect}) {
 
   const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
   const favorited = isFavorite(film.id);
+  const navigate = useNavigate();
 
   const toggleFavorite = (e) => {
     e.stopPropagation(); //prevent card click evnt
@@ -40,6 +42,10 @@ function HoverOverlayLandscape({film}) {
         </button>
 
         <button
+          onClick={(e) => {
+             e.stopPropagation();
+            navigate(`/watch/${film.id}`);
+          }}
           className="hover-overlay-landscape-button hover-overlay-landscape-button--play 
             w-12 h-12 rounded-full border-2 border-white/50 
             hover:border-white hover:bg-white/15 hover:scale-110 
@@ -50,6 +56,10 @@ function HoverOverlayLandscape({film}) {
         </button>
 
         <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onSelect?.(film);
+          }}
           className="hover-overlay-landscape-button hover-overlay-landscape-button--detail 
             w-10 h-10 rounded-full border-2 border-white/50 
             hover:border-white hover:bg-white/15 hover:scale-110 

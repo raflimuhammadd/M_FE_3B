@@ -4,6 +4,7 @@ import filmData from '../data/filmData';
 import { storage } from '../utils/localStorage';
 
 const STORAGE_KEY = 'chill-streams-favorites';
+const STORAGE_KEY_OVERRIDES = 'chill-streams-favorites-overrides';
 
 export function FavoritesProvider({children}) {
     // initialize localstorage
@@ -13,11 +14,22 @@ export function FavoritesProvider({children}) {
         return stored;
     });
 
+    const [favoriteOverrides, setFavoriteOverrides] = useState(() => {
+        const stored = storage.get(STORAGE_KEY_OVERRIDES, {});
+        console.log('stored overrides', stored);
+        return stored;
+    });
+
     // sync to localstorage whenever changes
     useEffect(() => {
         storage.set(STORAGE_KEY, favorites);
         console.log('favorites', favorites);
     }, [favorites]);
+
+    useEffect(() => {
+        storage.set(STORAGE_KEY_OVERRIDES, favoriteOverrides);
+        console.log('favoriteOverrides', favoriteOverrides);
+    }, [favoriteOverrides]);
 
     const addToFavorites = (id) => {
         setFavorites(prev => {
@@ -44,26 +56,61 @@ export function FavoritesProvider({children}) {
         return favorites.includes(id);
     };
 
+    const getMergedFilm = (id) => {
+        const filmKey = Object.keys(filmData).find(
+            key => filmData[key].id === id
+        );
+        if (!filmKey) {
+            console.warn(`No film found with id: ${id}`);
+            return null;
+        }
+        const baseFilm = filmData[filmKey];
+        const override = favoriteOverrides[id];
+
+        return override ? {...baseFilm, ...override} : baseFilm;
+    }
+
+    const updateFavoriteItem = (id, updates) => {
+        setFavoriteOverrides(prev => ({
+            ...prev,
+            [id]: {
+                ...(prev[id] || {}),
+                ...updates
+            }
+        }));
+        console.log('updated favorite item', id, updates);
+    }
+
     // get film objects
     const getFavoriteItems = () => {
+
         const items = favorites
-            .map(id => {
-                // find film by id in object
-                const filmKey = Object.keys(filmData).find(
-                    key => filmData[key].id === id
-                );
-
-                if (!filmKey) {
-                    console.warn(`No film found with id: ${id}`);
-                    return null;
-                }
-
-                return filmData[filmKey];
-            })
+            .map(id => getMergedFilm(id))
             .filter(Boolean);
 
-            console.log('items', items.length);
-            return items;
+        console.log('items', items.length);
+        return items;
+
+
+
+        // const items = favorites
+        //     .map(id => {
+        //         // find film by id in object
+        //         const filmKey = Object.keys(filmData).find(
+        //             key => filmData[key].id === id
+        //         );
+
+        //         if (!filmKey) {
+        //             console.warn(`No film found with id: ${id}`);
+        //             return null;
+        //         }
+
+        //         return filmData[filmKey];
+        //     })
+        //     .filter(Boolean);
+
+        //     console.log('items', items.length);
+        //     return items;
     };
 
     // clear all favorites
@@ -78,7 +125,9 @@ export function FavoritesProvider({children}) {
         removeFromFavorites,
         isFavorite,
         getFavoriteItems,
-        clearFavorites
+        clearFavorites,
+        updateFavoriteItem,
+        getMergedFilm,
     };
 
     return (

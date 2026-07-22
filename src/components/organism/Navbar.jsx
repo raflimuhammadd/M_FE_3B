@@ -1,9 +1,13 @@
 import ProfileDropdown from "../molecules/ProfileDropdown";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {useState, useEffect} from 'react';
+import MenuOverlay from './MenuOverlay';
+import Icon from '../atoms/Icon';
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +18,7 @@ function Navbar() {
   }, []);
 
   return (
+    <>
     <nav className={`navbar fixed top-0 w-full z-50 transition-all duration-500 ${
       isScrolled
         ? 'bg-chill-dark/80 backdrop-blur-md border-b border-white/10'
@@ -34,7 +39,7 @@ function Navbar() {
                 className="h-7 sm:h-8 md:h-10 w-auto hidden sm:block"
               />
             </NavLink>
-            <ul className="navbar-menu flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6">
+            <ul className="navbar-menu hidden sm:flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6">
               <li className="navbar-menu-item">
                 <Link to="/series" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
                     Series
@@ -57,12 +62,38 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <div className="navbar-right ml-auto">
-            <ProfileDropdown />
+          <div className="navbar-right ml-auto flex items-center gap-3">
+            <div className="hidden sm:block">
+              <ProfileDropdown />
+            </div>
+
+            <div className="sm:hidden">
+              <ProfileDropdown />
+            </div>
+
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="sm:hidden flex items-center gap-2"
+              aria-label="Open menu"
+            >
+                <Icon name="hamburger" className="w-6 h-6 stroke-white"/>
+            </button>
           </div>
         </div>
       </div>
     </nav>
+
+     {/* menu overlay */}
+    <MenuOverlay 
+              isOpen={isMobileMenuOpen}
+              onClose={() => setIsMobileMenuOpen(false)}
+              onLogout={() => {
+                setIsMobileMenuOpen(false);
+                navigate('/login');
+              }}
+    />
+
+    </>
   );
 }
 

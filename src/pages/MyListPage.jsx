@@ -1,13 +1,19 @@
 import { useState } from 'react';
-import { Navbar, Footer, FilmDetailModal } from '../components';
+import { Navbar, Footer, FilmDetailModal, EditFavoriteModal, ClearAllButton, ConfirmClearModal } from '../components';
 import { useFavorites } from '../hooks/useFavorites';
 import { useDetailModal } from '../hooks/useDetailModal';
 import MyListGrid from '../components/organism/MyListGrid';
 
 function MyListPage () {
-  const {getFavoriteItems} = useFavorites();
+  const {getFavoriteItems, updateFavoriteItem, clearFavorites} = useFavorites();
   const [activeTab, setActiveTab] = useState('all');
   const {isOpen, selectedItem, isMobile, openModal, closeModal, handleBackdropClick} = useDetailModal();
+
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState(null);
+
+  const [isClearModalOpen, setIsClearModalOpen] = useState(false);
+  const [isClearing, setIsClearing] = useState(false);
 
   // get all favorite items
   const allItems = getFavoriteItems();
@@ -31,6 +37,37 @@ function MyListPage () {
     film: 'Belum ada film di daftar Anda'
   };
 
+  const handleEdit = (item) => {
+    setEditingItem(item);
+    setIsEditModalOpen(true);
+  };
+
+  const handleSaveEdit = (id, updates) => {
+    updateFavoriteItem(id, updates);
+    setEditingItem(null);
+  };
+
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
+    setEditingItem(null);
+  };
+
+  const handleClearAll = async () => {
+    setIsClearing(true);
+    try {
+      clearFavorites();
+      // TODO: Add toast/notification system later
+      console.log('Semua favorites berhasil dihapus');
+    } catch (error) {
+      console.error('Gagal menghapus semua favorites:', error);
+      // TODO: Show error toast
+    } finally {
+      setIsClearing(false);
+      setIsClearModalOpen(false);
+    }
+  };
+
+
   return (
     <div className="min-h-screen bg-chill-dark">
       <Navbar />
@@ -38,12 +75,20 @@ function MyListPage () {
       <main className="container-fluid pt-24 pb-8 sm:pb-12">
         {/* header */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white
-        mb-6 sm:mb-8">
+        mb-4 sm:mb-6">
           Daftar Saya
         </h1>
 
+        {/* Clear All Button */}
+        <ClearAllButton 
+          onClick={() => setIsClearModalOpen(true)}
+          disabled={!allItems.length}
+          className="mb-4 sm:mb-6"
+          isLoading={isClearing}
+        />
+
         {/* tabs */}
-         <div className="tabs-wrapper mb-6 sm:mb-8 flex gap-4 border-b border-gray-800">
+         <div className="tabs-wrapper mb-4 sm:mb-6 flex gap-4 border-b border-gray-800">
           <button
             onClick={() => setActiveTab('all')}
             className={`tab-button pb-3 px-2 text-sm sm:text-base font-medium transition
@@ -81,8 +126,25 @@ function MyListPage () {
           items={displayItems}
           emptyMessage={emptyMessages[activeTab]}
           onSelect={openModal}
+          onEdit={handleEdit}
+          isMobile={isMobile}
         />
       </main>
+
+      <EditFavoriteModal 
+        key={editingItem?.id}
+        isOpen={isEditModalOpen}
+        film={editingItem}
+        onSave={handleSaveEdit}
+        onClose={handleCloseEditModal}
+      />
+
+      <ConfirmClearModal 
+        isOpen={isClearModalOpen}
+        onConfirm={handleClearAll}
+        onClose={() => setIsClearModalOpen(false)}
+        isLoading={isClearing}
+      />
 
       <FilmDetailModal 
         isOpen={isOpen}

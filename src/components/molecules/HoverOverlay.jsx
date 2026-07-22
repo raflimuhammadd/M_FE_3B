@@ -2,7 +2,7 @@ import {useNavigate} from 'react-router-dom';
 import Icon from '../atoms/Icon';
 import {useFavorites} from '../../hooks/useFavorites';
 
-function HoverOverlay({film, variant = 'default', onSelect}) {
+function HoverOverlay({film, variant = 'default', onSelect, onEdit}) {
     const navigate = useNavigate();
 
     const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
@@ -20,11 +20,14 @@ function HoverOverlay({film, variant = 'default', onSelect}) {
     if (variant === 'mylist') {
         return (
             <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 
-                            transition-opacity duration-300 gap-3 backdrop-blur-xs">
+                            transition-opacity duration-300 gap-3 backdrop-blur-md bg-black/60">
                 <div className="absolute inset-0" />
                 <div className="relative flex flex-col items-center gap-4">
                     <button
-                        onClick={() => navigate(`/watch/${film.id}`)}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onSelect?.(film);
+                        }}
                         className="bg-white text-black rounded-full w-10 h-10 
                         flex items-center justify-center hover:bg-gray-200 
                         transition transform hover:scale-110 shadow-lg"
@@ -40,6 +43,18 @@ function HoverOverlay({film, variant = 'default', onSelect}) {
                         aria-label="Remove from favorites"
                     >
                         <Icon name="delete" className="h-6 w-6" />
+                    </button>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onEdit?.(film);
+                        }}
+                        className="bg-transparent border-2 border-gray-400 text-gray-200 rounded-full 
+                        w-10 h-10 flex items-center justify-center hover:border-blue-500 
+                        hover:text-blue-500 transition transform hover:scale-110"
+                        aria-label="Edit"
+                    >
+                        <Icon name="update" className="h-6 w-6" />
                     </button>
                 </div>
             </div>
@@ -84,7 +99,7 @@ function HoverOverlay({film, variant = 'default', onSelect}) {
                         transition transform hover:scale-110 shadow-lg"
                         aria-label='Play'
                     >
-                        <Icon name="play" className="h-8 w-8 fill-black" />
+                        <Icon name="play" className="h-5 w-5 fill-black" />
                     </button>
                     <button
                         onClick={(e) => {e.stopPropagation(); onSelect(film);}}
