@@ -63,7 +63,6 @@ function HomePage() {
                     title="Melanjutkan Tontonan Film dan Series"
                     films={continueWatching}
                     variant='landscape'
-                    onSelect={openModal}
                 />
 
                 {/* section 2 */}
@@ -71,7 +70,6 @@ function HomePage() {
                     title="Top Rating Film dan Series Hari ini"
                     films={topRating}
                     variant='portrait'
-                    onSelect={openModal}
                 />
 
                 {/* section 3 */}
@@ -79,7 +77,6 @@ function HomePage() {
                     title="Film dan Series Trending"
                     films={trending}
                     variant='portrait'
-                    onSelect={openModal}
                 />
 
                 {/* section 4 */}
@@ -87,7 +84,6 @@ function HomePage() {
                     title="Rilis Baru"
                     films={newReleases}
                     variant='portrait'
-                    onSelect={openModal}
                 />
             </main>
             <Footer />

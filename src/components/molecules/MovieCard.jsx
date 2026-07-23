@@ -4,10 +4,11 @@ import Icon from '../atoms/Icon';
 import Badge from '../atoms/Badge';
 import HoverOverlay from './HoverOverlay';
 import HoverOverlayLandscape from './HoverOverlayLandscape';
-// import {isSeries, isFilm} from '../../utils/contentTypes';
+import  useModalStore from '../../store/modalStore';
 
-function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = false, onSelect, hoverVariant, onEdit, mobileActions = false }) {
+function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = false, hoverVariant, onEdit = false }) {
   const { removeFromFavorites } = useFavorites();
+  const {isMobile, openModal} = useModalStore();
   const [showActions, setShowActions] = useState(false);
 
   if (!item) return null;
@@ -16,10 +17,20 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
 
 
 
-  const handleSelect = () => {
-    if (mobileActions) {
-      setShowActions(true);
-    }
+  // const handleSelect = () => {
+  //   if (mobileActions) {
+  //     setShowActions(true);
+  //   }
+  // };
+
+    const handleSelect = () => {
+      if (isMobile) {
+        if (isMyListCard) {
+          setShowActions(true);
+        } else {
+          openModal(item);
+        }
+      }
   };
 
   const handleCloseOverlay = () => {
@@ -28,9 +39,7 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
 
   const handlePlay = (e) => {
     e.stopPropagation();
-    if (onSelect) {
-      onSelect(item);
-    }
+    openModal(item);
   };
 
   const handleDelete = (e) => {
@@ -77,12 +86,12 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
                 <span>{item.rating}</span>
               </Badge>
             )}
-            {(!mobileActions || hoverVariant !== 'mylist') && (
-              <HoverOverlay film={item} variant={hoverVariant || 'default'} onSelect={onSelect} onEdit={onEdit} />
+            {(!isMobile || hoverVariant !== 'mylist') && (
+              <HoverOverlay film={item} variant={hoverVariant || 'default'} onEdit={onEdit} />
             )}
 
             {/* Mobile actions overlay - inside poster wrapper */}
-            {mobileActions && showActions && (
+            {isMobile && showActions && (
               <div className="absolute inset-0 z-20 flex flex-col items-center justify-center rounded-lg backdrop-blur-xs bg-black/70">
                 <button
                   onClick={(e) => {
@@ -178,7 +187,7 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
                   style={{width: `${displayProgress}%`}}
                 />
         </div>
-        <HoverOverlayLandscape film={item} onSelect={onSelect} />
+        <HoverOverlayLandscape film={item} />
 
       </div>
       

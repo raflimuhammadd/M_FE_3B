@@ -65,7 +65,6 @@ function FilmPage() {
                         title="Melanjutkan Tontonan Film"
                         items={continueWatchingFilms}
                         variant="landscape"
-                        onSelect={openModal}
                     />
 
                     {/* section2: portrait */}
@@ -73,7 +72,6 @@ function FilmPage() {
                         title="Film Populer"
                         items={popularFilms}
                         variant="portrait"
-                        onSelect={openModal}
                     />
 
                     {/* section3: portrait */}
@@ -81,7 +79,6 @@ function FilmPage() {
                         title="Top Rating Film Hari ini"
                         items={topRatingFilms}
                         variant="portrait"
-                        onSelect={openModal}
                     />
 
                     {/* section4: portrait */}
@@ -89,7 +86,6 @@ function FilmPage() {
                         title="Film Trending"
                         items={trendingFilms}
                         variant="portrait"
-                        onSelect={openModal}
                     />
 
                     {/* section5: genre */}
@@ -98,7 +94,6 @@ function FilmPage() {
                             title="Rilis Baru"
                             items={newReleaseFilms}
                             variant="portrait"
-                            onSelect={openModal}
                         />
                     )}
                 </div>

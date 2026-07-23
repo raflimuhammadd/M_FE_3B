@@ -4,7 +4,7 @@ import filmData from '../data/filmData';
 import {useDetailModal} from '../hooks';
 
 function SeriesPage() {
-    const { isOpen, selectedItem, isMobile, openModal, closeModal, handleBackdropClick } = useDetailModal();
+    const { isOpen, selectedItem, isMobile, closeModal, handleBackdropClick } = useDetailModal();
     // convert data object to arrray
     const allFilms = Object.values(filmData);
 
@@ -67,7 +67,6 @@ function SeriesPage() {
                         title="Melanjutkan Tontonan Series"
                         items={continueWatchingSeries}
                         variant="landscape"
-                        onSelect={openModal}
                     />
 
                     {/* section2: portrait */}
@@ -75,7 +74,6 @@ function SeriesPage() {
                         title="Series Populer"
                         items={popularSeries}
                         variant="portrait"
-                        onSelect={openModal}
                     />
 
                     {/* section3: portrait */}
@@ -83,7 +81,6 @@ function SeriesPage() {
                         title="Top Rating Series Hari ini"
                         items={topRatingSeries}
                         variant="portrait"
-                        onSelect={openModal}
                     />
 
                     {/* section4: portrait */}
@@ -91,7 +88,6 @@ function SeriesPage() {
                         title="Series Trending"
                         items={trendingSeries}
                         variant="portrait"
-                        onSelect={openModal}
                     />
 
                     {/* section5: genre */}
@@ -100,7 +96,6 @@ function SeriesPage() {
                             title="Rilis Baru"
                             items={newReleaseSeries}
                             variant="portrait"
-                            onSelect={openModal}
                         />
                     )}
                 </div>

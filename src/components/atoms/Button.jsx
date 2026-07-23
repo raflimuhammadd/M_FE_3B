@@ -7,6 +7,7 @@ function Button({ variant = 'primary', size = 'md', className = '', children, ..
     };
 
     const sizes = {
+        xs: 'px-3 py-1.5 text-xs',
         sm: 'px-4 py-2 text-sm',
         md: 'px-6 py-3 text-base',
         lg: 'px-8 py-3 text-lg',
@@ -15,6 +16,7 @@ function Button({ variant = 'primary', size = 'md', className = '', children, ..
     const base = 'rounded-full transition flex items-center justify-center gap-2';
     const iconBase = 'flex items-center justify-center rounded-full transition box-border';
     const iconSizes = {
+        xs: 'w-7 h-7',
         sm: 'w-8 h-8',
         md: 'w-10 h-10',
         lg: 'w-12 h-12',

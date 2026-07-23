@@ -1,10 +1,11 @@
 import { Icon } from "../atoms";
 import {useFavorites} from "../../hooks/useFavorites";
 import {useNavigate} from "react-router-dom";
+import useModalStore from "../../store/modalStore";
 
-function HoverOverlayLandscape({film, onSelect}) {
-
+function HoverOverlayLandscape({film}) {
   const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
+  const {openModal} = useModalStore();
   const favorited = isFavorite(film.id);
   const navigate = useNavigate();
 
@@ -58,7 +59,7 @@ function HoverOverlayLandscape({film, onSelect}) {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            onSelect?.(film);
+            openModal(film);
           }}
           className="hover-overlay-landscape-button hover-overlay-landscape-button--detail 
             w-10 h-10 rounded-full border-2 border-white/50 

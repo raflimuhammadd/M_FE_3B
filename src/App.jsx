@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import {FavoritesProvider} from './context/FavoriteProvider';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import HomePage from './pages/HomePage';
@@ -15,7 +14,6 @@ import MyListPage from './pages/MyListPage';
 
 function App() {
   return (
-    <FavoritesProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
@@ -37,7 +35,6 @@ function App() {
         <Route path="/" element={<Navigate to="/login" replace />} />
       </Routes>
     </BrowserRouter>
-    </FavoritesProvider>
   );
 }
 

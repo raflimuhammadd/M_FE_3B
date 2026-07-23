@@ -131,30 +131,32 @@ function FilmDetailModal({
             </div>
 
             {/* actions-btn */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10">
+            <div className="flex items-center justify-center gap-3 px-4 border-b border-white/10">
               <Button 
                 variant="primary" 
-                size="md"
-                className="button-play flex-1 mr-2"
+                size="sm"
+                className="flex-1"
                 onClick={handlePlayClick}
               >
-                <Icon name="play" className="h-4 w-4 mr-2" />
+                <Icon name="play" className="h-4 w-4" />
                 Mulai
               </Button>
               <Button 
                 variant="secondary" 
                 size="icon"
+                className="w-9! h-9! p-0!"
                 onClick={handleFavoriteClick}
               >
-                <Icon name="plus" className="h-5 w-5" />
+                  <Icon name={favorited ? "check" : "plus"}/>
               </Button>
               <Button 
                 variant="secondary" 
                 size="icon"
                 onClick={handleMuteClick}
+                className="w-9! h-9! p-0!"
                 aria-label={isMuted ? 'Unmute' : 'Mute'}
               >
-                <Icon name={isMuted ? 'speaker-x' : 'volume'} className="h-5 w-5" />
+                <Icon name={isMuted ? 'speaker-x' : 'volume'} className="h-4 w-4" />
               </Button>
             </div>
 

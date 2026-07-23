@@ -124,26 +124,28 @@ function SeriesDetailModal({
             </div>
 
             {/* actions-btn */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10">
+            <div className="flex items-center justify-center gap-3 px-4 border-b border-white/10">
               <Button 
                 variant="primary" 
-                size="md"
-                className="button-play flex-1 mr-2"
+                size="sm"
+                className="button-play flex-1"
                 onClick={handlePlayClick}
               >
-                <Icon name="play" className="h-4 w-4 mr-2" />
+                <Icon name="play" className="h-4 w-4" />
                 Mulai
               </Button>
               <Button 
                 variant="secondary" 
                 size="icon"
+                className="w-9! h-9! p-0!"
                 onClick={handleFavoriteClick}
               >
-                <Icon name="plus" className="h-5 w-5" />
+                <Icon name={favorited ? "check" : "plus"} className="h-5 w-5" />
               </Button>
               <Button 
                 variant="secondary" 
                 size="icon"
+                className="w-9! h-9! p-0!"
                 onClick={handleMuteClick}
                 aria-label={isMuted ? 'Unmute' : 'Mute'}
               >

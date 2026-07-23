@@ -1,10 +1,11 @@
 import {useNavigate} from 'react-router-dom';
 import Icon from '../atoms/Icon';
 import {useFavorites} from '../../hooks/useFavorites';
+import useModalStore from '../../store/modalStore';
 
-function HoverOverlay({film, variant = 'default', onSelect, onEdit}) {
+function HoverOverlay({film, variant = 'default', onEdit}) {
     const navigate = useNavigate();
-
+    const {openModal} = useModalStore();
     const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
     const favorited = isFavorite(film.id);
 
@@ -26,7 +27,7 @@ function HoverOverlay({film, variant = 'default', onSelect, onEdit}) {
                     <button
                         onClick={(e) => {
                             e.stopPropagation();
-                            onSelect?.(film);
+                            openModal(film);
                         }}
                         className="bg-white text-black rounded-full w-10 h-10 
                         flex items-center justify-center hover:bg-gray-200 
@@ -102,7 +103,7 @@ function HoverOverlay({film, variant = 'default', onSelect, onEdit}) {
                         <Icon name="play" className="h-5 w-5 fill-black" />
                     </button>
                     <button
-                        onClick={(e) => {e.stopPropagation(); onSelect(film);}}
+                        onClick={(e) => {e.stopPropagation(); openModal(film);}}
                         className="hover-overlay-button hover-overlay-button--detail 
                             w-10 h-10 rounded-full bg-white/20 hover:bg-white/30
                             flex items-center justify-center text-white transition"

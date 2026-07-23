@@ -9,7 +9,7 @@ function ConfirmClearModal({ isOpen, onConfirm, onClose, isLoading = false }) {
       onClick={onClose}
     >
       <div 
-        className="bg-gray-900 rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto animate-slide-up"
+        className="bg-chill-gray rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto animate-slide-up"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -41,7 +41,8 @@ function ConfirmClearModal({ isOpen, onConfirm, onClose, isLoading = false }) {
             type="button"
             onClick={onClose}
             disabled={isLoading}
-            className="flex-1 px-4 py-2.5 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-medium transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white rounded-lg 
+                        font-medium transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Batal
           </button>

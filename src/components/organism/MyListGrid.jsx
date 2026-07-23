@@ -2,12 +2,12 @@ import MovieCard from '../molecules/MovieCard';
 import Icon from '../atoms/Icon';
 
 /**
- * Grid component untuk display favorites
+ * Grid component for favorites
  * 
  * @param {Array} items
  * @param {string} emptyMessage
  */
-function MyListGrid({ items, emptyMessage, onSelect, onEdit, isMobile }) {
+function MyListGrid({ items, emptyMessage, onEdit }) {
   // Empty state
   if (!items || items.length === 0) {
     return (
@@ -34,9 +34,7 @@ function MyListGrid({ items, emptyMessage, onSelect, onEdit, isMobile }) {
             variant="portrait"
             showNewEpisode={item.hasNewEpisode}
             hoverVariant='mylist'
-            onSelect={onSelect}
             onEdit={onEdit}
-            mobileActions={isMobile}
           />
         ))}
       </div>

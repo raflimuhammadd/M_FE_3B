@@ -79,7 +79,7 @@ export const filmData = {
         image: '/assets/images/duty-after-potrait.png',
         hoverImage: '/assets/images/duty-after.png',
         topRank: 4,
-        youtubeId: 'kZ5i8NyA4P4',
+        youtubeId: 'U0MOoyI7pIM',
         description: 'Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.',
         cast: ['Shin Hyun-soo', 'Lee Soon-won', 'Im Se-mi', 'Kim Ki-hae', 'Kwon Eun-bin', 'Moon Sang-min'],
         creator: 'Lee Nam-kyu',

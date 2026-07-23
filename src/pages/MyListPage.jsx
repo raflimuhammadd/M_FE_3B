@@ -56,11 +56,9 @@ function MyListPage () {
     setIsClearing(true);
     try {
       clearFavorites();
-      // TODO: Add toast/notification system later
       console.log('Semua favorites berhasil dihapus');
     } catch (error) {
       console.error('Gagal menghapus semua favorites:', error);
-      // TODO: Show error toast
     } finally {
       setIsClearing(false);
       setIsClearModalOpen(false);
@@ -73,13 +71,11 @@ function MyListPage () {
       <Navbar />
 
       <main className="container-fluid pt-24 pb-8 sm:pb-12">
-        {/* header */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white
+        <h1 className="header text-3xl sm:text-4xl md:text-5xl font-semibold text-white
         mb-4 sm:mb-6">
           Daftar Saya
         </h1>
 
-        {/* Clear All Button */}
         <ClearAllButton 
           onClick={() => setIsClearModalOpen(true)}
           disabled={!allItems.length}
@@ -87,7 +83,6 @@ function MyListPage () {
           isLoading={isClearing}
         />
 
-        {/* tabs */}
          <div className="tabs-wrapper mb-4 sm:mb-6 flex gap-4 border-b border-gray-800">
           <button
             onClick={() => setActiveTab('all')}
@@ -125,9 +120,7 @@ function MyListPage () {
         <MyListGrid 
           items={displayItems}
           emptyMessage={emptyMessages[activeTab]}
-          onSelect={openModal}
           onEdit={handleEdit}
-          isMobile={isMobile}
         />
       </main>
 

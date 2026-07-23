@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import MovieCard from '../molecules/MovieCard';
 import ScrollButtons from '../molecules/ScrollButtons';
 
-function ContentSection({ title, films, items, variant = 'portrait', onSelect }) {
+function ContentSection({ title, films, items, variant = 'portrait' }) {
   const navigate = useNavigate();
   const scrollRef = useRef(null);
 
@@ -69,7 +69,6 @@ function ContentSection({ title, films, items, variant = 'portrait', onSelect })
                 variant={variant}
                 progress={film.progress}
                 showNewEpisode={film.hasNewEpisode}
-                onSelect={onSelect}
               />
             ))}
           </div>
