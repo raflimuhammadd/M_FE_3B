@@ -19,7 +19,7 @@ function ClearAllButton({ onClick, disabled = false, className = '', isLoading =
           ? 'border-red-500/50 text-red-500/50 opacity-50 cursor-not-allowed' 
           : isLoading
             ? 'border-red-400 text-red-400 cursor-wait'
-            : 'border-red-500 text-red-500 hover:bg-red-500/10'
+            : 'border-red-500 text-red-500 hover:bg-red-500 hover:text-white'
         }
         ${className}
       `}

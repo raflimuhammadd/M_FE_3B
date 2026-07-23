@@ -9,7 +9,7 @@ export const useFilmData = () => {
     return getMergedFilm(id) || null;
   };
   
-  // Get all films (for browse pages)
+  // Get all films (merged)
   const getAllFilms = () => {
     return Object.keys(filmData).map(key => {
       const film = filmData[key];

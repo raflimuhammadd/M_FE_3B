@@ -13,7 +13,7 @@ function MyListGrid({ items, emptyMessage, onEdit }) {
     return (
       <div className="my-list-empty-state text-center py-20">
         <div className="empty-state-icon mb-6">
-          <Icon name="bookmark" className="h-16 w-16 mx-auto text-gray-600" />
+          <Icon name="bookmark" className="w-12 h-12 mx-auto fill-white" />
         </div>
         <p className="empty-state-message text-gray-400 text-base sm:text-lg max-w-md mx-auto">
           {emptyMessage || "Belum ada item di daftar Anda"}

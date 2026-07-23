@@ -2,6 +2,7 @@ import { useState } from "react";
 import {useNavigate, Link} from 'react-router-dom';
 import FormField from "./FormField";
 import { EyeIcon, Input, Button } from "../atoms";
+import useAuthStore from "../../store/authStore";
 
 const isValidUsername = (username) => /^[a-zA-Z0-9_]{3,20}$/.test(username);
 
@@ -23,6 +24,7 @@ function LoginForm() {
     const [errors, setErrors] = useState ({});
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+    const {login, isLoading, error} = useAuthStore();
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -30,11 +32,13 @@ function LoginForm() {
         if (errors[name]) setErrors((prev) => ({...prev, [name]: ''}));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
        e.preventDefault();
        const formErrors = validateForm(formData);
        if (Object.keys(formErrors).length > 0) return setErrors(formErrors);
-       navigate('/home'); 
+       
+       const success = await login(formData);
+       if (success) navigate('/home'); 
     };
 
     return (
@@ -82,8 +86,15 @@ function LoginForm() {
             </div>
 
             <div className="space-y-3">
-                    <Button type="submit" variant="primary" className="w-full">
-                        Masuk
+                    {error && (
+                        <div className="bg-red-500/20 border-red-500 text-red-500 px-4 py-3 
+                                        rounded-lg text-center text-sm">
+                            {error}
+                        </div>
+                    )}
+                    <Button type="submit" variant="primary" className="w-full"
+                                    disabled={isLoading}>
+                        {isLoading ? 'Memproses...' : 'Masuk'}
                     </Button>
                     <p className="login-form-register-text text-center text-white/60">Atau</p>
                     <Button type="button" variant="secondary" className="w-full">

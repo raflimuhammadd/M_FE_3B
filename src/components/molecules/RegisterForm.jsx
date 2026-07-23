@@ -4,6 +4,7 @@ import Input from "../atoms/Input";
 import Button from "../atoms/Button";
 import FormField from "./FormField";
 import EyeIcon from "../atoms/EyeIcon";
+import useAuthStore from "../../store/authStore";
 
 const isValidUsername = (username) => /^[a-zA-Z0-9_]{3,20}$/.test(username);
 
@@ -29,6 +30,7 @@ function RegisterForm() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
+    const {register, isLoading, error} = useAuthStore();
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -37,12 +39,20 @@ function RegisterForm() {
         if (errors[name]) setErrors((prev) => ({...prev, [name]: ''}));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
        e.preventDefault();
        const formErrors = validateForm(formData);
        if (Object.keys(formErrors).length > 0) return setErrors(formErrors);
-       setSuccessMessage('Registrasi berhasil! Mengalihkan..');
-       setTimeout(() => navigate('/home'), 2000); 
+       
+       const success = await register ({
+          username: formData.username,
+          password: formData.password,
+       });
+
+       if (success) {
+          setSuccessMessage('Registrasi berhasil! Mengalihkan..');
+          setTimeout(() => navigate('/home'), 2000); 
+      }
     };
 
     return (
@@ -114,8 +124,14 @@ function RegisterForm() {
       </div>
 
       <div className="space-y-3">
-        <Button type="submit" variant="primary" className="w-full">
-          Daftar
+        {error && (
+          <div className="bg-red-500/20 border-red-500 text-red-500 px-4 py-3 
+                        rounded-lg text-center text-sm">
+                {error}
+          </div>
+        )}
+        <Button type="submit" variant="primary" className="w-full" disabled={isLoading}>
+          {isLoading ? 'Mendaftar...' : 'Daftar'}
         </Button>
         <p className="text-center text-white/60">atau</p>
         <Button type="button" variant="secondary" className="w-full">

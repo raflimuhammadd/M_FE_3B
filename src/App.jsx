@@ -11,6 +11,7 @@ import DetailPage from './pages/DetailPage';
 import SeriesPage from './pages/SeriesPage';
 import FilmPage from './pages/FilmPage';
 import MyListPage from './pages/MyListPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage/>} />
         <Route path="/continue-watching" element={<ContinueWatchingPage />} />
         <Route path="/top-rating" element={<TopRatingPage />} />
         <Route path="/trending" element={<TrendingPage />} />

@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import {useNavigate} from 'react-router-dom';
+import useAuthStore from "../../store/authStore";
 
 function ProfileDropdown() {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const {logout} = useAuthStore();
     const navigate = useNavigate();
 
     // close dropdown
@@ -23,6 +25,7 @@ function ProfileDropdown() {
 
     const handleLogout = () => {
         setIsOpen(false);
+        logout();
         navigate('/login');
     };
 
@@ -49,6 +52,7 @@ function ProfileDropdown() {
                 <button
                     onClick={() => {
                         setIsOpen(false);
+                        navigate('/profile');
                     }}
                     className="profile-dropdown-item profile-dropdown-item--profile 
                         w-full px-3 py-4 text-left text-white hover:text-red-500
@@ -65,6 +69,7 @@ function ProfileDropdown() {
                 <button
                     onClick={() => {
                         setIsOpen(false);
+                        navigate('/profile');
                     }}
                     className="profile-dropdown-item profile-dropdown-item--premium 
                         w-full px-4 py-3 text-left text-white hover:text-red-500
