@@ -11,8 +11,8 @@ const apiClient = axios.create({
 // request interceptor - logging
 apiClient.interceptors.request.use(
     (config) => {
-        console.log(`[API] ${config.method.toUpperCase()} ${config.url}`,
-            config.data || '');
+        // console.log(`[API] ${config.method.toUpperCase()} ${config.url}`,
+        //     config.data || '');
         
         const user = JSON.parse(localStorage.getItem('chill-user') || 'null');
         if (user?.id) {
