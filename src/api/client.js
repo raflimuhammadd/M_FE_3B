@@ -26,11 +26,11 @@ apiClient.interceptors.request.use(
 // response interceptor - logging
 apiClient.interceptors.response.use(
     (response) => {
-        console.log(`[API] Response ${response.status} from ${response.config.url}`);
+        // console.log(`[API] Response ${response.status} from ${response.config.url}`);
         return response;
     },
     (error) => {
-        console.log('[API] Error:', error.response?.status, error.message);
+        // console.log('[API] Error:', error.response?.status, error.message);
         return Promise.reject(error);
     }
 );
