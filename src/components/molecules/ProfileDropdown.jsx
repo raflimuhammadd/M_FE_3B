@@ -68,7 +68,7 @@ function ProfileDropdown() {
                 <button
                     onClick={() => {
                         setIsOpen(false);
-                        navigate('/profile');
+                        navigate('/premium');
                     }}
                     className="profile-dropdown-item profile-dropdown-item--premium 
                         w-full px-4 py-3 text-left text-white hover:text-red-500

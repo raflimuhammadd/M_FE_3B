@@ -18,7 +18,7 @@ function ProfilePage() {
   useDetailModal();
   const avatarSrc = user?.avatar || '/assets/images/profile.png';
   // const isSubscribed = true;
-  const isSubscribed = Boolean(user?.subscriptionStatus);
+  const isSubscribed = Boolean(user?.isPremium);
   const [avatarBase64, setAvatarBase64] = useState(null);
 
 

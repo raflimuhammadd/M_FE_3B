@@ -12,6 +12,7 @@ import SeriesPage from './pages/SeriesPage';
 import FilmPage from './pages/FilmPage';
 import MyListPage from './pages/MyListPage';
 import ProfilePage from './pages/ProfilePage';
+import PremiumPage from './pages/PremiumPage';
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
         <Route path="/film" element={<FilmPage />} />
         <Route path="/my-list" element={<MyListPage />} />
 
+        {/* premium */}
+        <Route path="/premium" element={<PremiumPage />} />
 
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/" element={<Navigate to="/login" replace />} />

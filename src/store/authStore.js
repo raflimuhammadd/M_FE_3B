@@ -15,7 +15,7 @@ const useAuthStore = create((set) => ({
         ...credentials,
         full_name: '',
         email: '',
-        subscription_status: false,
+        isPremium: false,
         avatar: '',
         createdAt: new Date().toISOString(),
       });
@@ -41,7 +41,13 @@ const useAuthStore = create((set) => ({
         set({ error: 'Kata sandi salah', isLoading: false });
         return false;
       }
-      localStorage.setItem('chill-user', JSON.stringify(foundUser));
+
+      const normalizedUser = {
+        ...foundUser,
+        isPremium: Boolean(foundUser.subscription_status ?? foundUser.isPremium),
+      };
+
+      localStorage.setItem('chill-user', JSON.stringify(normalizedUser));
       set({ user: foundUser, isLoading: false });
       return true;
     } catch (err) {
@@ -59,11 +65,17 @@ const useAuthStore = create((set) => ({
     set({isLoading: true, error: null});
     try {
       const currentUser = useAuthStore.getState().user;
-      const updatedUser = await updateUser(currentUser.id, {
-        ...currentUser,
-        ...updates,
-      });
-      localStorage.setItem('chill-user', JSON.stringify(updatedUser));
+      const apiPayload = {...currentUser, ...updates};
+      if ('isPremium' in updates) {
+        apiPayload.subscription_status = updates.isPremium;
+        delete apiPayload.isPremium;
+      }
+      const updatedUser = await updateUser(currentUser.id, apiPayload);
+      const normalizedUser = {
+        ...updatedUser,
+        isPremium: Boolean(updatedUser.subscription_status ?? updatedUser.isPremium),
+      };
+      localStorage.setItem('chill-user', JSON.stringify(normalizedUser));
       set({user: updatedUser, isLoading: false});
       return true;
     } catch (err) {
