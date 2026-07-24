@@ -7,6 +7,20 @@ const icons = {
     <line x1="5" y1="12" x2="19" y2="12" />
     </>
   ),
+  crown: (
+    <>
+      <path d="M4 20a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"/>
+      <path d="m12.474 5.943 1.567 5.34a1 1 0 0 0 1.75.328l2.616-3.402"/>
+      <path d="m20 9-3 9"/><path d="m5.594 8.209 2.615 3.403a1 1 0 0 0 1.75-.329l1.567-5.34"/>
+      <path d="M7 18 4 9"/>
+    </>
+  ),
+  premium: (
+    <>
+      <path d="M2 20h20v2H2v-2zM4 8l4 4 4-8 4 8 4-4v9H4V8z"/>
+
+    </>
+  ),
   hamburger: (
     <>
       <line x1="3" y1="6" x2="21" y2="6"/>
@@ -27,10 +41,29 @@ const icons = {
       <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path>
     </>  
 ),
+user: (
+  <>
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle cx="12" cy="7" r="4"/>
+  </>
+),
   bookmark: (
     <>
-    <path d="M 4 5 C 2.895 5 2 5.895 2 7 L 2 23 C 2 24.105 2.895 25 4 25 L 12 25 C 13.105 25 14 25.895 14 27 L 14 7 C 14 5.895 13.105 5 12 5 L 4 5 z M 18 5 C 16.895 5 16 5.895 16 7 L 16 27 C 16 25.895 16.895 25 18 25 L 26 25 C 27.105 25 28 24.105 28 23 L 28 7 C 28 5.895 27.105 5 26 5 L 18 5 z"></path>
+      <path d="M7 3v18"></path>
+      <path d="M3 7.5h4"></path>
+      <path d="M3 12h18"></path>
+      <path d="M3 16.5h4"></path>
+      <path d="M17 3v18"></path>
+      <path d="M17 7.5h4"></path>
+      <path d="M17 16.5h4"></path>
     </>
+  ),
+  upload: (
+  <>
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <path d="M17 8l-5-5-5 5" />
+    <path d="M12 3v12" />
+  </>
   ),
   info: (
     <>
@@ -60,6 +93,13 @@ const icons = {
       <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
     </>
   ),
+  logout: (
+    <>
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+      <polyline points="16 17 21 12 16 7"/>
+      <line x1="21" y1="12" x2="9" y2="12"/>
+    </>
+  ),
 };
 
 function Icon({ name, className = "h-5 w-5", ...props }) {
@@ -70,8 +110,8 @@ function Icon({ name, className = "h-5 w-5", ...props }) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill={['star', 'play'].includes(name) ? 'currentColor' : 'none'}
-      stroke={['star', 'play'].includes(name) ? 'none' : 'currentColor'}
+      fill={['star', 'play', 'premium', 'user'].includes(name) ? 'currentColor' : 'none'}
+      stroke={['star', 'play', 'premium', 'user'].includes(name) ? 'none' : 'currentColor'}
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"

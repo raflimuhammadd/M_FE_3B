@@ -13,3 +13,6 @@ export { default as EditFavoriteModal } from './EditFavoriteModal';
 export { default as ClearAllButton } from './ClearAllButton';
 export { default as ConfirmClearModal } from './ConfirmClearModal';
 export { default as RecommendationCard } from './RecommendationCard';
+export { default as SubscriptionCard } from './SubscriptionCard';
+export { default as AvatarUpload } from './AvatarUpload';
+export { default as ProfileForm } from './ProfileForm';

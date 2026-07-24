@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { registerUser, loginUser } from "../api/authService";
+import { registerUser, loginUser, updateUser } from "../api/authService";
 
 const useAuthStore = create((set) => ({
   // ── State ──
@@ -13,9 +13,9 @@ const useAuthStore = create((set) => ({
     try {
       const newUser = await registerUser({
         ...credentials,
-        fullName: '',
+        full_name: '',
         email: '',
-        subscriptionStatus: false,
+        subscription_status: false,
         avatar: '',
         createdAt: new Date().toISOString(),
       });
@@ -54,6 +54,23 @@ const useAuthStore = create((set) => ({
     localStorage.removeItem('chill-user');
     set({ user: null, error: null });
   },
+
+  updateProfile: async (updates) => {
+    set({isLoading: true, error: null});
+    try {
+      const currentUser = useAuthStore.getState().user;
+      const updatedUser = await updateUser(currentUser.id, {
+        ...currentUser,
+        ...updates,
+      });
+      localStorage.setItem('chill-user', JSON.stringify(updatedUser));
+      set({user: updatedUser, isLoading: false});
+      return true;
+    } catch (err) {
+      set({error: err.message, isLoading: false});
+      return false;
+    }
+  }
 }));
 
 export default useAuthStore;
