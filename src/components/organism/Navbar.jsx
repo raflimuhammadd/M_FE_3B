@@ -41,19 +41,33 @@ function Navbar() {
             </NavLink>
             <ul className="navbar-menu hidden sm:flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6">
               <li className="navbar-menu-item">
-                <Link to="/series" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                <NavLink to="/series" 
+                className={({isActive}) => 
+                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
+                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
+                font-medium`}>
                     Series
-                </Link>
+                </NavLink>
               </li>
               <li className="navbar-menu-item">
-                <Link to="/film" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                <NavLink to="/film" 
+                className={({isActive}) => 
+                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
+                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
+                font-medium`}
+                >
                     Film
-                </Link>
+                </NavLink>
               </li>
               <li className="navbar-menu-item">
-                <Link to="/my-list" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+                <NavLink to="/my-list" 
+                className={({isActive}) => 
+                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
+                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
+                font-medium`}
+                >
                     Daftar Saya
-                </Link>
+                </NavLink>
               </li>
               <li className="navbar-menu-item">
                 <Link to="#" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
