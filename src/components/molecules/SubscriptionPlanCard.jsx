@@ -1,6 +1,9 @@
 import { Icon } from "../atoms";
+import { useNavigate } from "react-router-dom";
 
 function SubscriptionPlanCard({ plan, onSelect, isSelected }) {
+  const navigate = useNavigate();
+
   return (
     <article
         className={`rounded-[20px] md:rounded-[24px] bg-gradient-to-b from-[#5370D4] to-[#192DB7] 
@@ -10,10 +13,12 @@ function SubscriptionPlanCard({ plan, onSelect, isSelected }) {
     >
       {/* Plan Name Badge */}
       <div className="mb-4">
-        <span className="inline-block rounded-full 
-        bg-[#3D4142] px-5 py-3 text-sm md:text-base font-bold text-white">
-          {plan.name}
-        </span>
+        {plan?.name && (
+          <span className="inline-block rounded-full 
+                bg-[#3D4142] px-5 py-3 text-sm md:text-base font-bold text-white">
+              {plan.name}
+          </span>
+        )}
       </div>
 
       {/* Pricing & Users */}
@@ -35,8 +40,13 @@ function SubscriptionPlanCard({ plan, onSelect, isSelected }) {
       {/* Button & Terms */}
     <div className="mt-auto border-t border-white/20 pt-6 md:pt-8">
         <button
-            onClick={() => onSelect(plan.id)}
-            className="w-full rounded-full bg-white py-3 md:py-4 text-sm md:text-base font-bold text-[#2E3EDF] transition-all duration-300 hover:bg-white/90"
+            onClick={() => {
+              onSelect(plan.id);
+              navigate('/payment');
+            }}
+            className="w-full rounded-full bg-white py-3 md:py-4 text-sm 
+            md:text-base font-bold text-[#2E3EDF] transition-all duration-300 
+            hover:bg-white/90"
         >
             Langganan
         </button>

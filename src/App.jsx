@@ -12,6 +12,7 @@ import SeriesPage from './pages/SeriesPage';
 import FilmPage from './pages/FilmPage';
 import MyListPage from './pages/MyListPage';
 import ProfilePage from './pages/ProfilePage';
+import PaymentPage from './pages/PaymentPage';
 import PremiumPage from './pages/PremiumPage';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
         {/* premium */}
         <Route path="/premium" element={<PremiumPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
 
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/" element={<Navigate to="/login" replace />} />
