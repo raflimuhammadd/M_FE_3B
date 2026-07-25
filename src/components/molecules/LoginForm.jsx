@@ -79,8 +79,8 @@ function LoginForm() {
             </FormField>
 
             <div className="login-form-options flex justify-between items-center text-sm">
-                <Link to="/register" className="text-white/60 hover:text-white">
-                    Belum punya akun? <span className="text-blue-500">Daftar</span>
+                <Link to="/register" className="text-white/80">
+                    Belum punya akun? <span className="text-blue-300 hover:text-blue-700">Daftar</span>
                 </Link>
                 <a href="#" className="text-white/60 hover:text-white">Lupa kata sandi</a>
             </div>

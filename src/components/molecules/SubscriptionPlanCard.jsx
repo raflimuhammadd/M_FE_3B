@@ -6,8 +6,8 @@ function SubscriptionPlanCard({ plan, onSelect, isSelected }) {
 
   return (
     <article
-        className={`rounded-[20px] md:rounded-[24px] bg-gradient-to-b from-[#5370D4] to-[#192DB7] 
-            p-6 md:p-8 min-h-[346px] md:min-h-[400px] flex flex-col 
+        className={`rounded-[20px] md:rounded-3xl bg-linear-to-b from-[#5370D4] to-[#192DB7] 
+            p-6 md:p-8 min-h-86.5 md:min-h-100 flex flex-col 
             transition-all duration-300 hover:shadow-xl
             ${isSelected ? 'ring-4 ring-white/80' : ''}`}
     >
@@ -42,11 +42,11 @@ function SubscriptionPlanCard({ plan, onSelect, isSelected }) {
         <button
             onClick={() => {
               onSelect(plan.id);
-              navigate('/payment');
+              navigate('/payment', {state: {planId: plan.id}});
             }}
             className="w-full rounded-full bg-white py-3 md:py-4 text-sm 
-            md:text-base font-bold text-[#2E3EDF] transition-all duration-300 
-            hover:bg-white/90"
+            md:text-base font-bold text-[#0F1E93] transition-all duration-300 
+            hover:bg-[#7EC036] active:bg-[#60A125] hover:text-white cursor-pointer"
         >
             Langganan
         </button>

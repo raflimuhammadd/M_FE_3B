@@ -118,8 +118,8 @@ function RegisterForm() {
       </FormField>
 
       <div className="text-sm">
-        <Link to="/login" className="text-white/60 hover:text-white">
-          Sudah punya akun? <span className="text-purple-500">Masuk</span>
+        <Link to="/login" className="text-white/60">
+          Sudah punya akun? <span className="text-blue-300 hover:text-blue-700">Masuk</span>
         </Link>
       </div>
 

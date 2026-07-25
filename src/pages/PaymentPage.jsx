@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/organism/Navbar';
 import Footer from '../components/organism/Footer';
 import SubscriptionPlanCard from '../components/molecules/SubscriptionPlanCard';
@@ -7,6 +7,7 @@ import PaymentMethodOption from '../components/molecules/PaymentMethodOption';
 import CountdownBox from '../components/molecules/CountdownBox';
 import { Icon } from '../components';
 import subscriptionPlans from '../data/subscriptionPlans';
+import useAuthStore from '../store/authStore';
 
 function PaymentPage() {
     const navigate = useNavigate();
@@ -15,6 +16,9 @@ function PaymentPage() {
     const [voucherCode, setVoucherCode] = useState('');
     const [countdown, setCountdown] = useState(15 * 60);
     const [paymentSession, setPaymentSession] = useState(null);
+    const setPremium = useAuthStore((s) => s.setPremium);
+    const location = useLocation();
+    const selectedPlanId = location.state?.planId || 'individual';
 
     useEffect(() => {
         if (paymentStatus === 'waiting') {
@@ -76,7 +80,7 @@ function PaymentPage() {
         alert(`Voucher "${voucherCode}" applied!`)
     };
 
-    const activePlan = subscriptionPlans.find(p => p.id === 'individual')
+    const activePlan = subscriptionPlans.find(p => p.id === selectedPlanId)
         || subscriptionPlans[0]
         || {name: '-', price: '-', users: '-'};
 
@@ -187,8 +191,8 @@ function PaymentPage() {
                             <div className="w-full md:w-45">
                                 <button
                                     onClick={handlePay}
-                                    className="btn-pay w-full rounded-full bg-[#09147A] py-4 
-                                    font-bold text-lg hover:bg-[#0a17a0] transition"
+                                    className="btn-pay w-full rounded-full bg-[#0586FF] py-4 
+                                    font-bold text-lg hover:bg-[#0367DB] active:bg-[#024DB7] transition"
                                 >
                                     Bayar Sekarang
                                 </button>
@@ -292,13 +296,20 @@ function PaymentPage() {
                                 )}
                             </ol>
                         </section>
+
+                        {/* premium test */}
+                        <button
+                            onClick={() => {
+                                setPremium();
+                                navigate('/profile')
+                            }}
+                            className="mt-6 w-45 py-4 rounded-full bg-green-600 font-bold
+                            text-lg hover:bg-green-500 transition"
+                        >
+                            Test Premium
+                        </button>
                         </>
                     )}
-
-
-
-
-
                 </div> 
                 </div>
             </main>
