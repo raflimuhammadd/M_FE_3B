@@ -7,7 +7,7 @@ import Icon from '../atoms/Icon';
  * @param {Array} items
  * @param {string} emptyMessage
  */
-function MyListGrid({ items, emptyMessage, onEdit }) {
+function MyListGrid({ items, emptyMessage }) {
   // Empty state
   if (!items || items.length === 0) {
     return (
@@ -34,7 +34,6 @@ function MyListGrid({ items, emptyMessage, onEdit }) {
             variant="portrait"
             showNewEpisode={item.hasNewEpisode}
             hoverVariant='mylist'
-            onEdit={onEdit}
           />
         ))}
       </div>

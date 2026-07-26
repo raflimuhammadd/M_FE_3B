@@ -4,14 +4,11 @@ import Button from '../atoms/Button';
 import Badge from '../atoms/Badge';
 import {useFavorites} from '../../hooks/useFavorites';
 import EpisodeCard from './EpisodeCard';
+import useModalStore from '../../store/modalStore';
 
-function SeriesDetailModal({ 
-  isOpen, 
-  series, 
-  isMobile, 
-  closeModal, 
-  handleBackdropClick 
-}) {
+function SeriesDetailModal() {
+  const { isOpen, selectedItem: series, isMobile, closeModal, handleBackdropClick } = useModalStore();
+
   const modalRef = useRef(null);
 
   const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();

@@ -1,10 +1,8 @@
 import {Navbar, Hero, Footer} from '../components';
 import {ContentSection, FilmDetailModal} from '../components';
 import filmData from '../data/filmData';
-import {useDetailModal} from '../hooks';
 
 function FilmPage() {
-    const { isOpen, selectedItem, isMobile, openModal, closeModal, handleBackdropClick } = useDetailModal();
     // convert data object to arrray
     const allFilms = Object.values(filmData);
 
@@ -102,14 +100,7 @@ function FilmPage() {
             <Footer />
 
             {/* Film Detail Modal */}
-            <FilmDetailModal
-                isOpen={isOpen}
-                film={selectedItem}
-                isMobile={isMobile}
-                closeModal={closeModal}
-                handleBackdropClick={handleBackdropClick}
-                openModal={openModal}
-            />
+            <FilmDetailModal />
         </div>
     )
 }

@@ -4,12 +4,14 @@ import Icon from '../atoms/Icon';
 import Badge from '../atoms/Badge';
 import HoverOverlay from './HoverOverlay';
 import HoverOverlayLandscape from './HoverOverlayLandscape';
-import  useModalStore from '../../store/modalStore';
+import useModalStore from '../../store/modalStore';
+import useEditModalStore from '../../store/editModalStore';
 
-function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = false, hoverVariant, onEdit = false }) {
+function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = false, hoverVariant }) {
   const { removeFromFavorites } = useFavorites();
   const {isMobile, openModal} = useModalStore();
   const [showActions, setShowActions] = useState(false);
+  const {openEditModal} = useEditModalStore();
 
   if (!item) return null;
   const displayProgress = progress;
@@ -50,7 +52,7 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
 
   const handleEditClick = (e) => {
     e.stopPropagation();
-    onEdit?.(item);
+    openEditModal(item);
     handleCloseOverlay();
   };
 
@@ -87,7 +89,7 @@ function MovieCard({ item, variant = 'portrait', progress, showNewEpisode = fals
               </Badge>
             )}
             {(!isMobile || hoverVariant !== 'mylist') && (
-              <HoverOverlay film={item} variant={hoverVariant || 'default'} onEdit={onEdit} />
+              <HoverOverlay film={item} variant={hoverVariant || 'default'} />
             )}
 
             {/* Mobile actions overlay - inside poster wrapper */}

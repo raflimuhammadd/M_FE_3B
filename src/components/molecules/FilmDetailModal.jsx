@@ -5,15 +5,10 @@ import Badge from '../atoms/Badge';
 import {useFavorites} from '../../hooks/useFavorites';
 import filmData from '../../data/filmData';
 import RecommendationCard from './RecommendationCard';
+import useModalStore from '../../store/modalStore';
 
-function FilmDetailModal({ 
-  isOpen, 
-  film, 
-  isMobile, 
-  closeModal, 
-  handleBackdropClick, 
-  openModal
-}) {
+function FilmDetailModal() {
+  const {isOpen, selectedItem: film, isMobile, closeModal, handleBackdropClick, openModal} = useModalStore();
   const modalRef = useRef(null);
 
   const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
@@ -350,5 +345,4 @@ function FilmDetailModal({
     </div>
   );
 }
-
 export default FilmDetailModal;

@@ -62,7 +62,7 @@ function ProfilePage() {
             </div>
 
             <div className="order-1 md:order-2 md:pt-16">
-              <SubscriptionCard isSubscribed={isSubscribed} />
+              <SubscriptionCard isSubscribed={isSubscribed} plan={user?.subscriptionPlan} />
             </div>
           </div>
         </section>

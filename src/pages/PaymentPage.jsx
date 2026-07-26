@@ -300,7 +300,7 @@ function PaymentPage() {
                         {/* premium test */}
                         <button
                             onClick={() => {
-                                setPremium();
+                                setPremium(selectedPlanId);
                                 navigate('/profile')
                             }}
                             className="mt-6 w-45 py-4 rounded-full bg-green-600 font-bold

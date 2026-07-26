@@ -2,12 +2,14 @@ import {useNavigate} from 'react-router-dom';
 import Icon from '../atoms/Icon';
 import {useFavorites} from '../../hooks/useFavorites';
 import useModalStore from '../../store/modalStore';
+import useEditModalStore from '../../store/editModalStore';
 
-function HoverOverlay({film, variant = 'default', onEdit}) {
+function HoverOverlay({film, variant = 'default'}) {
     const navigate = useNavigate();
     const {openModal} = useModalStore();
     const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
     const favorited = isFavorite(film.id);
+    const {openEditModal} = useEditModalStore();
 
     const toggleFavorite = (e) => {
         e.stopPropagation(); //prevent card click evnt
@@ -48,7 +50,7 @@ function HoverOverlay({film, variant = 'default', onEdit}) {
                     <button
                         onClick={(e) => {
                             e.stopPropagation();
-                            onEdit?.(film);
+                            openEditModal(film);
                         }}
                         className="bg-transparent border-2 border-gray-400 text-gray-200 rounded-full 
                         w-10 h-10 flex items-center justify-center hover:border-blue-500 

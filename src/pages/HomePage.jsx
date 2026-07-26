@@ -1,7 +1,6 @@
 import {Navbar, Hero, Footer} from '../components';
 import filmData from '../data/filmData';
 import {ContentSection, FilmDetailModal} from '../components';
-import {useDetailModal} from '../hooks';
 
 function HomePage() {
     const featuredFilm = filmData['card-duty'];
@@ -46,9 +45,6 @@ function HomePage() {
         filmData['card-suzume']
     ];
 
-    const { isOpen, selectedItem, isMobile, 
-            openModal, closeModal, handleBackdropClick 
-    } = useDetailModal();
 
     return (
         <div className="min-h-screen bg-chill-dark">
@@ -88,14 +84,7 @@ function HomePage() {
             </main>
             <Footer />
 
-            <FilmDetailModal 
-                isOpen={isOpen}
-                film={selectedItem}
-                isMobile={isMobile}
-                closeModal={closeModal}
-                handleBackdropClick={handleBackdropClick}
-                openModal={openModal}
-            />
+            <FilmDetailModal />
         </div>
     )
 }

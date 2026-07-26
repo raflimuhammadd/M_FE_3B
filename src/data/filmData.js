@@ -20,35 +20,40 @@ export const filmData = {
                 thumbnail: '/assets/images/ted-lasso-trailer-1.png',
                 title: 'Pilot',
                 description: 'American football coach Ted Lasso is hired by a wealthy divorcée to coach the English soccer team AFC Richmond.',
-                duration: '31m'
+                duration: '31m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/ted-lasso-trailer-2.png',
                 title: 'Biscuits',
                 description: "It's Ted's first day of coaching, and fans aren't happy. He makes little headway but remains undeterred as the team play their first match.",
-                duration: '29m'
+                duration: '29m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/ted-lasso-trailer-3.png',
                 title: 'Trent Crimm: The Independent',
                 description: 'To arrange an in-depth exposé, Rebecca pairs cynical journalist Trent Crimm with Ted for a day.',
-                duration: '30m'
+                duration: '30m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/ted-lasso-trailer-4.png',
                 title: 'For the Children',
                 description: "Rebecca hosts the team's annual charity benefit, where Ted stages a reconciliation between Roy and Jamie.",
-                duration: '34m'
+                duration: '34m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/ted-lasso-trailer-5.png',
                 title: 'Tan Lines',
                 description: 'With his wife and son visiting from America, Ted makes drastic changes to the lineup during a critical match.',
-                duration: '31m'
+                duration: '31m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },
@@ -89,35 +94,40 @@ export const filmData = {
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 1',
                 description: 'Inspector Na Hwa-jin steps into the chaos and takes control of a school plagued by mysterious spheres.',
-                duration: '55m'
+                duration: '55m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 2',
                 description: 'Students are recruited into military training as the alien threat intensifies.',
-                duration: '60m'
+                duration: '60m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 3',
                 description: 'The group faces their first real combat situation against the spheres.',
-                duration: '58m'
+                duration: '58m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 4',
                 description: 'Tensions rise within the group as survival becomes increasingly difficult.',
-                duration: '62m'
+                duration: '62m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 5',
                 description: 'A devastating loss forces the students to question their mission.',
-                duration: '65m'
+                duration: '65m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },
@@ -141,35 +151,40 @@ export const filmData = {
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 1',
                 description: 'Arisu and his friends find themselves in a deserted Tokyo and are forced to compete in dangerous games.',
-                duration: '48m'
+                duration: '48m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 2',
                 description: 'The group encounters other players and learns more about the deadly game world.',
-                duration: '56m'
+                duration: '56m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 3',
                 description: 'Arisu meets Usagi and they team up to survive the increasingly difficult games.',
-                duration: '50m'
+                duration: '50m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 4',
                 description: 'The group discovers The Beach, a safe haven where players gather.',
-                duration: '52m'
+                duration: '52m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 5',
                 description: 'Dark secrets about The Beach begin to surface as tensions escalate.',
-                duration: '45m'
+                duration: '45m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },
@@ -192,35 +207,40 @@ export const filmData = {
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 1',
                 description: 'A high school becomes ground zero for a zombie virus outbreak.',
-                duration: '66m'
+                duration: '66m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 2',
                 description: 'The infected multiply in droves as the students run for their lives.',
-                duration: '68m'
+                duration: '68m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 3',
                 description: 'The group seeks shelter in the music room while Nam-ra discovers something unsettling.',
-                duration: '57m'
+                duration: '57m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 4',
                 description: 'The students make a risky escape attempt across the rooftops.',
-                duration: '65m'
+                duration: '65m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Episode 5',
                 description: "Na-yeon's betrayal puts everyone at risk as tensions reach a breaking point.",
-                duration: '53m'
+                duration: '53m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },
@@ -237,7 +257,7 @@ export const filmData = {
         year: 2009,
         cast: ['Sam Worthington', 'Zoe Saldana', 'Sigourney Weaver', 'Stephen Lang', 'Michelle Rodriguez'],
         creator: 'James Cameron',
-        youtubeId: 'Ml27ZX3f8GQ',
+        youtubeId: 'dQw4w9WgXcQ',
         recommendations: ['avatar-way-of-water', 'guardian-galaxy', 'jurassic-world']
     },
     'card-avatar-2': {
@@ -253,7 +273,7 @@ export const filmData = {
         description: 'Jake Sully dan Neytiri bersama anak-anak mereka hidup damai di Pandora. Ancaman datang ketika kolonial manusia RDA kembali. Untuk melindungi keluarga dan sukunya, mereka melarikan diri dan berlindung pada suku laut Metkayina.',
         cast: ['Sam Worthington', 'Zoe Saldana', 'Sigourney Weaver', 'Kate Winslet'],
         creator: 'James Cameron',
-        youtubeId: 'd9MyW72ELq0',
+        youtubeId: 'dQw4w9WgXcQ',
         isPremium: true
     },
     'card-batman': {
@@ -269,7 +289,7 @@ export const filmData = {
         description: 'Ketika seorang pembunuh berantai yang sadis mulai membunuh tokoh-tokoh penting di Gotham, Batman harus menyelidiki pesan-pesan misterius yang ditinggalkan oleh si pembunuh sambil mengungkap jaringan korupsi yang lebih dalam di kota itu.',
         cast: ['Robert Pattinson', 'Zoë Kravitz', 'Paul Dano', 'Colin Farrell', 'Jeffrey Wright'],
         creator: 'Matt Reeves',
-        youtubeId: 'mqqft2x_Aa4',
+        youtubeId: 'dQw4w9WgXcQ',
         recommendations: ['black-adam', 'shazam-fury', 'doctor-strange-multiverse']
     },
     'card-baymax': {
@@ -291,35 +311,40 @@ export const filmData = {
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Cass',
                 description: 'Aunt Cass sprains her ankle and Baymax tries to help run the Lucky Cat Café.',
-                duration: '11m'
+                duration: '11m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Kiko',
                 description: 'Baymax meets Kiko, an elderly woman who refuses his help.',
-                duration: '10m'
+                duration: '10m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Sofia',
                 description: 'A middle school student learns about menstruation with Baymax\'s help.',
-                duration: '10m'
+                duration: '10m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Mbita',
                 description: 'Baymax helps a young man deal with a severe fish allergy.',
-                duration: '11m'
+                duration: '11m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Yuki',
                 description: 'A man learns to accept help after Baymax intervenes in his daily routine.',
-                duration: '10m'
+                duration: '10m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },
@@ -372,35 +397,40 @@ export const filmData = {
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Dream',
                 description: 'Yoichi Isagi bergabung dengan proyek Blue Lock dan langsung merasakan betapa kejamnya kompetisi striker terbaik Jepang.',
-                duration: '24m'
+                duration: '24m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Monster',
                 description: 'Persaingan di Blue Lock semakin memanas saat para pemain harus mencetak gol untuk bertahan.',
-                duration: '24m'
+                duration: '24m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Devour',
                 description: 'Isagi belajar dari pemain terbaik dan mulai mengembangkan gaya bermainnya sendiri.',
-                duration: '24m'
+                duration: '24m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Luck',
                 description: 'Babak kedua dimulai dengan aturan baru yang lebih kejam. Hanya yang terkuat yang akan bertahan.',
-                duration: '24m'
+                duration: '24m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'Flow',
                 description: 'Para pemain memasuki kondisi flow dan menunjukkan kemampuan terbaik mereka di lapangan.',
-                duration: '24m'
+                duration: '24m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },
@@ -423,35 +453,40 @@ export const filmData = {
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'The Trial Begins',
                 description: 'Kang Yo-han memulai persidangan pertamanya yang menghebohkan publik Korea.',
-                duration: '70m'
+                duration: '70m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 2,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'The Idealist',
                 description: 'Kim Ga-on bergabung dengan pengadilan nasional dan mulai meragukan metode Kang Yo-han.',
-                duration: '68m'
+                duration: '68m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 3,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'The Puppet',
                 description: 'Konspirasi di balik layar mulai terungkap saat kekuatan politik mencoba mengendalikan pengadilan.',
-                duration: '72m'
+                duration: '72m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 4,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'The Truth',
                 description: 'Masa lalu Kang Yo-han mulai terungkap dan mengungkap motif sebenarnya.',
-                duration: '66m'
+                duration: '66m',
+                youtubeId: 'dQw4w9WgXcQ'
             },
             {
                 id: 5,
                 thumbnail: '/assets/images/placeholder-episode.jpg',
                 title: 'The Verdict',
                 description: 'Persidangan mencapai klimaks saat semua pihak harus menghadapi kebenaran yang paling pahit.',
-                duration: '75m'
+                duration: '75m',
+                youtubeId: 'dQw4w9WgXcQ'
             }
         ]
     },

@@ -1,17 +1,13 @@
 import { useState } from 'react';
 import { Navbar, Footer, FilmDetailModal, EditFavoriteModal, ClearAllButton, ConfirmClearModal } from '../components';
 import { useFavorites } from '../hooks/useFavorites';
-import { useDetailModal } from '../hooks/useDetailModal';
 import MyListGrid from '../components/organism/MyListGrid';
+import useEditModalStore from '../store/editModalStore';
 
 function MyListPage () {
   const {getFavoriteItems, updateFavoriteItem, clearFavorites} = useFavorites();
   const [activeTab, setActiveTab] = useState('all');
-  const {isOpen, selectedItem, isMobile, openModal, closeModal, handleBackdropClick} = useDetailModal();
-
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [editingItem, setEditingItem] = useState(null);
-
+  const { isOpen: isEditOpen, editingItem, closeEditModal } = useEditModalStore();
   const [isClearModalOpen, setIsClearModalOpen] = useState(false);
   const [isClearing, setIsClearing] = useState(false);
 
@@ -37,19 +33,13 @@ function MyListPage () {
     film: 'Belum ada film di daftar Anda'
   };
 
-  const handleEdit = (item) => {
-    setEditingItem(item);
-    setIsEditModalOpen(true);
-  };
-
   const handleSaveEdit = (id, updates) => {
     updateFavoriteItem(id, updates);
-    setEditingItem(null);
+    closeEditModal();
   };
 
   const handleCloseEditModal = () => {
-    setIsEditModalOpen(false);
-    setEditingItem(null);
+    closeEditModal();
   };
 
   const handleClearAll = async () => {
@@ -120,13 +110,12 @@ function MyListPage () {
         <MyListGrid 
           items={displayItems}
           emptyMessage={emptyMessages[activeTab]}
-          onEdit={handleEdit}
         />
       </main>
 
       <EditFavoriteModal 
         key={editingItem?.id}
-        isOpen={isEditModalOpen}
+        isOpen={isEditOpen}
         film={editingItem}
         onSave={handleSaveEdit}
         onClose={handleCloseEditModal}
@@ -139,14 +128,7 @@ function MyListPage () {
         isLoading={isClearing}
       />
 
-      <FilmDetailModal 
-        isOpen={isOpen}
-        film={selectedItem}
-        isMobile={isMobile}
-        closeModal={closeModal}
-        handleBackdropClick={handleBackdropClick}
-        openModal={openModal}
-      />
+      <FilmDetailModal />
       <Footer />
     </div>
   )

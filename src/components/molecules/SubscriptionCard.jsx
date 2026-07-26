@@ -1,33 +1,31 @@
 import Icon from '../atoms/Icon';
 import { useNavigate } from 'react-router-dom';
 import useAuthStore from '../../store/authStore';
+import subscriptionPlans from '../../data/subscriptionPlans';
 
-function SubscriptionCard({isSubscribed = false}) {
+function SubscriptionCard({isSubscribed = false, plan = 'individual'}) {
     const navigate = useNavigate();
     const removePremium = useAuthStore((s) => s.removePremium);
+    const planData = subscriptionPlans.find(p => p.id === plan);
+    subscriptionPlans[0];
 
     if (isSubscribed) {
         return (
-            <section className="rounded-2xl bg-linear-to-br from-[#192DB7]
+            <section className="relative rounded-2xl bg-linear-to-br from-[#192DB7]
             to-[#5370D4] px--7 py-8 md:px-8 md:py-8">
                 <div className="flex items-start gap-5 md:gap-6">
-                    <div className="flex h-14 w-14 items-center justify-center
-                    rounded-full bg-white/10">
-                        <Icon name="crown" className='h-7 w-7'/>
-                    </div>
-
                     <div className="flex-1">
-                        <div className="flex items-center gap-3">
-                            <h2 className="text-2xl md:text-[32px]
-                            font-bold leading-tight text-white">
-                                Akun Premium Individual ✨
-                            </h2>
-                            <span className="shrink-0 rounded-full bg-green-500/20
-                            px-3 py-1 text-xs font-bold text-green-300">
-                                AKTIF
-                            </span>
-                        </div>
-
+                        {/* Badge AKTIF */}
+                        <span className="inline-block rounded-full bg-[#C1C2C4]
+                            px-3 py-1 text-md font-bold text-[#0F1E93] mb-2">
+                            AKTIF
+                        </span>
+                        
+                        {/* Title */}
+                        <h2 className="text-2xl md:text-[32px] font-bold leading-tight text-white">
+                            Akun Premium {planData.name} ✨
+                        </h2>
+                        
                         <p className="mt-3 max-w-140 text-base md:text-xl leading-relaxed
                         text-white/90">
                             Saat ini kamu sedang menggunakan akses akun premium
@@ -44,11 +42,11 @@ function SubscriptionCard({isSubscribed = false}) {
                     <button
                         onClick={removePremium}
                         className="rounded-full border border-red-400 
-                        px-6 py-3 text-sm md:text-base font-bold text-red-400 
-                        hover:text-white hover:bg-red-700 transition duration-300
+                        px-3 py-1 text-sm md:text-base font-bold text-red-400 
+                        hover:text-white transition duration-300
                         cursor-pointer"
                     >
-                        Nonaktifkan Premium
+                        Remove Prem
                     </button>
                 </div>
             </section>

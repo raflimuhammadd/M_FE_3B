@@ -84,10 +84,10 @@ const useAuthStore = create((set) => ({
     }
   },
 
-  setPremium: () => {
+  setPremium: (planId = 'individual') => {
     const currentUser = useAuthStore.getState().user;
     if (!currentUser) return;
-    const updateUser = {...currentUser, isPremium: true};
+    const updateUser = {...currentUser, isPremium: true, subscriptionPlan: planId};
     localStorage.setItem('chill-user', JSON.stringify(updateUser));
     set({user: updateUser});
   },
@@ -95,7 +95,7 @@ const useAuthStore = create((set) => ({
   removePremium: () => {
     const currentUser = useAuthStore.getState().user;
     if (!currentUser) return;
-    const updateUser = {...currentUser, isPremium: false};
+    const updateUser = {...currentUser, isPremium: false, subscriptionPlan: null};
     localStorage.setItem('chill-user', JSON.stringify(updateUser));
     set({user: updateUser});
   }
