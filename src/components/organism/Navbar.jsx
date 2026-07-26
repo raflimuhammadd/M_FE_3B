@@ -1,5 +1,5 @@
 import ProfileDropdown from "../molecules/ProfileDropdown";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import MenuOverlay from './MenuOverlay';
 import Icon from '../atoms/Icon';
@@ -70,9 +70,14 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="navbar-menu-item">
-                <Link to="#" className="navbar-menu-link text-white/80 hover:text-red-500 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl font-medium">
-                    Genre
-                </Link>
+                <NavLink to="/community"
+                className={({isActive}) => 
+                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
+                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
+                font-medium`}
+                >
+                    Community
+                </NavLink>
               </li>
             </ul>
           </div>

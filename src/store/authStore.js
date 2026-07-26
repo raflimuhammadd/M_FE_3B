@@ -1,6 +1,12 @@
 import { create } from "zustand";
 import { registerUser, loginUser, updateUser } from "../api/authService";
 
+const planNameMap = {
+    individual: 'Individual',
+    duo: 'Berdua',
+    family: 'Keluarga',
+};
+
 const useAuthStore = create((set) => ({
   // ── State ──
   user: JSON.parse(localStorage.getItem('chill-user') || 'null'),
@@ -84,12 +90,30 @@ const useAuthStore = create((set) => ({
     }
   },
 
-  setPremium: (planId = 'individual') => {
+
+
+  setPremium: async (planId = 'individual') => {
     const currentUser = useAuthStore.getState().user;
     if (!currentUser) return;
-    const updateUser = {...currentUser, isPremium: true, subscriptionPlan: planId};
-    localStorage.setItem('chill-user', JSON.stringify(updateUser));
-    set({user: updateUser});
+
+    const normalizedUser = {
+      ...currentUser, 
+      isPremium: true, 
+      subscriptionPlan: planId
+    };
+    localStorage.setItem('chill-user', JSON.stringify(normalizedUser));
+    set({user: normalizedUser});
+
+    // sync to mockapi
+    try {
+      await updateUser(currentUser.id, {
+        ...currentUser,
+        subscription_status: true,
+        plan: planNameMap[planId] || 'Premium',
+      });
+    } catch (error) {
+      console.log('Gagal sync plan ke mockAPI:', error);
+    }
   },
 
   removePremium: () => {

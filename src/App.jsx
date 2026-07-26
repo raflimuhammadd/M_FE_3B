@@ -14,6 +14,7 @@ import MyListPage from './pages/MyListPage';
 import ProfilePage from './pages/ProfilePage';
 import PaymentPage from './pages/PaymentPage';
 import PremiumPage from './pages/PremiumPage';
+import CommunityPage from './pages/CommunityPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/continue-watching" element={<ContinueWatchingPage />} />
         <Route path="/top-rating" element={<TopRatingPage />} />
         <Route path="/trending" element={<TrendingPage />} />
+        <Route path="/community" element={<CommunityPage />} />
         <Route path="/new-release" element={<NewReleasePage />} />
         <Route path="/watch/:id" element={<WatchPage />} />
 
