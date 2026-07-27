@@ -239,7 +239,7 @@ function WatchHistoryPage() {
                     <button
                         onClick={handleAdd}
                         disabled={!form.filmId}
-                        className="mt-4 px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-white/10
+                        className="mt-4 px-6 py-2 bg-[#0586FF] hover:bg-[#0367DB] active:bg-[#024DB7] disabled:bg-white/10
                                    disabled:text-white/40 rounded-lg text-sm font-medium transition-colors"
                     >
                         + Tambah
@@ -259,7 +259,7 @@ function WatchHistoryPage() {
                             onClick={() => setActiveTab(tab.key)}
                             className={`pb-3 px-2 text-sm font-medium transition-colors ${
                                 activeTab === tab.key
-                                    ? 'text-white border-b-2 border-blue-500'
+                                    ? 'text-white border-b-2 border-[#0586FF]'
                                     : 'text-white/40 hover:text-white/60'
                             }`}
                         >
@@ -271,7 +271,7 @@ function WatchHistoryPage() {
                 {/* ── Loading ── */}
                 {loading && (
                     <div className="flex items-center gap-3 bg-white/5 rounded-xl p-6 mb-6">
-                        <div className="animate-spin h-6 w-6 border-2 border-blue-500 border-t-transparent rounded-full" />
+                        <div className="animate-spin h-6 w-6 border-2 border-[#0586FF] border-t-transparent rounded-full" />
                         <span className="text-white/70">Memuat data...</span>
                     </div>
                 )}
@@ -414,15 +414,15 @@ function WatchHistoryPage() {
                 )}
 
                 {/* ── Redux Info Box ── */}
-                <div className="mt-8 bg-purple-500/10 border border-purple-500/30 rounded-xl p-5">
-                    <p className="text-purple-300 font-medium text-sm mb-2">
+                <div className="mt-8 bg-[#3D4142] border border-[#192DB7] rounded-xl p-5">
+                    <p className="text-[#E7E3FCDE] font-medium text-sm mb-2">
                         Cara Kerja Redux di Halaman Ini:
                     </p>
-                    <ul className="text-purple-300/70 text-sm space-y-1">
+                    <ul className="text-[#E7E3FCDE] text-sm space-y-1">
                         <li>1. Component mount → dispatch(fetchWatchHistory(userId))</li>
                         <li>2. ReduxThunk GET data dari MockAPI → state.items</li>
                         <li>3. useSelector membaca items → component render</li>
-                        <li>4. Add/Edit/Delete → dispatch thunk → API call → state update</li>
+                        <li>4. Add/Edit/Remove → dispatch thunk → API call → state update</li>
                     </ul>
                 </div>
             </main>
