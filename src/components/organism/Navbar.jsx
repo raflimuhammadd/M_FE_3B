@@ -70,13 +70,13 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="navbar-menu-item">
-                <NavLink to="/community"
+                <NavLink to="/watch-history"
                 className={({isActive}) => 
                 `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
                 transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
                 font-medium`}
                 >
-                    Community
+                    History
                 </NavLink>
               </li>
             </ul>
