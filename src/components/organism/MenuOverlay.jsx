@@ -66,7 +66,7 @@ function MenuOverlay({isOpen, onClose, onLogout}) {
                         My List
                     </Link>
                     <Link
-                        to="/history"
+                        to="/watch-history"
                         onClick={onClose}
                         className="text-2xl font-medium text-white/80 hover:text-red-500 transition-colors"
                     >
