@@ -66,11 +66,11 @@ function MenuOverlay({isOpen, onClose, onLogout}) {
                         My List
                     </Link>
                     <Link
-                        to="/community"
+                        to="/history"
                         onClick={onClose}
                         className="text-2xl font-medium text-white/80 hover:text-red-500 transition-colors"
                     >
-                        Community
+                        History
                     </Link>
                     <div className="w-48 border-t border-white/20 my-2" />
                     <button
