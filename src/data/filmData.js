@@ -11,7 +11,7 @@ export const filmData = {
         hoverImage: '/assets/images/ted-lands.png',
         hasNewEpisode: true,
         isNewRelease: true,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: '3u7EIiohs6U',
         isPremium: false,
         description: 'Seorang pelatih sepak bola Amerika yang optimis dipekerjakan untuk melatih tim sepak bola profesional Inggris, meskipun ia tidak memiliki pengalaman melatih sepak bola.',
         cast: ['Jason Sudeikis', 'Hannah Waddingham', 'Brett Goldstein', 'Juno Temple', 'Brendan Hunt', 'Nick Mohammed'],
@@ -23,7 +23,7 @@ export const filmData = {
                 title: 'Pilot',
                 description: 'American football coach Ted Lasso is hired by a wealthy divorcée to coach the English soccer team AFC Richmond.',
                 duration: '31m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '3u7EIiohs6U'
             },
             {
                 id: 2,
@@ -31,7 +31,7 @@ export const filmData = {
                 title: 'Biscuits',
                 description: "It's Ted's first day of coaching, and fans aren't happy. He makes little headway but remains undeterred as the team play their first match.",
                 duration: '29m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '3u7EIiohs6U'
             },
             {
                 id: 3,
@@ -39,7 +39,7 @@ export const filmData = {
                 title: 'Trent Crimm: The Independent',
                 description: 'To arrange an in-depth exposé, Rebecca pairs cynical journalist Trent Crimm with Ted for a day.',
                 duration: '30m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '3u7EIiohs6U'
             },
             {
                 id: 4,
@@ -47,7 +47,7 @@ export const filmData = {
                 title: 'For the Children',
                 description: "Rebecca hosts the team's annual charity benefit, where Ted stages a reconciliation between Roy and Jamie.",
                 duration: '34m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '3u7EIiohs6U'
             },
             {
                 id: 5,
@@ -55,7 +55,7 @@ export const filmData = {
                 title: 'Tan Lines',
                 description: 'With his wife and son visiting from America, Ted makes drastic changes to the lineup during a critical match.',
                 duration: '31m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '3u7EIiohs6U'
             }
         ]
     },
@@ -99,7 +99,7 @@ export const filmData = {
                 title: 'Episode 1',
                 description: 'Inspector Na Hwa-jin steps into the chaos and takes control of a school plagued by mysterious spheres.',
                 duration: '55m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'U0MOoyI7pIM'
             },
             {
                 id: 2,
@@ -107,7 +107,7 @@ export const filmData = {
                 title: 'Episode 2',
                 description: 'Students are recruited into military training as the alien threat intensifies.',
                 duration: '60m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'U0MOoyI7pIM'
             },
             {
                 id: 3,
@@ -115,7 +115,7 @@ export const filmData = {
                 title: 'Episode 3',
                 description: 'The group faces their first real combat situation against the spheres.',
                 duration: '58m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'U0MOoyI7pIM'
             },
             {
                 id: 4,
@@ -123,7 +123,7 @@ export const filmData = {
                 title: 'Episode 4',
                 description: 'Tensions rise within the group as survival becomes increasingly difficult.',
                 duration: '62m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'U0MOoyI7pIM'
             },
             {
                 id: 5,
@@ -131,7 +131,7 @@ export const filmData = {
                 title: 'Episode 5',
                 description: 'A devastating loss forces the students to question their mission.',
                 duration: '65m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'U0MOoyI7pIM'
             }
         ]
     },
@@ -146,7 +146,7 @@ export const filmData = {
         image: '/assets/images/alice.png',
         hoverImage: '/assets/images/alice-lands.png',
         topRank: 6,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: '49_44FFKZ1M',
         isPremium: false,
         description: 'Seorang gamer dan dua temannya menemukan diri mereka di Tokyo yang sepi dan dipaksa untuk bersaing dalam serangkaian permainan mematikan untuk bertahan hidup di dunia paralel.',
         cast: ['Kento Yamazaki', 'Tao Tsuchiya', 'Nijiro Murakami', 'Yuki Morinaga', 'Keita Machida', 'Ayaka Miyoshi'],
@@ -158,7 +158,7 @@ export const filmData = {
                 title: 'Episode 1',
                 description: 'Arisu and his friends find themselves in a deserted Tokyo and are forced to compete in dangerous games.',
                 duration: '48m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '49_44FFKZ1M'
             },
             {
                 id: 2,
@@ -166,7 +166,7 @@ export const filmData = {
                 title: 'Episode 2',
                 description: 'The group encounters other players and learns more about the deadly game world.',
                 duration: '56m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '49_44FFKZ1M'
             },
             {
                 id: 3,
@@ -174,7 +174,7 @@ export const filmData = {
                 title: 'Episode 3',
                 description: 'Arisu meets Usagi and they team up to survive the increasingly difficult games.',
                 duration: '50m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '49_44FFKZ1M'
             },
             {
                 id: 4,
@@ -182,7 +182,7 @@ export const filmData = {
                 title: 'Episode 4',
                 description: 'The group discovers The Beach, a safe haven where players gather.',
                 duration: '52m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '49_44FFKZ1M'
             },
             {
                 id: 5,
@@ -190,7 +190,7 @@ export const filmData = {
                 title: 'Episode 5',
                 description: 'Dark secrets about The Beach begin to surface as tensions escalate.',
                 duration: '45m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: '49_44FFKZ1M'
             }
         ]
     },
@@ -204,7 +204,7 @@ export const filmData = {
         genres: ['Horror', 'Thriller', 'Drama'],
         image: '/assets/images/all-off-us.png',
         hoverImage: '/assets/images/all-of-us-lands.png',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'IN5TD4VRcSM',
         isPremium: false,
         description: 'Siswa sekolah menengah terjebak di sekolah mereka saat virus zombie menyebar dengan cepat. Mereka harus berjuang untuk bertahan hidup atau berubah menjadi salah satu dari mereka.',
         cast: ['Park Ji-hu', 'Yoon Chan-young', 'Cho Yi-hyun', 'Lomon', 'Yoo In-soo', 'Lee Yoo-mi'],
@@ -216,7 +216,7 @@ export const filmData = {
                 title: 'Episode 1',
                 description: 'A high school becomes ground zero for a zombie virus outbreak.',
                 duration: '66m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'IN5TD4VRcSM'
             },
             {
                 id: 2,
@@ -224,7 +224,7 @@ export const filmData = {
                 title: 'Episode 2',
                 description: 'The infected multiply in droves as the students run for their lives.',
                 duration: '68m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'IN5TD4VRcSM'
             },
             {
                 id: 3,
@@ -232,7 +232,7 @@ export const filmData = {
                 title: 'Episode 3',
                 description: 'The group seeks shelter in the music room while Nam-ra discovers something unsettling.',
                 duration: '57m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'IN5TD4VRcSM'
             },
             {
                 id: 4,
@@ -240,7 +240,7 @@ export const filmData = {
                 title: 'Episode 4',
                 description: 'The students make a risky escape attempt across the rooftops.',
                 duration: '65m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'IN5TD4VRcSM'
             },
             {
                 id: 5,
@@ -248,7 +248,7 @@ export const filmData = {
                 title: 'Episode 5',
                 description: "Na-yeon's betrayal puts everyone at risk as tensions reach a breaking point.",
                 duration: '53m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'IN5TD4VRcSM'
             }
         ]
     },
@@ -265,7 +265,7 @@ export const filmData = {
         year: 2009,
         cast: ['Sam Worthington', 'Zoe Saldana', 'Sigourney Weaver', 'Stephen Lang', 'Michelle Rodriguez'],
         creator: 'James Cameron',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'M8Mi0elohJw',
         isPremium: false,
         recommendations: ['avatar-way-of-water', 'guardian-galaxy', 'jurassic-world']
     },
@@ -282,7 +282,7 @@ export const filmData = {
         description: 'Jake Sully dan Neytiri bersama anak-anak mereka hidup damai di Pandora. Ancaman datang ketika kolonial manusia RDA kembali. Untuk melindungi keluarga dan sukunya, mereka melarikan diri dan berlindung pada suku laut Metkayina.',
         cast: ['Sam Worthington', 'Zoe Saldana', 'Sigourney Weaver', 'Kate Winslet'],
         creator: 'James Cameron',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'ysxvVoP7-dU',
         isPremium: true
     },
     'card-batman': {
@@ -298,7 +298,7 @@ export const filmData = {
         description: 'Ketika seorang pembunuh berantai yang sadis mulai membunuh tokoh-tokoh penting di Gotham, Batman harus menyelidiki pesan-pesan misterius yang ditinggalkan oleh si pembunuh sambil mengungkap jaringan korupsi yang lebih dalam di kota itu.',
         cast: ['Robert Pattinson', 'Zoë Kravitz', 'Paul Dano', 'Colin Farrell', 'Jeffrey Wright'],
         creator: 'Matt Reeves',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: '0h8ZBXUNXXM',
         isPremium: false,
         recommendations: ['black-adam', 'shazam-fury', 'doctor-strange-multiverse']
     },
@@ -312,7 +312,7 @@ export const filmData = {
         genres: ['Animation', 'Comedy', 'Family'],
         image: '/assets/images/baymax.png',
         hoverImage: '/assets/images/baymax-lands.png',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'lcYPrMk12zw',
         isPremium: false,
         description: 'Baymax, robot perawat kesehatan yang menggemaskan, kembali membantu orang-orang di San Fransokyo dengan cara uniknya yang penuh kehangatan.',
         cast: ['Scott Adsit', 'Ryan Potter', 'Maya Rudolph', 'Emily Kuroda', 'Lilimar', 'Jaboukie Young-White'],
@@ -324,7 +324,7 @@ export const filmData = {
                 title: 'Cass',
                 description: 'Aunt Cass sprains her ankle and Baymax tries to help run the Lucky Cat Café.',
                 duration: '11m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'lcYPrMk12zw'
             },
             {
                 id: 2,
@@ -332,7 +332,7 @@ export const filmData = {
                 title: 'Kiko',
                 description: 'Baymax meets Kiko, an elderly woman who refuses his help.',
                 duration: '10m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'lcYPrMk12zw'
             },
             {
                 id: 3,
@@ -340,7 +340,7 @@ export const filmData = {
                 title: 'Sofia',
                 description: 'A middle school student learns about menstruation with Baymax\'s help.',
                 duration: '10m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'lcYPrMk12zw'
             },
             {
                 id: 4,
@@ -348,7 +348,7 @@ export const filmData = {
                 title: 'Mbita',
                 description: 'Baymax helps a young man deal with a severe fish allergy.',
                 duration: '11m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'lcYPrMk12zw'
             },
             {
                 id: 5,
@@ -356,7 +356,7 @@ export const filmData = {
                 title: 'Yuki',
                 description: 'A man learns to accept help after Baymax intervenes in his daily routine.',
                 duration: '10m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'lcYPrMk12zw'
             }
         ]
     },
@@ -389,7 +389,7 @@ export const filmData = {
         description: 'Black Adam, seorang anti-pahlawan legendaris yang dibangkitkan dari masa lalu, diberikan kekuatan oleh para dewa. Setelah hampir 5.000 tahun dikurung, ia dibebaskan dan membawa keadilan dengan caranya sendiri yang brutal di dunia modern.',
         cast: ['Dwayne Johnson', 'Aldis Hodge', 'Noah Centineo', 'Sarah Shahi', 'Pierce Brosnan'],
         creator: 'Jaume Collet-Serra',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'JaV7mmc9HGw',
         isPremium: false
     },
     'card-blue-lock': {
@@ -402,7 +402,7 @@ export const filmData = {
         image: '/assets/images/blue-lock.png',
         hoverImage: '/assets/images/blue-lock-lands.png',
         year: 2022,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'QAlsuW5EXUg',
         isPremium: false,
         description: 'Sebuah program pelatihan sepak bola ekstrem yang mempertemukan 300 pemain muda terbaik Jepang untuk bersaing memperebutkan satu posisi striker terbaik di dunia. Yoichi Isagi harus beradaptasi dengan kompetisi brutal ini untuk mewujudkan mimpinya menjadi pemain sepak bola terbaik.',
         cast: ['Kazuki Ura', 'Yuma Uchida', 'Miyu Irino', 'Tasuku Kaito', 'Soma Saito'],
@@ -414,7 +414,7 @@ export const filmData = {
                 title: 'Dream',
                 description: 'Yoichi Isagi bergabung dengan proyek Blue Lock dan langsung merasakan betapa kejamnya kompetisi striker terbaik Jepang.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'QAlsuW5EXUg'
             },
             {
                 id: 2,
@@ -422,7 +422,7 @@ export const filmData = {
                 title: 'Monster',
                 description: 'Persaingan di Blue Lock semakin memanas saat para pemain harus mencetak gol untuk bertahan.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'QAlsuW5EXUg'
             },
             {
                 id: 3,
@@ -430,7 +430,7 @@ export const filmData = {
                 title: 'Devour',
                 description: 'Isagi belajar dari pemain terbaik dan mulai mengembangkan gaya bermainnya sendiri.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'QAlsuW5EXUg'
             },
             {
                 id: 4,
@@ -438,7 +438,7 @@ export const filmData = {
                 title: 'Luck',
                 description: 'Babak kedua dimulai dengan aturan baru yang lebih kejam. Hanya yang terkuat yang akan bertahan.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'QAlsuW5EXUg'
             },
             {
                 id: 5,
@@ -446,7 +446,7 @@ export const filmData = {
                 title: 'Flow',
                 description: 'Para pemain memasuki kondisi flow dan menunjukkan kemampuan terbaik mereka di lapangan.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'QAlsuW5EXUg'
             }
         ]
     },
@@ -460,7 +460,7 @@ export const filmData = {
         image: '/assets/images/devil-at-me.png',
         hoverImage: '/assets/images/devil-lands.png',
         year: 2021,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'qSstsZey9Kg',
         isPremium: false,
         description: 'Di masa depan dystopian Korea, masyarakat mendambakan keadilan dan terobsesi dengan pertunjukan realitas. Hakim misterius Kang Yo-han memimpin persidangan langsung yang disiarkan di mana rakyat menjadi juri. Seorang hakim idealis bergabung dan mulai mempertanyakan motif di balik pengadilan tersebut.',
         cast: ['Ji Sung', 'Kim Min-jung', 'Park Jin-young', 'Park Gyu-young'],
@@ -472,7 +472,7 @@ export const filmData = {
                 title: 'The Trial Begins',
                 description: 'Kang Yo-han memulai persidangan pertamanya yang menghebohkan publik Korea.',
                 duration: '70m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'qSstsZey9Kg'
             },
             {
                 id: 2,
@@ -480,7 +480,7 @@ export const filmData = {
                 title: 'The Idealist',
                 description: 'Kim Ga-on bergabung dengan pengadilan nasional dan mulai meragukan metode Kang Yo-han.',
                 duration: '68m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'qSstsZey9Kg'
             },
             {
                 id: 3,
@@ -488,7 +488,7 @@ export const filmData = {
                 title: 'The Puppet',
                 description: 'Konspirasi di balik layar mulai terungkap saat kekuatan politik mencoba mengendalikan pengadilan.',
                 duration: '72m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'qSstsZey9Kg'
             },
             {
                 id: 4,
@@ -496,7 +496,7 @@ export const filmData = {
                 title: 'The Truth',
                 description: 'Masa lalu Kang Yo-han mulai terungkap dan mengungkap motif sebenarnya.',
                 duration: '66m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'qSstsZey9Kg'
             },
             {
                 id: 5,
@@ -504,7 +504,7 @@ export const filmData = {
                 title: 'The Verdict',
                 description: 'Persidangan mencapai klimaks saat semua pihak harus menghadapi kebenaran yang paling pahit.',
                 duration: '75m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'qSstsZey9Kg'
             }
         ]
     },
@@ -521,7 +521,7 @@ export const filmData = {
         description: 'Kisah cinta remaja antara Milea, seorang siswi pindahan dari Jakarta, dan Dilan, seorang siswa populer di sekolah mereka di Bandung tahun 1990. Dilan dengan segala keunikan dan keberaniannya berusaha memenangkan hati Milea.',
         cast: ['Iqbaal Ramadhan', 'Vanesha Prescilla', 'Bucek Depp', 'Happy Salma'],
         creator: 'Fajar Bustomi',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: '4RowGQWWQWc',
         isPremium: false
     },
     'card-doc-strange': {
@@ -537,7 +537,7 @@ export const filmData = {
         description: 'Dr. Stephen Strange membuka pintu ke multiverse setelah secara tidak sengaja menggunakan mantra terlarang. Ia harus bekerja sama dengan sekutu lama dan baru untuk melintasi realitas alternatif yang berbahaya dan menghadapi musuh misterius.',
         cast: ['Benedict Cumberbatch', 'Elizabeth Olsen', 'Chiwetel Ejiofor', 'Benedict Wong', 'Xochitl Gomez'],
         creator: 'Sam Raimi',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: '4rFme4ubfNk',
         isPremium: false
     },
     'card-dont-look': {
@@ -553,7 +553,7 @@ export const filmData = {
         description: 'Dua astronom menemukan sebuah komet raksasa yang akan menghancurkan Bumi dalam waktu dekat. Mereka berusaha memperingatkan dunia melalui media dan pemerintah, tetapi tidak ada yang mau mendengarkan. Satir gelap tentang respons masyarakat terhadap krisis.',
         cast: ['Leonardo DiCaprio', 'Jennifer Lawrence', 'Meryl Streep', 'Cate Blanchett', 'Timothée Chalamet'],
         creator: 'Adam McKay',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'RbIxYm3mKzI',
         isPremium: false
     },
     'card-fast-x': {
@@ -569,7 +569,7 @@ export const filmData = {
         description: 'Dominic Toretto dan keluarganya menjadi target balas dendam manusia paling berbahaya yang pernah mereka hadapi: Dante Reyes, yang ingin menghancurkan segalanya yang dicintai Dom. Kali ini, Dom harus melindungi keluarganya dengan cara apa pun.',
         cast: ['Vin Diesel', 'Jason Momoa', 'Michelle Rodriguez', 'Tyrese Gibson', 'Ludacris'],
         creator: 'Louis Leterrier',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: '32RAq6JzY-w',
         isPremium: false
     },
     'card-happiness': {
@@ -594,7 +594,7 @@ export const filmData = {
                 title: 'The Outbreak',
                 description: 'Wabah misterius menyebar di apartemen mewah dan para penghuni mulai menunjukkan gejala aneh.',
                 duration: '65m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'gqhUlldiLEo'
             },
             {
                 id: 2,
@@ -602,7 +602,7 @@ export const filmData = {
                 title: 'Lockdown',
                 description: 'Apartemen di-lockdown dan Sae-bom serta Yi-hyun harus bertahan hidup di tengah kekacauan.',
                 duration: '68m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'gqhUlldiLEo'
             },
             {
                 id: 3,
@@ -610,7 +610,7 @@ export const filmData = {
                 title: 'The Infected',
                 description: 'Semakin banyak penghuni apartemen yang terinfeksi dan situasi semakin tidak terkendali.',
                 duration: '70m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'gqhUlldiLEo'
             },
             {
                 id: 4,
@@ -618,7 +618,7 @@ export const filmData = {
                 title: 'Survival',
                 description: 'Persediaan makanan mulai menipis dan kelompok yang selamat harus membuat keputusan sulit.',
                 duration: '66m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'gqhUlldiLEo'
             },
             {
                 id: 5,
@@ -626,7 +626,7 @@ export const filmData = {
                 title: 'The Truth',
                 description: 'Sae-bom dan Yi-hyun menemukan kebenaran di balik wabah yang menghancurkan apartemen mereka.',
                 duration: '72m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'gqhUlldiLEo'
             }
         ]
     },
@@ -643,7 +643,7 @@ export const filmData = {
         description: 'Taman hiburan Jurassic World di pulau Isla Nublar beroperasi penuh dengan dinosaurus hasil rekayasa genetik. Namun, ketika dinosaurus hibrida baru yang cerdas melarikan diri, liburan keluarga berubah menjadi perjuangan untuk bertahan hidup.',
         cast: ['Chris Pratt', 'Bryce Dallas Howard', 'Vincent D\'Onofrio', 'Omar Sy', 'BD Wong'],
         creator: 'Colin Trevorrow',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'RFinNxS5KN4',
         isPremium: false,
         topRank: 2
     },
@@ -660,7 +660,7 @@ export const filmData = {
         description: 'Ariel, seorang putri duyung muda yang penasaran dengan dunia manusia, membuat kesepakatan dengan penyihir laut Ursula untuk menjadi manusia. Ia harus memenangkan cinta Pangeran Eric dalam tiga hari atau jiwanya akan menjadi milik Ursula.',
         cast: ['Halle Bailey', 'Jonah Hauer-King', 'Daveed Diggs', 'Melissa McCarthy', 'Javier Bardem'],
         creator: 'Rob Marshall',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'kepHY685b34',
         isPremium: false
     },
     'card-megan': {
@@ -676,7 +676,7 @@ export const filmData = {
         description: 'Seorang insinyur robotika menjadi wali bagi keponakannya yang yatim piatu. Ia menciptakan sebuah boneka AI yang disebut M3GAN untuk menemani dan melindungi gadis itu. Namun M3GAN menjadi terlalu protektif dengan cara yang mengerikan.',
         cast: ['Allison Williams', 'Violet McGraw', 'Amie Donald', 'Jenna Davis', 'Ronny Chieng'],
         creator: 'Gerard Johnstone',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'jgmZLGbcCY8',
         isPremium: false,
         topRank: 5
     },
@@ -693,7 +693,7 @@ export const filmData = {
         description: 'Miles Morales berpetualang melintasi multiverse untuk bergabung dengan Spider-People dari berbagai dimensi. Ia harus menghadapi ancaman baru dan menentukan arti menjadi seorang pahlawan dalam petualangan epik ini.',
         cast: ['Shameik Moore', 'Hailee Steinfeld', 'Oscar Isaac', 'Jake Johnson', 'Issa Rae'],
         creator: 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'cqGjhVJWtEg',
         isPremium: false
     },
     'card-missing': {
@@ -709,7 +709,7 @@ export const filmData = {
         description: 'Seorang remaja perempuan menggunakan keterampilan internetnya untuk menyelidiki hilangnya ibunya secara misterius saat liburan di Kolombia. Tanpa bantuan orang dewasa, ia harus meretas sistem dan melintasi batas untuk mengungkap kebenaran.',
         cast: ['Storm Reid', 'Nia Long', 'Ken Leung', 'Amy Landecker', 'Daniel Henney'],
         creator: 'Will Merrick, Nick Johnson',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'C1b-w4zBPlI',
         isPremium: false
     },
     'card-my-hero': {
@@ -722,7 +722,7 @@ export const filmData = {
         image: '/assets/images/my-hero-aca.png',
         hoverImage: '/assets/images/my-hero-lands.png',
         year: 2016,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'Sh8XzoEbpFs',
         isPremium: false,
         description: 'Di dunia di mana hampir setiap orang memiliki kekuatan super yang disebut Quirk, Izuku Midoriya adalah salah satu dari sedikit manusia tanpa kekuatan. Namun ia bercita-cita menjadi pahlawan. Takdirnya berubah saat bertemu pahlawan terhebat All Might yang mewariskan Quirk padanya. Izuku bergabung dengan SMA UA untuk menjadi pahlawan profesional.',
         cast: ['Daiki Yamashita', 'Nobuhiko Okamoto', 'Kenta Miyake', 'Ayane Sakura', 'Kaito Ishikawa'],
@@ -734,7 +734,7 @@ export const filmData = {
                 title: 'Izuku Midoriya: Origin',
                 description: 'Izuku Midoriya, seorang anak tanpa Quirk, bertemu dengan pahlawan nomor satu All Might.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'Sh8XzoEbpFs'
             },
             {
                 id: 2,
@@ -742,7 +742,7 @@ export const filmData = {
                 title: 'What It Takes to Be a Hero',
                 description: 'All Might memberikan izuku Quirk One for All dan mempersiapkannya untuk ujian masuk SMA UA.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'Sh8XzoEbpFs'
             },
             {
                 id: 3,
@@ -750,7 +750,7 @@ export const filmData = {
                 title: 'Roaring Muscles',
                 description: 'Ujian masuk SMA UA dimulai dan Izuku harus menunjukkan kemampuan barunya.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'Sh8XzoEbpFs'
             },
             {
                 id: 4,
@@ -758,7 +758,7 @@ export const filmData = {
                 title: 'Start Line',
                 description: 'Hari pertama Izuku di SMA UA dimulai dengan teman-teman dan rival baru.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'Sh8XzoEbpFs'
             },
             {
                 id: 5,
@@ -766,7 +766,7 @@ export const filmData = {
                 title: 'What I Can Do Now',
                 description: 'Kelas 1-A menjalani pelatihan pertama mereka dengan guru mereka, Shota Aizawa.',
                 duration: '24m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'Sh8XzoEbpFs'
             }
         ]
     },
@@ -781,7 +781,7 @@ export const filmData = {
         hoverImage: '/assets/images/my-perfect-lands.png',
         topRank: 5,
         year: 2023,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'uKs-xeZ1xQ0',
         isPremium: false,
         description: 'Yoon Hae-joon, seorang editor majalah, terjebak di tahun 1987 setelah mengendarai mobil misterius. Di sana ia bertemu Baek Yoon-young, seorang mahasiswi yang berusaha menyelidiki kasus pembunuhan berantai. Keduanya bekerja sama untuk mengubah masa depan sambil menemukan misteri yang menghubungkan mereka.',
         cast: ['Kim Dong-wook', 'Jin Ki-joo', 'Seo Ji-hoon', 'Lee Won-jung'],
@@ -793,7 +793,7 @@ export const filmData = {
                 title: 'The Time Slip',
                 description: 'Hae-joon secara tidak sengaja melakukan perjalanan waktu ke tahun 1987 dan bertemu dengan Yoon-young.',
                 duration: '65m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'uKs-xeZ1xQ0'
             },
             {
                 id: 2,
@@ -801,7 +801,7 @@ export const filmData = {
                 title: 'The Murder Case',
                 description: 'Yoon-young mengajak Hae-joon untuk menyelidiki kasus pembunuhan berantai yang terjadi di desanya.',
                 duration: '68m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'uKs-xeZ1xQ0'
             },
             {
                 id: 3,
@@ -809,7 +809,7 @@ export const filmData = {
                 title: 'The Connection',
                 description: 'Keduanya menemukan bahwa kasus pembunuhan tersebut terhubung dengan orang-orang di sekitar mereka.',
                 duration: '70m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'uKs-xeZ1xQ0'
             },
             {
                 id: 4,
@@ -817,7 +817,7 @@ export const filmData = {
                 title: 'The Warning',
                 description: 'Hae-joon menyadari bahwa tindakannya di masa lalu bisa mengubah masa depan secara drastis.',
                 duration: '66m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'uKs-xeZ1xQ0'
             },
             {
                 id: 5,
@@ -825,7 +825,7 @@ export const filmData = {
                 title: 'The Race',
                 description: 'Waktu terus berjalan dan mereka harus menemukan pelaku sebelum terlambat.',
                 duration: '72m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'uKs-xeZ1xQ0'
             }
         ]
     },
@@ -842,7 +842,7 @@ export const filmData = {
         description: 'Otto adalah seorang duda tua pemarah yang pensiun dan tinggal sendiri. Hidupnya berubah ketika sebuah keluarga muda pindah ke sebelah rumahnya. Dengan bantuan mereka, Otto belajar kembali arti kehidupan dan kebahagiaan.',
         cast: ['Tom Hanks', 'Mariana Treviño', 'Rachel Keller', 'Manuel Garcia-Rulfo'],
         creator: 'Marc Forster',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'eFYUX9l-m5I',
         isPremium: false
     },
     'card-quantumania': {
@@ -858,7 +858,7 @@ export const filmData = {
         description: 'Scott Lang dan Hope van Dyne bersama orang tua Hope, Hank Pym dan Janet van Dyne, tersedot ke dunia kuantum yang misterius. Mereka harus bekerja sama untuk melawan Kang sang Penakluk dan menemukan jalan pulang ke dunia nyata.',
         cast: ['Paul Rudd', 'Evangeline Lilly', 'Jonathan Majors', 'Michael Douglas', 'Michelle Pfeiffer'],
         creator: 'Peyton Reed',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'VfpWhTgAt7A',
         isPremium: false
     },
     'card-rio': {
@@ -874,7 +874,7 @@ export const filmData = {
         description: 'Blu, seekor macaw biru jinak yang tidak bisa terbang, dibawa dari Minnesota ke Rio de Janeiro untuk bertemu dengan Pearl, satu-satunya macaw biru betina yang tersisa. Petualangan dimulai saat mereka diculik oleh penyelundup burung.',
         cast: ['Jesse Eisenberg', 'Anne Hathaway', 'Jemaine Clement', 'Leslie Mann', 'will.i.am'],
         creator: 'Carlos Saldanha',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'P1GRO31ve5Q',
         isPremium: false
     },
     'card-shazam': {
@@ -890,7 +890,7 @@ export const filmData = {
         description: 'Billy Batson dan teman-teman supernya masih belajar menggunakan kekuatan dewa mereka. Namun ketika para dewa mitologi kuno mengancam Bumi, Shazam dan keluarganya harus bersatu untuk melindungi dunia dan kekuatan mereka.',
         cast: ['Zachary Levi', 'Asher Angel', 'Jack Dylan Grazer', 'Rachel Zegler', 'Helen Mirren'],
         creator: 'David F. Sandberg',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'Zi88i4CpHe4',
         isPremium: false
     },
     'card-sonic-2': {
@@ -906,7 +906,7 @@ export const filmData = {
         description: 'Sonic si landak biru kembali bersama sahabatnya Tom. Kali ini ia harus menghadapi Dr. Robotnik yang kembali dengan sekutu baru, Knuckles. Sonic bergabung dengan Tails untuk menyelamatkan dunia dari ancaman baru.',
         cast: ['James Marsden', 'Ben Schwartz', 'Idris Elba', 'Colleen O\'Shaughnessey', 'Jim Carrey'],
         creator: 'Jeff Fowler',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'aABuE-1Lg4c',
         isPremium: false
     },
     'card-stuart': {
@@ -922,7 +922,7 @@ export const filmData = {
         description: 'Keluarga Little mengadopsi seorang anak laki-laki bernama Stuart — yang kebetulan adalah seekor tikus kecil yang bisa berbicara. Stuart harus beradaptasi dengan kehidupan barunya bersama keluarga manusia dan menghadapi kucing keluarga yang tidak menyukainya.',
         cast: ['Michael J. Fox', 'Geena Davis', 'Hugh Laurie', 'Jonathan Lipnicki', 'Nathan Lane'],
         creator: 'Rob Minkoff',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'AzXv1fPo9J4',
         isPremium: true
     },
     'card-tomorrow': {
@@ -938,7 +938,7 @@ export const filmData = {
         description: 'Sekelompok tentara dari masa depan melakukan perjalanan waktu ke masa kini untuk merekrut warga sipil bergabung dalam perang melawan alien yang mengancam keberadaan umat manusia. Seorang guru sains direkrut dan harus meninggalkan keluarganya.',
         cast: ['Chris Pratt', 'Yvonne Strahovski', 'J.K. Simmons', 'Betty Gilpin', 'Sam Richardson'],
         creator: 'Chris McKay',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'P42u4IE-Qng',
         isPremium: false
     },
     'card-suzume': {
@@ -955,8 +955,8 @@ export const filmData = {
         cast: ['Nanoka Hara', 'Hokuto Matsumura', 'Eri Fukatsu', 'Sōta Fukushi'],
         creator: 'Makoto Shinkai',
         hasNewEpisode: true,
-        topRank: 1,
-        youtubeId: 'dQw4w9WgXcQ',
+        topRank: 6,
+        youtubeId: 'KlnIuIVftaU',
         isPremium: false
     },
     'card-light-shop': {
@@ -971,7 +971,7 @@ export const filmData = {
         hoverImage: '/assets/images/light-shop-land.jpg',
         topRank: 2,
         isPremium: true,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'jSj4SOdLA3A',
         description: 'Kisah sekelompok orang asing yang memiliki pengalaman buruk dari masa lalu mereka. Mereka tertarik ke toko lampu misterius di ujung gang gelap.',
         cast: ['Ju Ji-hoon', 'Park Bo-young', 'Bae Seong-woo', 'Uhm Tae-goo', 'Lee Jung-eun', 'Kim Min-ha'],
         creator: 'Kang Full',
@@ -982,7 +982,7 @@ export const filmData = {
                 title: 'Episode 1',
                 description: 'Eight strangers find themselves inexplicably drawn to a mysterious lamp shop.',
                 duration: '70m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'jSj4SOdLA3A'
             },
             {
                 id: 2,
@@ -990,7 +990,7 @@ export const filmData = {
                 title: 'Episode 2',
                 description: 'The shopkeeper reveals the true purpose of the lamps to the bewildered strangers.',
                 duration: '68m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'jSj4SOdLA3A'
             },
             {
                 id: 3,
@@ -998,7 +998,7 @@ export const filmData = {
                 title: 'Episode 3',
                 description: 'Each person begins to confront their past trauma through the lamps.',
                 duration: '65m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'jSj4SOdLA3A'
             },
             {
                 id: 4,
@@ -1006,7 +1006,7 @@ export const filmData = {
                 title: 'Episode 4',
                 description: 'Secrets unravel as the group learns more about the shop\'s mysterious origins.',
                 duration: '72m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'jSj4SOdLA3A'
             },
             {
                 id: 5,
@@ -1014,7 +1014,7 @@ export const filmData = {
                 title: 'Episode 5',
                 description: 'The boundaries between reality and fantasy begin to blur dangerously.',
                 duration: '60m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'jSj4SOdLA3A'
             }
         ]
     },
@@ -1030,7 +1030,7 @@ export const filmData = {
         hoverImage: '/assets/images/teach-you-land.jpg',
         topRank: 1,
         hasNewEpisode: true,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'TT_EtQFAVIM',
         isPremium: false,
         description: 'Inspektur Na Hwa-jin dari Biro Perlindungan Hak Pendidikan menggunakan metode tidak konvensional untuk mendisiplinkan siswa nakal dan mereformasi sistem pendidikan.',
         cast: ['Kim Mu-yeol', 'Lee Sung-min', 'Jin Ki-joo', 'Pyo Ji-hoon'],
@@ -1042,7 +1042,7 @@ export const filmData = {
                 title: 'Episode 1',
                 description: 'Inspector Na Hwa-jin steps into the chaos and takes control of a school plagued by the spoiled son of a powerful politician.',
                 duration: '52m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'TT_EtQFAVIM'
             },
             {
                 id: 2,
@@ -1050,7 +1050,7 @@ export const filmData = {
                 title: 'Episode 2',
                 description: 'With unassuming Bong Geun-dae on his side, Hwa-jin uses his special ops skills to handle a school gang.',
                 duration: '57m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'TT_EtQFAVIM'
             },
             {
                 id: 3,
@@ -1058,7 +1058,7 @@ export const filmData = {
                 title: 'Episode 3',
                 description: 'When a teen influencer spreads false claims about her teachers, Inspector Im Han-rim steps in.',
                 duration: '72m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'TT_EtQFAVIM'
             },
             {
                 id: 4,
@@ -1066,7 +1066,7 @@ export const filmData = {
                 title: 'Episode 4',
                 description: 'Hwa-jin\'s team visits an elite school to uncover why a student attacked a respected teacher.',
                 duration: '68m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'TT_EtQFAVIM'
             },
             {
                 id: 5,
@@ -1074,7 +1074,7 @@ export const filmData = {
                 title: 'Episode 5',
                 description: 'When an elementary school teacher\'s spirit wears down under pressure, Hwa-jin steps in as her substitute.',
                 duration: '66m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'TT_EtQFAVIM'
             }
         ]
     },
@@ -1090,7 +1090,7 @@ export const filmData = {
         hoverImage: '/assets/images/crash-landing-land.jpg',
         topRank: 3,
         isPremium: true,
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'eXMjTXL2Vks',
         description: 'Seorang pewaris kaya Korea Selatan mengalami kecelakaan paralayang dan mendarat darurat di Korea Utara, di mana ia bertemu seorang perwira tentara yang memutuskan untuk melindunginya.',
         cast: ['Hyun Bin', 'Son Ye-jin', 'Seo Ji-hye', 'Kim Jung-hyun'],
         creator: 'Park Ji-eun',
@@ -1101,7 +1101,7 @@ export const filmData = {
                 title: 'Episode 1',
                 description: 'Yoon Se-ri crash-lands in North Korea after a paragliding accident and meets Ri Jeong-hyeok.',
                 duration: '85m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'eXMjTXL2Vks'
             },
             {
                 id: 2,
@@ -1109,7 +1109,7 @@ export const filmData = {
                 title: 'Episode 2',
                 description: 'Jeong-hyeok hides Se-ri while searching for a way to get her home safely.',
                 duration: '78m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'eXMjTXL2Vks'
             },
             {
                 id: 3,
@@ -1117,7 +1117,7 @@ export const filmData = {
                 title: 'Episode 3',
                 description: 'Se-ri begins to adapt to life in North Korea under Jeong-hyeok\'s protection.',
                 duration: '82m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'eXMjTXL2Vks'
             },
             {
                 id: 4,
@@ -1125,7 +1125,7 @@ export const filmData = {
                 title: 'Episode 4',
                 description: 'A growing bond forms between Se-ri and Jeong-hyeok as danger closes in.',
                 duration: '84m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'eXMjTXL2Vks'
             },
             {
                 id: 5,
@@ -1133,7 +1133,7 @@ export const filmData = {
                 title: 'Episode 5',
                 description: 'Political tensions and personal secrets threaten Se-ri\'s safety.',
                 duration: '81m',
-                youtubeId: 'dQw4w9WgXcQ'
+                youtubeId: 'eXMjTXL2Vks'
             }
         ]
     },
@@ -1144,15 +1144,16 @@ export const filmData = {
         age: '13+',
         duration: '2j 2m',
         genres: ['Action', 'Adventure', 'Sci-Fi'],
-        image: '/assets/images/guardian.png',
-        hoverImage: '/assets/images/guardian-lands.png',
+        image: '/assets/images/avengers-dooms-prtrt.jpeg',
+        hoverImage: '/assets/images/avengers-dooms-lands.jpg',
         year: 2026,
         description: 'Para Avengers bersatu kembali untuk menghadapi ancaman terbesar mereka: Doctor Doom yang telah mendapatkan kekuatan tak terbayangkan. Pertempuran epik ini akan menentukan nasib Bumi dan multiverse.',
         cast: ['Robert Downey Jr.', 'Chris Evans', 'Scarlett Johansson', 'Benedict Cumberbatch'],
         creator: 'Anthony Russo, Joe Russo',
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'irVNGjRFZGk',
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
-        isPremium: true
+        isPremium: true,
+        topRank: 1
     },
     'card-amazing-spidey': {
         id: 'amazing-spidey',
@@ -1168,7 +1169,7 @@ export const filmData = {
         cast: ['Andrew Garfield', 'Emma Stone', 'Rhys Ifans', 'Denis Leary', 'Sally Field'],
         creator: 'Marc Webb',
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'cjq5-zmIpWA',
         isPremium: true,
         topRank: 3
     },
@@ -1186,7 +1187,7 @@ export const filmData = {
         cast: ['Tom Holland', 'Zendaya', 'Benedict Cumberbatch', 'Jacob Batalon'],
         creator: 'Destin Daniel Cretton',
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
-        youtubeId: 'dQw4w9WgXcQ',
+        youtubeId: 'pB2Y8Yr8j5A',
         isPremium: true,
         topRank: 4
     },

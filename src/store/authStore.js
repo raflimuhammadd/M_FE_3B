@@ -102,7 +102,7 @@ const useAuthStore = create((set) => ({
       subscriptionPlan: planId
     };
     localStorage.setItem('chill-user', JSON.stringify(normalizedUser));
-    set({user: normalizedUser});
+    set({user: normalizedUser, isLoading: false});
 
     // sync to mockapi
     try {

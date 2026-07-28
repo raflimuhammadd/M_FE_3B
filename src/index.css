@@ -50,4 +50,6 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   line-height: 1.6;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
 }

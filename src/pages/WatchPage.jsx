@@ -1,13 +1,47 @@
-function WatchPage({params}) {
-    return (
-        <div className="min-h-screen flex items-center justify-center bg-chill-dark">
-            <div className="text-center text-white">
-                <h1 className="text-3xl font-bold mb-4">Watch Page</h1>
-                <p className="text-white/60">Film ID: {params.id}</p>
-                <p className="text-white/40">Coming Soon - Video</p>
-            </div>
-        </div>
-    )
+import { useParams, useSearchParams, Navigate } from 'react-router-dom';
+import { filmData } from '../data/filmData';
+import useAuthStore from '../store/authStore';
+import VideoPlayer from '../components/organism/VideoPlayer';
+
+function WatchPage() {
+  const { id } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const episodeParam = searchParams.get('episode');
+  const currentEpisodeId = episodeParam ? parseInt(episodeParam) : 1;
+  const { user } = useAuthStore();
+
+  const filmKey = Object.keys(filmData).find(key => filmData[key].id === id);
+  const film = filmKey ? filmData[filmKey] : null;
+
+  if (!film) {
+    return <Navigate to="/home" replace />;
+  }
+
+  const isSeries = film.episodesList && film.episodesList.length > 0;
+  const currentEpisode = isSeries ? film.episodesList.find(ep => ep.id === currentEpisodeId) : null;
+
+  if (isSeries && !currentEpisode) {
+    return <Navigate to={`/watch/${id}?episode=1`} replace />;
+  }
+
+  const youtubeId = isSeries ? currentEpisode?.youtubeId : film.youtubeId;
+  const title = isSeries ? `${film.title} - ${currentEpisode?.title}` : film.title;
+  const isBlocked = film.isPremium && !user?.isPremium;
+
+  const handleEpisodeChange = (newEpisodeId) => {
+    setSearchParams({ episode: newEpisodeId.toString() });
+  };
+
+  return (
+    <VideoPlayer
+      youtubeId={youtubeId}
+      title={title}
+      isBlocked={isBlocked}
+      episodes={isSeries ? film.episodesList : null}
+      currentEpisodeId={currentEpisodeId}
+      onEpisodeChange={handleEpisodeChange}
+    />
+  );
 }
 
 export default WatchPage;

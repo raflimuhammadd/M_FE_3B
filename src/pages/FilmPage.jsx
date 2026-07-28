@@ -1,8 +1,11 @@
 import {Navbar, Hero, Footer} from '../components';
 import {ContentSection, FilmDetailModal} from '../components';
 import filmData from '../data/filmData';
+import {useDetailModal} from '../hooks/useDetailModal';
+
 
 function FilmPage() {
+    useDetailModal();
     // convert data object to arrray
     const allFilms = Object.values(filmData);
 

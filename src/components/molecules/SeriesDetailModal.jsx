@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Icon from '../atoms/Icon';
 import Button from '../atoms/Button';
 import Badge from '../atoms/Badge';
@@ -9,6 +10,7 @@ import useModalStore from '../../store/modalStore';
 function SeriesDetailModal() {
   const { isOpen, selectedItem: series, isMobile, closeModal, handleBackdropClick } = useModalStore();
 
+  const navigate = useNavigate();
   const modalRef = useRef(null);
 
   const {isFavorite, addToFavorites, removeFromFavorites} = useFavorites();
@@ -49,8 +51,8 @@ function SeriesDetailModal() {
   // Action handlers
   const handlePlayClick = () => {
     console.log(`Play ${title}`);
-    // navigate to watch page - soon
     closeModal();
+    navigate(`/watch/${series.id}?episode=1`);
   };
 
   const handleFavoriteClick = () => {

@@ -1,9 +1,11 @@
 import {Navbar, Hero, Footer} from '../components';
 import filmData from '../data/filmData';
 import {ContentSection, FilmDetailModal} from '../components';
+import {useDetailModal} from '../hooks/useDetailModal';
 
 function HomePage() {
     const featuredFilm = filmData['card-duty'];
+    useDetailModal();
 
     // section 1
     const continueWatching = [

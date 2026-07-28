@@ -16,7 +16,7 @@ function EpisodeCard({ episode, seriesTitle, variant = 'default' }) {
       >
         <div className="flex">
           {/* Thumbnail */}
-          <div className="relative w-24 h-20 flex-shrink-0">
+          <div className="relative w-24 h-20 shrink-0">
             <img 
               src={thumbnail || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMyMDIwMjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEwIiBmaWxsPSIjNWM2NzcyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSI+RXBpc29kZTwvdGV4dD48L3N2Zz4='}
               alt={title}
@@ -58,7 +58,7 @@ function EpisodeCard({ episode, seriesTitle, variant = 'default' }) {
       onClick={handlePlayEpisode}
     >
       {/* Thumbnail */}
-      <div className="relative w-16 h-12 flex-shrink-0 rounded overflow-hidden">
+      <div className="relative w-16 h-12 shrink-0 rounded overflow-hidden">
         <img 
           src={thumbnail || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMyMDIwMjAiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEwIiBmaWxsPSIjNWM2NzcyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBhbGlnbm1lbnQtYmFzZWxpbmU9Im1pZGRsZSI+RXBpc29kZTwvdGV4dD48L3N2Zz4='}
           alt={title}

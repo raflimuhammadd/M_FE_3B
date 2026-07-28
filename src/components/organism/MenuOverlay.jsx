@@ -22,7 +22,7 @@ function MenuOverlay({isOpen, onClose, onLogout}) {
     }, [isOpen, onClose]);
 
     return (
-        <div className={`fixed inset-0 z-[60] ${isOpen ? '' : 'pointer-events-none'}`}>
+        <div className={`fixed inset-0 z-60 ${isOpen ? '' : 'pointer-events-none'}`}>
             <div
                 className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
                     isOpen ? 'opacity-100' : 'opacity-0'
