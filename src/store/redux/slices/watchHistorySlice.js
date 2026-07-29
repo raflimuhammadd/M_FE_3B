@@ -4,7 +4,7 @@ import {
     addWatchHistory,
     updateWatchHistory,
     deleteWatchHistory,
-} from '../../../api/watchHistoryService';
+} from '../../../services/watchHistoryService';
 
 const initialState = {
     items: [],

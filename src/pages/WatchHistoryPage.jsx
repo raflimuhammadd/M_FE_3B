@@ -8,7 +8,7 @@ import {
     deleteWatchHistoryItem,
 } from '../store/redux/slices/watchHistorySlice';
 import {filmData} from '../data/filmData';
-import useAuthStore from '../store/authStore';
+import useAuthStore from '../features/auth/store/authStore';
 
 const allFilms = Object.values(filmData);
 
