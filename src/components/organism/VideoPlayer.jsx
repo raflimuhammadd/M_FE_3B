@@ -21,9 +21,14 @@ function VideoPlayer({ youtubeId, title, isBlocked, episodes, currentEpisodeId, 
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [idleTimer, setIdleTimer] = useState(null);
+  const [isPlayerReady, setIsPlayerReady] = useState(false);
+
+  const handleVideoError = () => {
+    setVideoError(true);
+    setIsPlayerReady(false);
+  }
 
   const isSeries = episodes && episodes.length > 0;
-
   const nextEpisode = isSeries ? episodes.find(ep => ep.id === currentEpisodeId + 1) : null;
 
   useEffect(() => {
@@ -52,31 +57,26 @@ function VideoPlayer({ youtubeId, title, isBlocked, episodes, currentEpisodeId, 
   }, [activeMenu, isPlaying, setShowControls]);
 
   const sendMessageToIframe = useCallback((message) => {
-    if (iframeRef.current?.contentWindow) {
+    if (iframeRef.current?.contentWindow && isPlayerReady) {
       iframeRef.current.contentWindow.postMessage(JSON.stringify(message), '*');
     }
-  }, []);
+  }, [isPlayerReady]);
 
   const handleIframeMessage = useCallback((event) => {
+    console.log('>>> RAW:', typeof event.data, event.data);
     if (!event.data || typeof event.data !== 'string') return;
     
     try {
+      console.log('[YouTube Event]', event.data);
       const data = JSON.parse(event.data);
-      
       if (data.event === 'onStateChange') {
-        setPlaying(data.data === 1);
+        setPlaying(data.info === 1);
       }
-      
-      if (data.event === 'onCurrentTime') {
-        setCurrentTime(data.data);
-      }
-      
-      if (data.event === 'onDuration') {
-        setDuration(data.data);
-      }
-      
-      if (data.event === 'onBuffer') {
-        setBuffered(data.data);
+
+      if (data.event === 'infoDelivery' && data.info) {
+        if (data.info.currentTime !== undefined) setCurrentTime(data.info.currentTime);
+        if (data.info.duration !== undefined) setDuration(data.info.duration);
+        if (data.info.videoLoadedFraction !== undefined) setBuffered(data.info.videoLoadedFraction);
       }
       
       if (data.event === 'onError') {
@@ -88,21 +88,22 @@ function VideoPlayer({ youtubeId, title, isBlocked, episodes, currentEpisodeId, 
     }
   }, [setPlaying, setCurrentTime, setDuration, setBuffered]);
 
-  useEffect(() => {
-    window.addEventListener('message', handleIframeMessage);
-    return () => window.removeEventListener('message', handleIframeMessage);
-  }, [handleIframeMessage]);
+      useEffect(() => {
+      window.addEventListener('message', handleIframeMessage);
+      return () => {
+        window.removeEventListener('message', handleIframeMessage);
+      };
+    }, [handleIframeMessage]);
 
-  useEffect(() => {
-    if (youtubeId && iframeRef.current) {
-      const config = `{
-        "event": "listening",
-        "func": "addEventListener",
-        "args": ["onStateChange", "onCurrentTime", "onDuration", "onBuffer", "onError"]
-      }`;
-      sendMessageToIframe(JSON.parse(config));
-    }
-  }, [youtubeId, sendMessageToIframe]);
+    useEffect(() => {
+      if (!isPlayerReady) return;
+      const interval = setInterval(() => {
+        sendMessageToIframe({ event: 'command', func: 'getCurrentTime', args: [] });
+        sendMessageToIframe({ event: 'command', func: 'getDuration', args: [] });
+      }, 1000);
+      return () => clearInterval(interval);
+  }, [isPlayerReady, sendMessageToIframe]);
+
 
   const handlePlayPause = useCallback(() => {
     if (isPlaying) {
@@ -210,8 +211,8 @@ function VideoPlayer({ youtubeId, title, isBlocked, episodes, currentEpisodeId, 
 
 
   
-  const iframeSrc = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin)}`;
-
+  
+const iframeSrc = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(window.location.origin)}`;
   if (error) {
     return (
       <div className="flex items-center justify-center h-screen bg-black text-white">
@@ -255,7 +256,10 @@ function VideoPlayer({ youtubeId, title, isBlocked, episodes, currentEpisodeId, 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title={title}
-        onLoad={() => setIsLoading(false)}
+        onLoad={() => {
+          setIsLoading(false);
+          setIsPlayerReady(true);
+        }}
       />
 
       {activeMenu === 'subtitle' && <SubtitleMenu />}

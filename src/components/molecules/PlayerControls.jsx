@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { playerStore } from '../../store/playerStore';
 import Icon from '../atoms/Icon';
+import { current } from '@reduxjs/toolkit';
 
 function PlayerControls({ isSeries = false, 
   nextEpisode, onVolumeChange, onPlayPause, onSeek }) {
   const { isPlaying, isMuted, volume, 
-    showControls, currentTime, duration, toggleFullscreen, 
+    showControls, currentTime, duration, buffered, toggleFullscreen, 
     setShowControls, activeMenu, openMenu, closeMenu,
   } = playerStore();
   
@@ -79,6 +80,37 @@ function PlayerControls({ isSeries = false,
       onMouseMove={handleMouseMove}
     >
       <div className="px-6 py-4 container-responsive">
+      <div className="relative w-full h-1 group cursor-pointer mb-4">
+        <div className="absolute inset-0 rounded-full bg-white/20">
+          <div 
+            className="h-full rounded-full bg-white/30 transition-all"
+        style={{ width: duration > 0 ? `${(buffered / duration) * 100}%` : '0%' }}
+            >
+          </div>
+          <div className="absolute inset-0 rounded-full bg-white/20">
+            <div
+              className='h-full rounded-full bg-blue-600 relative transition-all'
+              style={{width: duration > 0 ? `${(currentTime / duration) * 100}%` : '0%'}}
+            >
+              <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-white
+              rounded-full shadow opacity-0 group-hover:opacity-100 transition-opacity">
+              </div>
+            </div>
+            <input 
+              type='range'
+              min={0}
+              max={duration || 0}
+              step={0.1}
+              value={currentTime}
+              onChange={(e) => {
+                e.stopPropagation()
+                onSeek(parseFloat(e.target.value))
+              }}
+              className='absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10'
+            />
+          </div>
+        </div>
+      </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
