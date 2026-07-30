@@ -73,12 +73,13 @@ function MenuOverlay({isOpen, onClose, onLogout}) {
                         History
                     </Link>
                     <div className="w-48 border-t border-white/20 my-2" />
-                    <button
+                    <Link
+                        to="/profile"
                         onClick={onClose}
-                        className="text-2xl font-medium text-white/80 active:text-red-500 transition-colors"
+                        className="text-2xl font-medium text-white/80 hover:text-red-500 transition-colors"
                     >
                         Account
-                    </button>
+                    </Link>
                     <button
                         onClick={onLogout}
                         className="text-2xl font-medium text-white/80 active:text-red-500 transition-colors"

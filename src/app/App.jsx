@@ -16,6 +16,7 @@ import PaymentPage from '../features/subscription/pages/PaymentPage';
 import PremiumPage from '../features/subscription/pages/PremiumPage';
 import WatchHistoryPage from '../pages/WatchHistoryPage';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,14 +28,14 @@ function App() {
         <Route path="/continue-watching" element={<ContinueWatchingPage />} />
         <Route path="/top-rating" element={<TopRatingPage />} />
         <Route path="/trending" element={<TrendingPage />} />
-        <Route path="/watch-history" element={<WatchHistoryPage />} />
         <Route path="/new-release" element={<NewReleasePage />} />
-        <Route path="/watch/:id" element={<WatchPage />} />
 
-        {/* Series */}
+        {/* Series - Movie */}
         <Route path="/series" element={<SeriesPage />} />
         <Route path="/film" element={<FilmPage />} />
         <Route path="/my-list" element={<MyListPage />} />
+        <Route path="/watch/:id" element={<WatchPage />} />
+        <Route path="/watch-history" element={<WatchHistoryPage />} />
 
         {/* premium */}
         <Route path="/premium" element={<PremiumPage />} />
