@@ -87,6 +87,8 @@ export const filmData = {
         image: '/assets/images/duty-after-potrait.png',
         hoverImage: '/assets/images/duty-after.png',
         topRank: 4,
+        isNewRelease:true,
+        hasNewEpisode: true,
         youtubeId: 'U0MOoyI7pIM',
         isPremium: false,
         description: 'Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.',
@@ -312,6 +314,8 @@ export const filmData = {
         genres: ['Animation', 'Comedy', 'Family'],
         image: '/assets/images/baymax.png',
         hoverImage: '/assets/images/baymax-lands.png',
+        isNewRelease: true,
+        hasNewEpisode:true,
         youtubeId: 'lcYPrMk12zw',
         isPremium: false,
         description: 'Baymax, robot perawat kesehatan yang menggemaskan, kembali membantu orang-orang di San Fransokyo dengan cara uniknya yang penuh kehangatan.',
@@ -645,7 +649,7 @@ export const filmData = {
         creator: 'Colin Trevorrow',
         youtubeId: 'RFinNxS5KN4',
         isPremium: false,
-        topRank: 2
+        topRank: 6
     },
     'card-mermaid': {
         id: 'little-mermaid',
@@ -661,7 +665,8 @@ export const filmData = {
         cast: ['Halle Bailey', 'Jonah Hauer-King', 'Daveed Diggs', 'Melissa McCarthy', 'Javier Bardem'],
         creator: 'Rob Marshall',
         youtubeId: 'kepHY685b34',
-        isPremium: false
+        isPremium: true,
+        isNewRelease: true,
     },
     'card-megan': {
         id: 'megan',
@@ -678,7 +683,7 @@ export const filmData = {
         creator: 'Gerard Johnstone',
         youtubeId: 'jgmZLGbcCY8',
         isPremium: false,
-        topRank: 5
+        topRank: 4
     },
     'card-miles': {
         id: 'spider-verse',
@@ -843,7 +848,8 @@ export const filmData = {
         cast: ['Tom Hanks', 'Mariana Treviño', 'Rachel Keller', 'Manuel Garcia-Rulfo'],
         creator: 'Marc Forster',
         youtubeId: 'eFYUX9l-m5I',
-        isPremium: false
+        isPremium: true,
+        isNewRelease: true,
     },
     'card-quantumania': {
         id: 'ant-man-quantumania',
@@ -859,7 +865,8 @@ export const filmData = {
         cast: ['Paul Rudd', 'Evangeline Lilly', 'Jonathan Majors', 'Michael Douglas', 'Michelle Pfeiffer'],
         creator: 'Peyton Reed',
         youtubeId: 'VfpWhTgAt7A',
-        isPremium: false
+        isPremium: true,
+        isNewRelease:true,
     },
     'card-rio': {
         id: 'rio',
@@ -907,7 +914,8 @@ export const filmData = {
         cast: ['James Marsden', 'Ben Schwartz', 'Idris Elba', 'Colleen O\'Shaughnessey', 'Jim Carrey'],
         creator: 'Jeff Fowler',
         youtubeId: 'aABuE-1Lg4c',
-        isPremium: false
+        isPremium: false,
+        isNewRelease:true,
     },
     'card-stuart': {
         id: 'stuart-little',
@@ -923,7 +931,8 @@ export const filmData = {
         cast: ['Michael J. Fox', 'Geena Davis', 'Hugh Laurie', 'Jonathan Lipnicki', 'Nathan Lane'],
         creator: 'Rob Minkoff',
         youtubeId: 'AzXv1fPo9J4',
-        isPremium: true
+        isPremium: true,
+        isNewRelease:true,
     },
     'card-tomorrow': {
         id: 'tomorrow-war',
@@ -955,7 +964,7 @@ export const filmData = {
         cast: ['Nanoka Hara', 'Hokuto Matsumura', 'Eri Fukatsu', 'Sōta Fukushi'],
         creator: 'Makoto Shinkai',
         hasNewEpisode: true,
-        topRank: 6,
+        topRank: 5,
         youtubeId: 'KlnIuIVftaU',
         isPremium: false
     },
@@ -970,7 +979,8 @@ export const filmData = {
         image: '/assets/images/light-shop-portrait.jpg',
         hoverImage: '/assets/images/light-shop-land.jpg',
         topRank: 2,
-        isPremium: true,
+        hasNewEpisode: true,
+        isNewRelease: true,
         youtubeId: 'jSj4SOdLA3A',
         description: 'Kisah sekelompok orang asing yang memiliki pengalaman buruk dari masa lalu mereka. Mereka tertarik ke toko lampu misterius di ujung gang gelap.',
         cast: ['Ju Ji-hoon', 'Park Bo-young', 'Bae Seong-woo', 'Uhm Tae-goo', 'Lee Jung-eun', 'Kim Min-ha'],
@@ -1030,6 +1040,7 @@ export const filmData = {
         hoverImage: '/assets/images/teach-you-land.jpg',
         topRank: 1,
         hasNewEpisode: true,
+        isNewRelease: true,
         youtubeId: 'TT_EtQFAVIM',
         isPremium: false,
         description: 'Inspektur Na Hwa-jin dari Biro Perlindungan Hak Pendidikan menggunakan metode tidak konvensional untuk mendisiplinkan siswa nakal dan mereformasi sistem pendidikan.',
@@ -1090,6 +1101,8 @@ export const filmData = {
         hoverImage: '/assets/images/crash-landing-land.jpg',
         topRank: 3,
         isPremium: true,
+        isNewRelease:true,
+        hasNewEpisode: true,
         youtubeId: 'eXMjTXL2Vks',
         description: 'Seorang pewaris kaya Korea Selatan mengalami kecelakaan paralayang dan mendarat darurat di Korea Utara, di mana ia bertemu seorang perwira tentara yang memutuskan untuk melindunginya.',
         cast: ['Hyun Bin', 'Son Ye-jin', 'Seo Ji-hye', 'Kim Jung-hyun'],
@@ -1153,6 +1166,7 @@ export const filmData = {
         youtubeId: 'irVNGjRFZGk',
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
         isPremium: true,
+        isNewRelease:true,
         topRank: 1
     },
     'card-amazing-spidey': {
@@ -1171,6 +1185,7 @@ export const filmData = {
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
         youtubeId: 'cjq5-zmIpWA',
         isPremium: true,
+        isNewRelease:true,
         topRank: 3
     },
     'card-spidey-brand-new-day': {
@@ -1189,7 +1204,8 @@ export const filmData = {
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
         youtubeId: 'pB2Y8Yr8j5A',
         isPremium: true,
-        topRank: 4
+        isNewRelease:true,
+        topRank: 2
     },
 
 

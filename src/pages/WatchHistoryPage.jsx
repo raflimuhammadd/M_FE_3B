@@ -212,10 +212,14 @@ function WatchHistoryPage() {
                                 min="1"
                                 max="10"
                                 value={form.rating}
-                                onChange={(e) => setForm({
-                                    ...form,
-                                    rating: parseInt(e.target.value) || 7,
-                                })}
+                                onChange={(e) => {
+                                    const raw = e.target.value;
+                                    if (raw === ''){
+                                        setForm({...form, rating: ''});
+                                        return;
+                                    }
+                                    setForm({...form, rating: parseInt(raw, 10)});
+                                }}
                                 className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-sm"
                             />
                         </div>
@@ -336,11 +340,14 @@ function WatchHistoryPage() {
                                         {isEditing ? (
                                             <div className="mt-3 space-y-2">
                                                 <select
-                                                    value={editForm.status}
-                                                    onChange={(e) => setEditForm({
-                                                        ...editForm,
-                                                        status: e.target.value,
-                                                    })}
+                                                    value={(e) => {
+                                                        const raw = e.target.value;
+                                                        if (raw === '') {
+                                                            setEditForm({...editForm, rating: ''});
+                                                            return;
+                                                        }
+                                                        setEditForm({...editForm, rating: parseInt(raw, 10)});
+                                                    }}
                                                     className="w-full bg-white/10 border border-white/20 rounded px-2 py-1 text-xs"
                                                 >
                                                     {statusOptions.map((opt) => (

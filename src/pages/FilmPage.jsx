@@ -31,6 +31,7 @@ function FilmPage() {
 
     // section 3: TopRating
     const topRatingFilms = items
+        .slice()
         .sort((a, b) => {
             const aRating = parseFloat(a.rating);
             const bRating = parseFloat(b.rating);
@@ -45,13 +46,7 @@ function FilmPage() {
         .slice(0, 6);
 
     // section 5: Genre
-    const newReleaseFilms = items
-        .slice(0, 6)
-        .map((film, index) => ({
-            ...film,
-            hasNewEpisode: index % 3 === 0, //ambil new episode
-            topRank: index < 3 ? index + 1 : null //ambil top rank
-        }))
+    const newReleaseFilms = items.filter((film) => film.isNewRelease);
 
     return (
         <div className="min-h-screen bg-chill-dark">
