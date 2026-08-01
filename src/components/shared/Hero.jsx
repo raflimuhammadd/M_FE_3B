@@ -81,7 +81,7 @@ function Hero({featuredFilm}) {
                             <div className="flex items-center gap-2 xs:gap-3 sm:gap-4 flex-wrap">
                                 <button
                                     onClick={() => navigate(`/watch/${featuredFilm.id}`)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold
+                                    className="bg-[#0F1E93] hover:bg-[#09147A] text-white font-semibold
                                     px-2.5 sm:px-8 py-2 sm:py-3 rounded-full transition shrink-0 text-xs sm:text-base"
                                 >
                                     Mulai

@@ -54,7 +54,7 @@ const useAuthStore = create((set) => ({
       };
 
       localStorage.setItem('chill-user', JSON.stringify(normalizedUser));
-      set({ user: foundUser, isLoading: false });
+      set({ user: normalizedUser, isLoading: false });
       return true;
     } catch (err) {
       set({ error: err.message, isLoading: false });

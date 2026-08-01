@@ -104,7 +104,7 @@ function ProfileForm({ user, onSave }) {
 
       <button
         onClick={handleSubmit}
-        className="mt-8 rounded-full bg-[#09147A] px-8 py-3 text-base md:text-lg font-bold text-white hover:bg-[#111FA3] transition"
+        className="mt-8 rounded-full bg-[#0F1E93] hover:bg-[#09147A] px-8 py-3 text-base md:text-lg font-bold text-white transition"
       >
         Simpan
       </button>

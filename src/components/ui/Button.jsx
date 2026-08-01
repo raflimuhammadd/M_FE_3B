@@ -1,7 +1,8 @@
 function Button({ variant = 'primary', size = 'md', className = '', children, ...props}) {
     const variants = {
         primary: 'bg-blue-600 hover:bg-blue-700 text-white font-semibold',
-        secondary: 'bg-white/10 hover:bg-white/20 text-white font-semibold',
+        auth: 'bg-[#3D4142]/50 hover:bg-[#3D4142]/90 text-white font-semibold cursor-pointer',
+        secondary: 'border border-white/50 hover:bg-white/20 text-white font-semibold',
         ghost: 'text-white/60 hover:text-white',
         icon: 'bg-white/20 hover:bg-white/30 text-white',
     };

@@ -6,8 +6,7 @@ import subscriptionPlans from '../data/subscriptionPlans';
 function SubscriptionCard({isSubscribed = false, plan = 'individual'}) {
     const navigate = useNavigate();
     const removePremium = useAuthStore((s) => s.removePremium);
-    const planData = subscriptionPlans.find(p => p.id === plan);
-    subscriptionPlans[0];
+    const planData = subscriptionPlans.find(p => p.id === plan) || subscriptionPlans[0];
 
     if (isSubscribed) {
         return (
@@ -22,8 +21,8 @@ function SubscriptionCard({isSubscribed = false, plan = 'individual'}) {
                         </span>
                         
                         {/* Title */}
-                        <h2 className="text-2xl md:text-[32px] font-bold leading-tight text-white">
-                            Akun Premium {planData.name} ✨
+                        <h2 className="m-5 text-2xl md:text-[32px] font-bold leading-tight text-white">
+                            Akun Premium {planData?.name} ✨
                         </h2>
                         
                         <p className="mt-3 max-w-140 text-base md:text-xl leading-relaxed

@@ -92,7 +92,7 @@ function LoginForm() {
                             {error}
                         </div>
                     )}
-                    <Button type="submit" variant="primary" className="w-full"
+                    <Button type="submit" variant="auth" className="w-full"
                                     disabled={isLoading}>
                         {isLoading ? 'Memproses...' : 'Masuk'}
                     </Button>

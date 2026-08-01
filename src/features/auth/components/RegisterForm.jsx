@@ -130,7 +130,7 @@ function RegisterForm() {
                 {error}
           </div>
         )}
-        <Button type="submit" variant="primary" className="w-full" disabled={isLoading}>
+        <Button type="submit" variant="auth" className="w-full" disabled={isLoading}>
           {isLoading ? 'Mendaftar...' : 'Daftar'}
         </Button>
         <p className="text-center text-white/60">atau</p>
