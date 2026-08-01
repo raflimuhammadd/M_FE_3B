@@ -18,7 +18,11 @@ function PaymentPage() {
     const [paymentSession, setPaymentSession] = useState(null);
     const setPremium = useAuthStore((s) => s.setPremium);
     const location = useLocation();
-    const selectedPlanId = location.state?.planId || 'individual';
+    const selectedPlanId = location.state?.planId;
+
+    useEffect(() => {
+        if (!selectedPlanId) navigate('/premium');
+    }, [selectedPlanId, navigate]);
 
     useEffect(() => {
         if (paymentStatus === 'waiting') {

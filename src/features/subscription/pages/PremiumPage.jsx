@@ -17,7 +17,7 @@ function FeatureCard({ icon, title }) {
 }
 
 function PremiumPage() {
-  const [selectedPlanId, setSelectedPlanId] = useState('individual');
+  const [selectedPlanId, setSelectedPlanId] = useState(null);
 
   return (
     <div className="min-h-screen bg-chill-dark text-white flex flex-col mt-20">

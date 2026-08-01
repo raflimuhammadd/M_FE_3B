@@ -7,6 +7,12 @@ const planNameMap = {
     family: 'Keluarga',
 };
 
+const planIdMap = {
+  Individual: 'individual',
+  Berdua: 'duo',
+  Keluarga: 'family',
+}
+
 const useAuthStore = create((set) => ({
   // ── State ──
   user: JSON.parse(localStorage.getItem('chill-user') || 'null'),
@@ -22,6 +28,8 @@ const useAuthStore = create((set) => ({
         full_name: '',
         email: '',
         isPremium: false,
+        subscription_status: false,
+        subscriptionPlan: null,
         avatar: '',
         createdAt: new Date().toISOString(),
       });
@@ -51,8 +59,8 @@ const useAuthStore = create((set) => ({
       const normalizedUser = {
         ...foundUser,
         isPremium: Boolean(foundUser.subscription_status ?? foundUser.isPremium),
+        subscriptionPlan: foundUser.subscriptionPlan ?? planIdMap[foundUser.plan] ?? null,
       };
-
       localStorage.setItem('chill-user', JSON.stringify(normalizedUser));
       set({ user: normalizedUser, isLoading: false });
       return true;
