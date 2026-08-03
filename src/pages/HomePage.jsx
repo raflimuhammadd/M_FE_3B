@@ -14,7 +14,8 @@ function HomePage() {
         filmData['card-blue-lock'],
         filmData['card-otto'],
         filmData['card-ted-lasso'],
-        filmData['card-guardian']
+        filmData['card-guardian'],
+        filmData['card-quantumania']
     ]
 
     // Section 2: Top Rating (Portrait)
@@ -24,7 +25,14 @@ function HomePage() {
         filmData['card-my-perfect'],
         filmData['card-alice'],
         filmData['card-megan'],
-        filmData['card-mermaid']
+        filmData['card-mermaid'],
+        filmData['card-quantumania'],
+        filmData['card-sonic-2'],
+        filmData['card-happiness'],
+        filmData['card-stuart'],
+        filmData['card-rio'],
+        filmData['card-big-hero-6'],
+        filmData['card-tomorrow']
     ];
 
     // Section 3: Film Trending (Portrait)
@@ -34,7 +42,14 @@ function HomePage() {
         filmData['card-fast-x'],
         filmData['card-miles'],
         filmData['card-quantumania'],
-        filmData['card-sonic-2']
+        filmData['card-sonic-2'],
+        filmData['card-quantumania'],
+        filmData['card-sonic-2'],
+        filmData['card-happiness'],
+        filmData['card-stuart'],
+        filmData['card-rio'],
+        filmData['card-big-hero-6'],
+        filmData['card-tomorrow']
     ];
 
     // Section 4: Rilis Baru (Portrait)
@@ -44,7 +59,14 @@ function HomePage() {
         filmData['card-rio'],
         filmData['card-big-hero-6'],
         filmData['card-tomorrow'],
-        filmData['card-suzume']
+        filmData['card-suzume'],
+        filmData['card-quantumania'],
+        filmData['card-sonic-2'],
+        filmData['card-happiness'],
+        filmData['card-stuart'],
+        filmData['card-rio'],
+        filmData['card-big-hero-6'],
+        filmData['card-tomorrow']
     ];
 
 

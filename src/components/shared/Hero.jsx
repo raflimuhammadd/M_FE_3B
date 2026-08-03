@@ -63,14 +63,14 @@ function Hero({featuredFilm}) {
             <div className="absolute inset-0 bg-linear-to-t from-chill-dark via-black/75 to-black/20">
                 <div className="relative z-10 h-full flex items-end py-12 container-responsive">
                     <div className="w-full flex flex-col">
-                        <div className="max-w-2xl mb-0">
-                            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 xs:mb-4 leading-tight">
+                        <div className="max-w-4xl mb-0">
+                            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-3 xs:mb-4 leading-tight">
                                 {featuredFilm.title}
                             </h1>
 
                             <p className="
-                                text-white/80 text-xs xs:text-sm sm:text-base md:text-lg mb-3 xs:mb-4 sm:mb-5 
-                                max-w-[50ch] line-clamp-3 xs:line-clamp-4 sm:line-clamp-none
+                                text-white/80 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-3 xs:mb-4 sm:mb-5 
+                                max-w-[65ch] line-clamp-3 xs:line-clamp-4 sm:line-clamp-none
                             ">
                                 {featuredFilm.description}
                             </p>

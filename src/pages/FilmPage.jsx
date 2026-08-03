@@ -19,7 +19,7 @@ function FilmPage() {
 
     // section 1: LanjutTontonan
     const progressValues = [12, 30, 45, 60, 75, 90];
-    const continueWatchingFilms = items.slice(0, 6).map((film, index) => ({
+    const continueWatchingFilms = items.slice(0, 10).map((film, index) => ({
         ...film,
         progress: progressValues[index] || 20
     }));
@@ -27,7 +27,7 @@ function FilmPage() {
     // section 2: Top Rating
     const popularFilms = items
         .filter(film => film.rating && parseFloat(film.rating))
-        .slice(0, 6);
+        .slice(0, 10);
 
     // section 3: TopRating
     const topRatingFilms = items
@@ -37,13 +37,13 @@ function FilmPage() {
             const bRating = parseFloat(b.rating);
             return bRating - aRating;
         })
-        .slice(0, 6);
+        .slice(0, 10);
 
     // section 4: Trending
     const trendingFilms = items
         .filter(s => s.topRank)
         .sort((a, b) => (a.topRank || 999) - (b.topRank || 999))
-        .slice(0, 6);
+        .slice(0, 10);
 
     // section 5: Genre
     const newReleaseFilms = items.filter((film) => film.isNewRelease);
@@ -55,7 +55,7 @@ function FilmPage() {
             <Hero featuredFilm={featuredFilms} />
 
             <main className="bg-chill-dark relative z-20 py-8">
-                <div className="container-responsive space-y-12">
+                <div className="space-y-12">
                     {/* section1: landscape */}
                     <ContentSection 
                         title="Melanjutkan Tontonan Film"

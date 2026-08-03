@@ -10,6 +10,7 @@ export const filmData = {
         image: '/assets/images/ted-lasso-potrait.png',
         hoverImage: '/assets/images/ted-lands.png',
         hasNewEpisode: true,
+        topRank: 6,
         isNewRelease: true,
         youtubeId: '3u7EIiohs6U',
         isPremium: false,
@@ -87,7 +88,7 @@ export const filmData = {
         image: '/assets/images/duty-after-potrait.png',
         hoverImage: '/assets/images/duty-after.png',
         topRank: 4,
-        isNewRelease:true,
+        isNewRelease: true,
         hasNewEpisode: true,
         youtubeId: 'U0MOoyI7pIM',
         isPremium: false,
@@ -147,9 +148,10 @@ export const filmData = {
         genres: ['Thriller', 'Action', 'Drama'],
         image: '/assets/images/alice.png',
         hoverImage: '/assets/images/alice-lands.png',
-        topRank: 6,
+        topRank: 5,
         youtubeId: '49_44FFKZ1M',
         isPremium: false,
+        isNewRelease: true,
         description: 'Seorang gamer dan dua temannya menemukan diri mereka di Tokyo yang sepi dan dipaksa untuk bersaing dalam serangkaian permainan mematikan untuk bertahan hidup di dunia paralel.',
         cast: ['Kento Yamazaki', 'Tao Tsuchiya', 'Nijiro Murakami', 'Yuki Morinaga', 'Keita Machida', 'Ayaka Miyoshi'],
         creator: 'Shinsuke Sato',
@@ -206,8 +208,10 @@ export const filmData = {
         genres: ['Horror', 'Thriller', 'Drama'],
         image: '/assets/images/all-off-us.png',
         hoverImage: '/assets/images/all-of-us-lands.png',
+        topRank: 7,
         youtubeId: 'IN5TD4VRcSM',
         isPremium: false,
+        isNewRelease: true,
         description: 'Siswa sekolah menengah terjebak di sekolah mereka saat virus zombie menyebar dengan cepat. Mereka harus berjuang untuk bertahan hidup atau berubah menjadi salah satu dari mereka.',
         cast: ['Park Ji-hu', 'Yoon Chan-young', 'Cho Yi-hyun', 'Lomon', 'Yoo In-soo', 'Lee Yoo-mi'],
         creator: 'Chun Sung-il, Lee Jae-kyoo',
@@ -408,6 +412,7 @@ export const filmData = {
         year: 2022,
         youtubeId: 'QAlsuW5EXUg',
         isPremium: false,
+        isNewRelease: true,
         description: 'Sebuah program pelatihan sepak bola ekstrem yang mempertemukan 300 pemain muda terbaik Jepang untuk bersaing memperebutkan satu posisi striker terbaik di dunia. Yoichi Isagi harus beradaptasi dengan kompetisi brutal ini untuk mewujudkan mimpinya menjadi pemain sepak bola terbaik.',
         cast: ['Kazuki Ura', 'Yuma Uchida', 'Miyu Irino', 'Tasuku Kaito', 'Soma Saito'],
         creator: 'Muneyuki Kaneshiro',
@@ -569,6 +574,7 @@ export const filmData = {
         genres: ['Action', 'Adventure', 'Thriller'],
         image: '/assets/images/fast-x.png',
         hoverImage: '/assets/images/fast-x-lands.png',
+        topRank: 4,
         year: 2023,
         description: 'Dominic Toretto dan keluarganya menjadi target balas dendam manusia paling berbahaya yang pernah mereka hadapi: Dante Reyes, yang ingin menghancurkan segalanya yang dicintai Dom. Kali ini, Dom harus melindungi keluarganya dengan cara apa pun.',
         cast: ['Vin Diesel', 'Jason Momoa', 'Michelle Rodriguez', 'Tyrese Gibson', 'Ludacris'],
@@ -591,6 +597,7 @@ export const filmData = {
         creator: 'Ahn Gil-ho',
         youtubeId: 'gqhUlldiLEo',
         isPremium: false,
+        isNewRelease: true,
         episodesList: [
             {
                 id: 1,
@@ -683,7 +690,7 @@ export const filmData = {
         creator: 'Gerard Johnstone',
         youtubeId: 'jgmZLGbcCY8',
         isPremium: false,
-        topRank: 4
+        topRank: 7
     },
     'card-miles': {
         id: 'spider-verse',
@@ -698,6 +705,7 @@ export const filmData = {
         description: 'Miles Morales berpetualang melintasi multiverse untuk bergabung dengan Spider-People dari berbagai dimensi. Ia harus menghadapi ancaman baru dan menentukan arti menjadi seorang pahlawan dalam petualangan epik ini.',
         cast: ['Shameik Moore', 'Hailee Steinfeld', 'Oscar Isaac', 'Jake Johnson', 'Issa Rae'],
         creator: 'Joaquim Dos Santos, Kemp Powers, Justin K. Thompson',
+        topRank: 5,
         youtubeId: 'cqGjhVJWtEg',
         isPremium: false
     },
@@ -784,7 +792,7 @@ export const filmData = {
         genres: ['Romance', 'Mystery', 'Drama'],
         image: '/assets/images/my-perfect.png',
         hoverImage: '/assets/images/my-perfect-lands.png',
-        topRank: 5,
+        topRank: 8,
         year: 2023,
         youtubeId: 'uKs-xeZ1xQ0',
         isPremium: false,
@@ -866,7 +874,7 @@ export const filmData = {
         creator: 'Peyton Reed',
         youtubeId: 'VfpWhTgAt7A',
         isPremium: true,
-        isNewRelease:true,
+        isNewRelease: true,
     },
     'card-rio': {
         id: 'rio',
@@ -915,7 +923,7 @@ export const filmData = {
         creator: 'Jeff Fowler',
         youtubeId: 'aABuE-1Lg4c',
         isPremium: false,
-        isNewRelease:true,
+        isNewRelease: true,
     },
     'card-stuart': {
         id: 'stuart-little',
@@ -932,7 +940,7 @@ export const filmData = {
         creator: 'Rob Minkoff',
         youtubeId: 'AzXv1fPo9J4',
         isPremium: true,
-        isNewRelease:true,
+        isNewRelease: true,
     },
     'card-tomorrow': {
         id: 'tomorrow-war',
@@ -948,7 +956,8 @@ export const filmData = {
         cast: ['Chris Pratt', 'Yvonne Strahovski', 'J.K. Simmons', 'Betty Gilpin', 'Sam Richardson'],
         creator: 'Chris McKay',
         youtubeId: 'P42u4IE-Qng',
-        isPremium: false
+        isPremium: false,
+        isNewRelease: true
     },
     'card-suzume': {
         id: 'suzume',
@@ -964,7 +973,7 @@ export const filmData = {
         cast: ['Nanoka Hara', 'Hokuto Matsumura', 'Eri Fukatsu', 'Sōta Fukushi'],
         creator: 'Makoto Shinkai',
         hasNewEpisode: true,
-        topRank: 5,
+        topRank: 8,
         youtubeId: 'KlnIuIVftaU',
         isPremium: false
     },
@@ -1101,7 +1110,7 @@ export const filmData = {
         hoverImage: '/assets/images/crash-landing-land.jpg',
         topRank: 3,
         isPremium: true,
-        isNewRelease:true,
+        isNewRelease: true,
         hasNewEpisode: true,
         youtubeId: 'eXMjTXL2Vks',
         description: 'Seorang pewaris kaya Korea Selatan mengalami kecelakaan paralayang dan mendarat darurat di Korea Utara, di mana ia bertemu seorang perwira tentara yang memutuskan untuk melindunginya.',
@@ -1166,7 +1175,7 @@ export const filmData = {
         youtubeId: 'irVNGjRFZGk',
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
         isPremium: true,
-        isNewRelease:true,
+        isNewRelease: true,
         topRank: 1
     },
     'card-amazing-spidey': {
@@ -1185,7 +1194,7 @@ export const filmData = {
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
         youtubeId: 'cjq5-zmIpWA',
         isPremium: true,
-        isNewRelease:true,
+        isNewRelease: true,
         topRank: 3
     },
     'card-spidey-brand-new-day': {
@@ -1204,7 +1213,7 @@ export const filmData = {
         recommendations: ['avatar', 'the-batman', 'black-adam', 'ant-man-quantumania'],
         youtubeId: 'pB2Y8Yr8j5A',
         isPremium: true,
-        isNewRelease:true,
+        isNewRelease: true,
         topRank: 2
     },
 

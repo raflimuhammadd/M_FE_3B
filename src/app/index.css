@@ -10,8 +10,8 @@
     display: none;
   }
   .container-responsive {
-    width: min(100% - clamp(1rem, 4vw, 3rem) * 2, 1400px);
-    margin-inline: auto;
+    width: 100%;
+    padding-inline: clamp(2rem, 2.5vw, 4rem);
   }
   .container-fluid {
     width: 100%;
