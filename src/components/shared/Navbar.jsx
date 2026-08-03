@@ -8,6 +8,9 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const linkClass = ({ isActive }) =>
+  `hover:text-gray-300 navbar-menu-link ${isActive ? 'text-red-500 font-bold' : 'text-white font-medium'}
+  transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,40 +45,27 @@ function Navbar() {
             <ul className="navbar-menu hidden sm:flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6">
               <li className="navbar-menu-item">
                 <NavLink to="/series" 
-                className={({isActive}) => 
-                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
-                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
-                font-medium`}>
+                className={linkClass}>
                     Series
                 </NavLink>
               </li>
               <li className="navbar-menu-item">
                 <NavLink to="/film" 
-                className={({isActive}) => 
-                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
-                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
-                font-medium`}
+                className={linkClass}
                 >
                     Film
                 </NavLink>
               </li>
               <li className="navbar-menu-item">
                 <NavLink to="/my-list" 
-                className={({isActive}) => 
-                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
-                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
-                font-medium`}
+                className={linkClass}
                 >
                     Daftar Saya
                 </NavLink>
               </li>
               <li className="navbar-menu-item">
                 <NavLink to="/watch-history"
-                className={({isActive}) => 
-                `navbar-menu-link ${isActive ? 'text-red-500' : 'text-white/80'} 
-                transition text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl 
-                font-medium`}
-                >
+                className={linkClass}>
                     History
                 </NavLink>
               </li>

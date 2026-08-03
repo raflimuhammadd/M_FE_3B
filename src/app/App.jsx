@@ -15,11 +15,12 @@ import ProfilePage from '../features/profile/pages/ProfilePage';
 import PaymentPage from '../features/subscription/pages/PaymentPage';
 import PremiumPage from '../features/subscription/pages/PremiumPage';
 import WatchHistoryPage from '../pages/WatchHistoryPage';
-
+import ScrollToTop from '../components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
