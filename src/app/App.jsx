@@ -15,6 +15,8 @@ import ProfilePage from '../features/profile/pages/ProfilePage';
 import PaymentPage from '../features/subscription/pages/PaymentPage';
 import PremiumPage from '../features/subscription/pages/PremiumPage';
 import WatchHistoryPage from '../pages/WatchHistoryPage';
+import SearchPage from '../pages/SearchPage';
+import NotificationsPage from '../pages/NotificationsPage';
 import ScrollToTop from '../components/ScrollToTop';
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
         <Route path="/top-rating" element={<TopRatingPage />} />
         <Route path="/trending" element={<TrendingPage />} />
         <Route path="/new-release" element={<NewReleasePage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/notifications" element={<NotificationsPage />} />
 
         {/* Series - Movie */}
         <Route path="/series" element={<SeriesPage />} />

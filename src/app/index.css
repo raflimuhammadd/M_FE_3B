@@ -54,6 +54,84 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown-toggle svg {
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.profile-dropdown-toggle:hover svg {
+    color: white;
+}
+
+/* Desktop: Hover to Show */
+@media (min-width: 640px) {
+    .profile-dropdown .profile-dropdown-menu {
+        display: none;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: all 0.3s ease;
+    }
+    
+    .profile-dropdown:hover .profile-dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .profile-dropdown:hover .profile-dropdown-toggle svg {
+        transform: rotate(180deg);
+    }
+}
+
+/* Mobile: Click to Show */
+@media (max-width: 639px) {
+    .profile-dropdown .profile-dropdown-menu {
+        display: none;
+    }
+    
+    .profile-dropdown.open .profile-dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .profile-dropdown.open .profile-dropdown-toggle svg {
+        transform: rotate(180deg);
+    }
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  background-color: #E50914;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 4px;
+}
+
+/* Search & Notification Icons Hover */
+.navbar-right button svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-right button:hover svg {
+  transform: scale(1.1);
+}
+
 
 select option {
   background-color: #FFFFFF;

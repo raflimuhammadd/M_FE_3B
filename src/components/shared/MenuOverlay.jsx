@@ -72,6 +72,30 @@ function MenuOverlay({isOpen, onClose, onLogout}) {
                     >
                         History
                     </Link>
+                    <div className="flex items-center gap-6 mb-4">
+                        <Link
+                            to="/search"
+                            onClick={onClose}
+                            className="relative flex flex-col items-center gap-2 text-white/80 hover:text-red-500 transition-colors"
+                        >
+                            <Icon name="search" className="w-5 h-5" />
+                            <span className="text-sm">Search</span>
+                        </Link>
+                        
+                        <Link
+                            to="/notifications"
+                            onClick={onClose}
+                            className="relative flex flex-col items-center gap-2 text-white/80 hover:text-red-500 transition-colors"
+                        >
+                            <Icon name="bell" className="w-5 h-5" />
+                            {/* Badge */}
+                            <span className="absolute top-0 right-3 w-4 h-4 bg-red-500 
+                                        rounded-full text-[10px] flex items-center justify-center">
+                                3
+                            </span>
+                            <span className="text-sm">Notifications</span>
+                        </Link>
+                    </div>
                     <div className="w-48 border-t border-white/20 my-2" />
                     <Link
                         to="/profile"
