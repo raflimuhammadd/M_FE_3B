@@ -81,7 +81,7 @@ function Navbar() {
                 <Icon name="search" className="w-5 h-5 md:w-6 md:h-6 stroke-gray-500" />
               </button>
               <button
-                onClick={() => navigate('/search')}
+                onClick={() => navigate('/notifications')}
                 className="relative hover:text-white transition-colors"
                 aria-label="Notifications"
               >
